@@ -1,0 +1,318 @@
+/*
+CSS file for articles.
+
+@author:laplaciannin102
+*/
+
+html{ 
+    height: 100%; 
+}
+
+body {} /* article_bodyに書くことにする */
+
+div#article_body {
+    width: 1000px;
+    height: 100%;
+    margin-right: auto;
+    margin-left : auto;
+    background-color: #fbffff; /*背景色*/
+}
+
+
+
+/*
+記事ヘッダーのスタイル
+ナビゲーションバー
+*/
+div#navigation_bar {
+
+}
+
+
+
+/*
+ホームページの画像スタイル
+*/
+div#article_index_img001_div {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+
+/*
+記事内容のスタイル
+lightcyan
+#e0ffff
+*/
+div#article_content {
+    margin-top:40px;
+    padding:40px;
+    height: auto;
+    min-height: 100%;
+    text-align: left;
+    background-color: #ddffff;
+    color: black;
+}
+
+
+
+/* ナビゲーションバー 参照:https://www.w3schools.com/css/css_navbar.asp */
+ul#nav_bar_ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+li#nav_logo, li#nav_hamburger, li#nav_menu, li#nav_page_top {
+    float: left;
+    color: white;
+}
+
+div#nav_logo_div {
+    width: 90px;
+    height: 40px;
+    margin-left: 10px;
+    padding: 5px;
+    /*background-image: "../assets/img/lap102_logo.png";*/
+    background: url("../img/lap102_logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/*
+ハンバーガーボタン
+*/
+.ham_line {
+    width: 35px;
+    height: 5px;
+    margin: 5px 0;
+    background-color: white;
+    border-radius: 0.5em;
+}
+
+div#div_hamburger {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 7px 5px;
+    text-decoration: none;
+    border-style: solid;
+    border-color: black;
+}
+
+li a#nav_logo_a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1px 1px;
+    text-decoration: none;
+    border-style: solid;
+    border-color: black;
+}
+
+li a#nav_menu_a, li a#nav_page_top_a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-style: solid;
+    border-color: black;
+}
+
+li a:hover {
+    color: #f0f0f0;
+    background-color: #808080;
+}
+
+p#nbar_title {
+    background-color: #00ccff;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+
+/* 各項目 */
+h1 {
+    /* background-color: #bbffff; */
+    /* border-top: 5px solid #00ccee; */
+    /* border-bottom: 10px solid #00ccff; */
+    /* border-left: 5px solid #00ccff; */
+    border-left: 10px solid black;
+    padding: 7px;
+    padding-left: 20px;
+    display:inline-block;
+}
+
+
+h2 {
+    background-color: #bbffff;
+    /* border-top: 5px solid #00ccee; */
+    border-bottom: 5px solid #00ccff;
+    /* border-left: 5px solid #00ccff; */
+    padding: 7px;
+    /* display:inline-block; */
+}
+
+h3 {
+    background-color: #bbffff;
+}
+
+h4 {
+    background-color: #bbffff;
+}
+
+
+
+/*
+丸い枠
+*/
+div.round_box {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    color: black;/*文字色*/
+    border: solid black 3px;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+
+
+
+/*
+定義の引用
+*/
+span.ref_span {
+    position: relative;
+}
+
+a.referrer {
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 8px;
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+
+object.ref_html {
+    display: none;
+    position: absolute;
+    top: 25px;
+    left: -10px;
+    width: 480px;
+    height: 360px;
+    padding: 10px;
+    border: solid;
+    border-width: thin;
+    border-radius: 5px;
+    background: rgba(245, 245, 245, 0.99);
+    color: black;
+    font-weight: bold;
+    animation: fade_in_anime 0.5s linear;
+}
+
+
+/*
+object.ref_html: before {
+    position: absolute;
+    padding: 20px;
+    border: solid transparent;
+    border-width: 10px;
+    background: rgba(245, 245, 245, 0.95);
+    pointer-events: none;
+    content: " ";
+}
+*/
+
+
+a.referrer:hover + object.ref_html {
+    display: block;
+}
+
+object.ref_html:hover {
+    display: block;
+}
+
+
+@keyframes fade_in_anime{
+    0% {
+        color : rgba(255, 255, 255, 0);
+        background: rgba(245, 245, 245, 0.1);
+    }
+    100% {
+        color : black;
+        background: rgba(245, 245, 245, 0.99);
+    }
+}
+
+
+
+/*table*/
+table, th, td {
+    background-color: white;
+    border: 1.5px solid black;
+}
+
+
+table{
+    border-collapse:separate;
+    border-spacing: 0;
+}
+
+table th:first-child{
+    border-radius: 5px 0 0 0;
+}
+
+table th:last-child{
+    border-radius: 0 5px 0 0;
+    border-right: 1px solid #3c6690;
+}
+
+table th{
+    text-align: center;
+    color:white;
+    background: linear-gradient(#829ebc,#225588);
+    border-left: 1px solid #3c6690;
+    border-top: 1px solid #3c6690;
+    border-bottom: 1px solid #3c6690;
+    box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
+    width: 25%;
+    padding: 10px 0;
+}
+
+table td{
+    text-align: center;
+    border-left: 1px solid #a8b7c5;
+    border-bottom: 1px solid #a8b7c5;
+    border-top:none;
+    box-shadow: 0px -3px 5px 1px #eee inset;
+    width: 25%;
+    padding: 10px 0;
+}
+
+table td:last-child{
+    border-right: 1px solid #a8b7c5;
+}
+
+table tr:last-child td:first-child {
+    border-radius: 0 0 0 5px;
+}
+
+table tr:last-child td:last-child {
+    border-radius: 0 0 5px 0;
+}

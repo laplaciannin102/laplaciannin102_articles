@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Markdown向けサンプル</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<link rel="shortcut icon" href="../assets/ico/nanika_big.ico" type="image/vnd.microsoft.icon">
+<link rel="stylesheet" type="text/css" href="../assets/css/annn_articles.css">
+<style>
+</style>
+</head>
+<body>
+
+<div id="navigation_bar">
+<ul id="nav_bar_ul">
+    <!-- <li><p id="nbar_title">Markdown向けサンプル</p></li> -->
+    <li id="nav_logo"><a id="nav_logo_a" href="../index.html">
+        <div id="nav_logo_div"></div>
+    </a></li>
+
+    <!--
+    <li id="nav_hamburger">
+        <div id="div_hamburger">
+            <div class="ham_line"></div>
+            <div class="ham_line"></div>
+            <div class="ham_line"></div>
+        </div>
+    </li>
+    -->
+
+    <li id="nav_menu"><a id="nav_menu_a" href="./table_of_contents.html">Menu</a></li>
+    <li id="nav_page_top"><a id="nav_page_top_a" href="#article_body">PageTop</a></li>
+</ul>
+</div>
+
+<div id="article_body"> <!-- body -->
+<div id="article_content"> <!-- content -->
+
+<h1 id="markdown向けサンプル">Markdown向けサンプル</h1>
+<h2 id="abstract">Abstract</h2>
+<ul>
+<li>Markdownで記事を書くための数式サンプルをまとめた.</li>
+<li>(半分自分用)</li>
+</ul>
+<h2 id="contents">Contents</h2>
+<ul>
+<li><a href="#TeX数式サンプル">TeX数式サンプル</a></li>
+</ul>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="tex数式サンプル">TeX数式サンプル</h2>
+<p>こちら, 随時更新予定.</p>
+<h3 id="定義の矢印">定義の矢印</h3>
+<ul>
+<li>Preview</li>
+</ul>
+<p><br /><span class="math display">$$
+\begin{aligned}
+\overset{\text{def.}}{\Longleftrightarrow}
+\end{aligned}
+$$</span><br /></p>
+<ul>
+<li>Markdownでの記法</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="prettyprint tex"><code class="sourceCode latex"><a class="sourceLine" id="cb1-1" title="1"><span class="ss">$$</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="sc">\begin</span><span class="ss">{aligned}</span></a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="sc">\overset</span><span class="ss">{</span><span class="sc">\text</span>{def.}<span class="ss">}{</span><span class="sc">\Longleftrightarrow</span><span class="ss">}</span></a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="sc">\end</span><span class="ss">{aligned}</span></a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="ss">$$</span></a></code></pre></div>
+<p><br></p>
+<hr />
+<p><br></p>
+<h3 id="任意のforall">任意の(forall)</h3>
+<ul>
+<li>Preview</li>
+</ul>
+<p><br /><span class="math display">$$
+\begin{aligned}
+^\forall \epsilon
+\end{aligned}
+$$</span><br /></p>
+<ul>
+<li>Markdownでの記法</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="prettyprint tex"><code class="sourceCode latex"><a class="sourceLine" id="cb2-1" title="1"><span class="ss">$$</span></a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="sc">\begin</span><span class="ss">{aligned}</span></a>
+<a class="sourceLine" id="cb2-3" title="3"><span class="ss">^</span><span class="sc">\forall</span><span class="ss"> </span><span class="sc">\epsilon</span></a>
+<a class="sourceLine" id="cb2-4" title="4"><span class="sc">\end</span><span class="ss">{aligned}</span></a>
+<a class="sourceLine" id="cb2-5" title="5"><span class="ss">$$</span></a></code></pre></div>
+<p><br></p>
+<hr />
+<p><br></p>
+<h3 id="列ベクトル">(列)ベクトル</h3>
+<ul>
+<li>Preview</li>
+</ul>
+<p><br /><span class="math display">$$
+\begin{aligned}
+\boldsymbol{x} = \left(
+\begin{array}{c}
+x_{1} \\
+\vdots \\
+x_{j} \\
+\vdots \\
+x_{n}
+\end{array}
+\right)
+\end{aligned}
+$$</span><br /></p>
+<ul>
+<li>Markdownでの記法</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="prettyprint tex"><code class="sourceCode latex"><a class="sourceLine" id="cb3-1" title="1"><span class="ss">$$</span></a>
+<a class="sourceLine" id="cb3-2" title="2"><span class="sc">\begin</span><span class="ss">{aligned}</span></a>
+<a class="sourceLine" id="cb3-3" title="3"><span class="sc">\boldsymbol</span><span class="ss">{x} = </span><span class="sc">\left</span><span class="ss">(</span></a>
+<a class="sourceLine" id="cb3-4" title="4"><span class="sc">\begin</span><span class="ss">{array}{c}</span></a>
+<a class="sourceLine" id="cb3-5" title="5"><span class="ss">x_{1} </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb3-6" title="6"><span class="sc">\vdots</span><span class="ss"> </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb3-7" title="7"><span class="ss">x_{j} </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb3-8" title="8"><span class="sc">\vdots</span><span class="ss"> </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb3-9" title="9"><span class="ss">x_{n}</span></a>
+<a class="sourceLine" id="cb3-10" title="10"><span class="sc">\end</span><span class="ss">{array}</span></a>
+<a class="sourceLine" id="cb3-11" title="11"><span class="sc">\right</span><span class="ss">)</span></a>
+<a class="sourceLine" id="cb3-12" title="12"><span class="sc">\end</span><span class="ss">{aligned}</span></a>
+<a class="sourceLine" id="cb3-13" title="13"><span class="ss">$$</span></a></code></pre></div>
+<p><br></p>
+<hr />
+<p><br></p>
+<h3 id="行列">行列</h3>
+<ul>
+<li>Preview</li>
+</ul>
+<p><br /><span class="math display">$$
+\begin{aligned}
+&amp;A = \left(
+\begin{array}{ccccc}
+a_{11} &amp; \cdots &amp; a_{1j} &amp; \cdots &amp; a_{1n} \\
+\vdots &amp;&amp; \vdots &amp;&amp; \vdots \\
+a_{i1} &amp; \cdots &amp; a_{ij} &amp; \cdots &amp; a_{in} \\
+\vdots &amp;&amp; \vdots &amp;&amp; \vdots \\
+a_{m1} &amp; \cdots &amp; a_{mj} &amp; \cdots &amp; a_{mn} \\
+\end{array}
+\right) \in \mathbb{R} ^ {m \times n}
+\end{aligned}
+$$</span><br /></p>
+<ul>
+<li>Markdownでの記法</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="prettyprint tex"><code class="sourceCode latex"><a class="sourceLine" id="cb4-1" title="1"><span class="ss">$$</span></a>
+<a class="sourceLine" id="cb4-2" title="2"><span class="sc">\begin</span><span class="ss">{aligned}</span></a>
+<a class="sourceLine" id="cb4-3" title="3"><span class="ss">&amp;A = </span><span class="sc">\left</span><span class="ss">(</span></a>
+<a class="sourceLine" id="cb4-4" title="4"><span class="sc">\begin</span><span class="ss">{array}{ccccc}</span></a>
+<a class="sourceLine" id="cb4-5" title="5"><span class="ss">a_{11} &amp; </span><span class="sc">\cdots</span><span class="ss"> &amp; a_{1j} &amp; </span><span class="sc">\cdots</span><span class="ss"> &amp; a_{1n} </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb4-6" title="6"><span class="sc">\vdots</span><span class="ss"> &amp;&amp; </span><span class="sc">\vdots</span><span class="ss"> &amp;&amp; </span><span class="sc">\vdots</span><span class="ss"> </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb4-7" title="7"><span class="ss">a_{i1} &amp; </span><span class="sc">\cdots</span><span class="ss"> &amp; a_{ij} &amp; </span><span class="sc">\cdots</span><span class="ss"> &amp; a_{in} </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb4-8" title="8"><span class="sc">\vdots</span><span class="ss"> &amp;&amp; </span><span class="sc">\vdots</span><span class="ss"> &amp;&amp; </span><span class="sc">\vdots</span><span class="ss"> </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb4-9" title="9"><span class="ss">a_{m1} &amp; </span><span class="sc">\cdots</span><span class="ss"> &amp; a_{mj} &amp; </span><span class="sc">\cdots</span><span class="ss"> &amp; a_{mn} </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb4-10" title="10"><span class="sc">\end</span><span class="ss">{array}</span></a>
+<a class="sourceLine" id="cb4-11" title="11"><span class="sc">\right</span><span class="ss">) </span><span class="sc">\in</span><span class="ss"> </span><span class="sc">\mathbb</span><span class="ss">{R} ^ {m </span><span class="sc">\times</span><span class="ss"> n}</span></a>
+<a class="sourceLine" id="cb4-12" title="12"><span class="sc">\end</span><span class="ss">{aligned}</span></a>
+<a class="sourceLine" id="cb4-13" title="13"><span class="ss">$$</span></a></code></pre></div>
+<p><br></p>
+<hr />
+<p><br></p>
+<h3 id="線形計画問題-不等式標準形"><span class="ref_span">
+    <a class="referrer" href="./linear_programming_problem.html">線形計画問題</a>
+    <object class="ref_html" data="../assets/ref_html/ref_linear_programming_problem.html" type="text/plain"></object>
+</span> 不等式標準形</h3>
+<ul>
+<li>Preview</li>
+</ul>
+<p><br /><span class="math display">$$
+\begin{aligned}
+\left \Vert \quad
+\begin{aligned}
+&amp;\textbf{min.} \quad
+&amp;&amp;\sum_{j=1}^{n} c_{j} x_{j} \in \mathbb{R} \\
+\\
+&amp;\textbf{s.t.} \quad
+&amp;&amp;\sum_{j=1}^{n} a_{ij} x_{j} \geq b_{i} \, (i = 1, \cdots , m) \\
+&amp;&amp;&amp;x_{j} \geq 0 \, (j = 1, \cdots , n)
+\end{aligned}
+\right.
+\end{aligned}
+$$</span><br /></p>
+<ul>
+<li>Markdownでの記法</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="prettyprint tex"><code class="sourceCode latex"><a class="sourceLine" id="cb5-1" title="1"><span class="ss">$$</span></a>
+<a class="sourceLine" id="cb5-2" title="2"><span class="sc">\begin</span><span class="ss">{aligned}</span></a>
+<a class="sourceLine" id="cb5-3" title="3"><span class="sc">\left</span><span class="ss"> </span><span class="sc">\Vert</span><span class="ss"> </span><span class="sc">\quad</span></a>
+<a class="sourceLine" id="cb5-4" title="4"><span class="sc">\begin</span><span class="ss">{aligned}</span></a>
+<a class="sourceLine" id="cb5-5" title="5"><span class="ss">&amp;</span><span class="sc">\textbf</span><span class="ss">{min.} </span><span class="sc">\quad</span></a>
+<a class="sourceLine" id="cb5-6" title="6"><span class="ss">&amp;&amp;</span><span class="sc">\sum</span><span class="ss">_{j=1}^{n} c_{j} x_{j} </span><span class="sc">\in</span><span class="ss"> </span><span class="sc">\mathbb</span><span class="ss">{R} </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb5-7" title="7"><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb5-8" title="8"><span class="ss">&amp;</span><span class="sc">\textbf</span><span class="ss">{s.t.} </span><span class="sc">\quad</span></a>
+<a class="sourceLine" id="cb5-9" title="9"><span class="ss">&amp;&amp;</span><span class="sc">\sum</span><span class="ss">_{j=1}^{n} a_{ij} x_{j} </span><span class="sc">\geq</span><span class="ss"> b_{i} </span><span class="sc">\,</span><span class="ss"> (i = 1, </span><span class="sc">\cdots</span><span class="ss"> , m) </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb5-10" title="10"><span class="ss">&amp;&amp;&amp;x_{j} </span><span class="sc">\geq</span><span class="ss"> 0 </span><span class="sc">\,</span><span class="ss"> (j = 1, </span><span class="sc">\cdots</span><span class="ss"> , n)</span></a>
+<a class="sourceLine" id="cb5-11" title="11"><span class="sc">\end</span><span class="ss">{aligned}</span></a>
+<a class="sourceLine" id="cb5-12" title="12"><span class="sc">\right</span><span class="ss">.</span></a>
+<a class="sourceLine" id="cb5-13" title="13"><span class="sc">\end</span><span class="ss">{aligned}</span></a>
+<a class="sourceLine" id="cb5-14" title="14"><span class="ss">$$</span></a></code></pre></div>
+<p><br></p>
+<hr />
+<p><br></p>
+<h3 id="単体法-辞書">単体法 辞書</h3>
+<ul>
+<li>Preview</li>
+</ul>
+<p><br /><span class="math display">$$
+\begin{aligned}
+D &amp;= \left(
+\begin{array}{c:c}
+0 &amp; C ^\mathrm{T} \\
+\hdashline
+-B &amp; A
+\end{array}
+\right) \\
+\\
+&amp;= \left(
+\begin{array}{c:ccccc}
+0 &amp; c_{1} &amp; \cdots &amp; c_{j} &amp; \cdots &amp; c_{n} \\
+\hdashline
+-b_{1} &amp; a_{11} &amp; \cdots &amp; a_{1j} &amp; \cdots &amp; a_{1n} \\
+\vdots &amp; \vdots &amp;&amp; \vdots &amp;&amp; \vdots \\
+-b_{i}  &amp; a_{i1} &amp; \cdots &amp; a_{ij} &amp; \cdots &amp; a_{in} \\
+\vdots &amp; \vdots &amp;&amp; \vdots &amp;&amp; \vdots \\
+-b_{m} &amp; a_{m1} &amp; \cdots &amp; a_{mj} &amp; \cdots &amp; a_{mn} \\
+\end{array}
+\right) \\
+\end{aligned}
+$$</span><br /></p>
+<ul>
+<li>Markdownでの記法</li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="prettyprint tex"><code class="sourceCode latex"><a class="sourceLine" id="cb6-1" title="1"><span class="ss">$$</span></a>
+<a class="sourceLine" id="cb6-2" title="2"><span class="sc">\begin</span><span class="ss">{aligned}</span></a>
+<a class="sourceLine" id="cb6-3" title="3"><span class="ss">D &amp;= </span><span class="sc">\left</span><span class="ss">(</span></a>
+<a class="sourceLine" id="cb6-4" title="4"><span class="sc">\begin</span><span class="ss">{array}{c:c}</span></a>
+<a class="sourceLine" id="cb6-5" title="5"><span class="ss">0 &amp; C ^</span><span class="sc">\mathrm</span><span class="ss">{T} </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb6-6" title="6"><span class="sc">\hdashline</span></a>
+<a class="sourceLine" id="cb6-7" title="7"><span class="ss">-B &amp; A</span></a>
+<a class="sourceLine" id="cb6-8" title="8"><span class="sc">\end</span><span class="ss">{array}</span></a>
+<a class="sourceLine" id="cb6-9" title="9"><span class="sc">\right</span><span class="ss">) </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb6-10" title="10"><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb6-11" title="11"><span class="ss">&amp;= </span><span class="sc">\left</span><span class="ss">(</span></a>
+<a class="sourceLine" id="cb6-12" title="12"><span class="sc">\begin</span><span class="ss">{array}{c:ccccc}</span></a>
+<a class="sourceLine" id="cb6-13" title="13"><span class="ss">0 &amp; c_{1} &amp; </span><span class="sc">\cdots</span><span class="ss"> &amp; c_{j} &amp; </span><span class="sc">\cdots</span><span class="ss"> &amp; c_{n} </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb6-14" title="14"><span class="sc">\hdashline</span></a>
+<a class="sourceLine" id="cb6-15" title="15"><span class="ss">-b_{1} &amp; a_{11} &amp; </span><span class="sc">\cdots</span><span class="ss"> &amp; a_{1j} &amp; </span><span class="sc">\cdots</span><span class="ss"> &amp; a_{1n} </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb6-16" title="16"><span class="sc">\vdots</span><span class="ss"> &amp; </span><span class="sc">\vdots</span><span class="ss"> &amp;&amp; </span><span class="sc">\vdots</span><span class="ss"> &amp;&amp; </span><span class="sc">\vdots</span><span class="ss"> </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb6-17" title="17"><span class="ss">-b_{i}  &amp; a_{i1} &amp; </span><span class="sc">\cdots</span><span class="ss"> &amp; a_{ij} &amp; </span><span class="sc">\cdots</span><span class="ss"> &amp; a_{in} </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb6-18" title="18"><span class="sc">\vdots</span><span class="ss"> &amp; </span><span class="sc">\vdots</span><span class="ss"> &amp;&amp; </span><span class="sc">\vdots</span><span class="ss"> &amp;&amp; </span><span class="sc">\vdots</span><span class="ss"> </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb6-19" title="19"><span class="ss">-b_{m} &amp; a_{m1} &amp; </span><span class="sc">\cdots</span><span class="ss"> &amp; a_{mj} &amp; </span><span class="sc">\cdots</span><span class="ss"> &amp; a_{mn} </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb6-20" title="20"><span class="sc">\end</span><span class="ss">{array}</span></a>
+<a class="sourceLine" id="cb6-21" title="21"><span class="sc">\right</span><span class="ss">) </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb6-22" title="22"><span class="sc">\end</span><span class="ss">{aligned}</span></a>
+<a class="sourceLine" id="cb6-23" title="23"><span class="ss">$$</span></a></code></pre></div>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li>Netlify「Supported Functions・KaTeX」, <a href="https://katex.org/docs/supported.html" class="uri">https://katex.org/docs/supported.html</a> (2020年8月14日閲覧)．</li>
+</ul>
+<p><br></p>
+<hr />
+<p><br></p>
+<!--
+footer
+@update:2020/08/14
+@title:markdown_sample
+@class0:blog
+@class1:tex
+@class2:
+@tags:blog,tex,sample,markdown
+@synonym:
+-->
+
+<p><br> 更新日: 2020/08/14<br>
+<p><br> Copyright (C) 2020 laplaciannin102 All Rights Reserved.<br>
+
+</div> <!-- content -->
+</div> <!-- body -->
+
+<script type="text/javascript" src="../assets/js/bookmark_pages.js"></script>
+<script async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=html&lang=python&lang=lang-latex&skin=desert"></script>
+<script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+</body>
+</html>
