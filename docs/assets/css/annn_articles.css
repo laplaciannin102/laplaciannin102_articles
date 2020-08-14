@@ -204,6 +204,24 @@ div.round_box {
 }
 
 
+/*
+ソースコード
+*/
+div.sourceCode {
+    font-size: large;
+    font-weight: normal;
+    /*border: solid #00ccff 3px;線*/
+}
+
+
+/*
+ソースコードの1行ごとに行番号を表示
+*/
+.prettyprint ol.linenums > li {
+	list-style-type: decimal; 
+}
+
+
 
 /*
 定義の引用
