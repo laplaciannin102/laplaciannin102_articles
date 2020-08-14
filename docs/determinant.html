@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>行列式</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<link rel="shortcut icon" href="../assets/ico/nanika_big.ico" type="image/vnd.microsoft.icon">
+<link rel="stylesheet" type="text/css" href="../assets/css/annn_articles.css">
+<style>
+</style>
+</head>
+<body>
+
+<div id="navigation_bar">
+<ul id="nav_bar_ul">
+    <!-- <li><p id="nbar_title">行列式</p></li> -->
+    <li id="nav_logo"><a id="nav_logo_a" href="./index.html">
+        <div id="nav_logo_div"></div>
+    </a></li>
+
+    <!--
+    <li id="nav_hamburger">
+        <div id="div_hamburger">
+            <div class="ham_line"></div>
+            <div class="ham_line"></div>
+            <div class="ham_line"></div>
+        </div>
+    </li>
+    -->
+
+    <li id="nav_menu"><a id="nav_menu_a" href="./table_of_contents.html">Menu</a></li>
+    <li id="nav_page_top"><a id="nav_page_top_a" href="#article_body">PageTop</a></li>
+</ul>
+</div>
+
+<div id="article_body"> <!-- body -->
+<div id="article_content"> <!-- content -->
+
+<h1 id="行列式">行列式</h1>
+<h2 id="概要">概要</h2>
+<ul>
+<li>正方行列の指標</li>
+</ul>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="定義">定義</h2>
+<p><span class="math inline"><em>A</em></span>を以下の様な<span class="math inline"><em>n</em></span>次の実正方行列とする.</p>
+<p><br /><span class="math display">$$
+\begin{aligned}
+&amp;i, j \in \{ 1, \cdots , n \}, \quad a_{ij} \in \mathbb{R} \\
+\\
+&amp;A = \left(
+\begin{array}{ccc}
+    a_{11} &amp; \cdots &amp; a_{1j} &amp; \cdots &amp; a_{1n} \\
+    \vdots &amp;        &amp; \vdots &amp;        &amp; \vdots \\
+    a_{i1} &amp; \cdots &amp; a_{ij} &amp; \cdots &amp; a_{in} \\
+    \vdots &amp;        &amp; \vdots &amp;        &amp; \vdots \\
+    a_{n1} &amp; \cdots &amp; a_{nj} &amp; \cdots &amp; a_{nn}
+\end{array}
+\right)
+= \left( a_{ij} \right)\\
+\end{aligned}
+$$</span><br /></p>
+<p>この時, 以下の式を<span class="math inline"><em>A</em></span>の行列式として定義し, <span class="math inline">det(<em>A</em>)</span>と書く.</p>
+<p><br /><span class="math display">$$
+\begin{aligned}
+\det(A) &amp;= \left| A \right| \\
+\\
+&amp; = \sum_{\sigma \in S_n}{\text{sgn}(\sigma) \prod_{i=1}^{n}{a_{i\sigma(i)}}}
+\end{aligned}
+$$</span><br /></p>
+<p><br></p>
+<hr />
+<p><br></p>
+<!--
+@reference:[### 行列式
+$$
+\begin{aligned}
+&i, j \in \{ 1, \cdots , n \}, \quad a_{ij} \in \mathbb{R} \\
+\\
+&A = \left(
+\begin{array}{ccc}
+    a_{11} & \cdots & a_{1j} & \cdots & a_{1n} \\
+    \vdots &        & \vdots &        & \vdots \\
+    a_{i1} & \cdots & a_{ij} & \cdots & a_{in} \\
+    \vdots &        & \vdots &        & \vdots \\
+    a_{n1} & \cdots & a_{nj} & \cdots & a_{nn}
+\end{array}
+\right)
+= \left( a_{ij} \right) \\
+\\
+\\
+&\det(A) := \sum_{\sigma \in S_n}{\text{sgn}(\sigma) \prod_{i=1}^{n}{a_{i\sigma(i)}}}
+\end{aligned}
+$$]
+-->
+<!--
+footer
+@update:2020/07/06
+@title:determinant
+@class0:mathematics
+@class1:algebra
+@class2:linear_algebra
+@tags:mathematics,matrix,definition,algebra
+@synonym:
+-->
+
+<p><br> 更新日: 2020/07/06<br>
+<p><br> Copyright (C) 2020 laplaciannin102 All Rights Reserved.<br>
+
+</div> <!-- content -->
+</div> <!-- body -->
+
+<script type="text/javascript" src="../assets/js/bookmark_pages.js"></script>
+<script async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=html&lang=python&lang=lang-latex&skin=desert"></script>
+<script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+</body>
+</html>

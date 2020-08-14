@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ベイズの定理</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<link rel="shortcut icon" href="../assets/ico/nanika_big.ico" type="image/vnd.microsoft.icon">
+<link rel="stylesheet" type="text/css" href="../assets/css/annn_articles.css">
+<style>
+</style>
+</head>
+<body>
+
+<div id="navigation_bar">
+<ul id="nav_bar_ul">
+    <!-- <li><p id="nbar_title">ベイズの定理</p></li> -->
+    <li id="nav_logo"><a id="nav_logo_a" href="./index.html">
+        <div id="nav_logo_div"></div>
+    </a></li>
+
+    <!--
+    <li id="nav_hamburger">
+        <div id="div_hamburger">
+            <div class="ham_line"></div>
+            <div class="ham_line"></div>
+            <div class="ham_line"></div>
+        </div>
+    </li>
+    -->
+
+    <li id="nav_menu"><a id="nav_menu_a" href="./table_of_contents.html">Menu</a></li>
+    <li id="nav_page_top"><a id="nav_page_top_a" href="#article_body">PageTop</a></li>
+</ul>
+</div>
+
+<div id="article_body"> <!-- body -->
+<div id="article_content"> <!-- content -->
+
+<h1 id="ベイズの定理">ベイズの定理</h1>
+<h2 id="概要">概要</h2>
+<ul>
+<li>条件付き確率に関して成り立つ定理</li>
+<li>事前確率を仮定した上で事後確率を求める</li>
+</ul>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="定理">定理</h2>
+<p><span class="math inline"><em>A</em></span>, <span class="math inline"><em>B</em></span>を事象(event)とする. この時次が成り立つ.</p>
+<p><br /><span class="math display">$$
+\begin{aligned}
+P(A \vert B) = \frac{P(B \vert A) P(A)}{P(B)}
+\end{aligned}
+$$</span><br /></p>
+<p>また,</p>
+<p><br /><span class="math display">$$
+\begin{aligned}
+&amp;^\forall i, j \\
+&amp;A_i, A_j, B : \text{event} \\
+\\
+&amp;A_i \cap A_j = \emptyset \\
+&amp;B \subseteq \bigcup_{i} A_i
+\end{aligned}
+$$</span><br /></p>
+<p>の時,</p>
+<p><br /><span class="math display">$$
+\begin{aligned}
+P(A_j \vert B) = \frac{P(B \vert A_j) P(A_j)}{\sum_{i}{P(B \vert A_i) P(A_i)}}
+\end{aligned}
+$$</span><br /></p>
+<p>が成り立つ. これを<strong>ベイズの定理(Bayes's theorem)</strong>という.</p>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="証明">証明</h2>
+<p>後半のみ行う. 条件付き確率の定義より,</p>
+<p><br /><span class="math display">$$
+\begin{aligned}
+P(B \vert A_i) = \frac{P(A_i \cap B)}{P(A_i)} \qquad \text{(1)} \\
+\\
+P(B \vert A_j) = \frac{P(A_j \cap B)}{P(A_j)} \qquad \text{(2)} \\
+\\
+P(A_j \vert B) = \frac{P(A_i \cap B)}{P(B)} \qquad \text{(3)}
+\end{aligned}
+$$</span><br /></p>
+<p>が成り立つ.</p>
+<p><span class="math inline">(1)</span> より,</p>
+<p><br /><span class="math display">$$
+\begin{aligned}
+\sum_{i}{P(B \vert A_i) P(A_i)} &amp;= \sum_{i}{P(A_i \cap B)} \\
+\\
+&amp;= P\left( (\bigcup_i A_i ) \cap B \right) \\
+\\
+&amp;= P(B)
+\end{aligned}
+$$</span><br /></p>
+<p><span class="math inline">(2)</span> と <span class="math inline">(3)</span> と上式より,</p>
+<p><br /><span class="math display">$$
+\begin{aligned}
+P(A_j \vert B) &amp;= \frac{P(A_i \cap B)}{P(B)} \\
+\\
+&amp;= \frac{P(B \vert A_j) P(A_j)}{P(B)} \\
+\\
+&amp;= \frac{P(B \vert A_j) P(A_j)}{\sum_{i}{P(B \vert A_i) P(A_i)}}
+\end{aligned}
+$$</span><br /></p>
+<p>が成り立つ.</p>
+<p>[証明終わり]</p>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li>稲垣宣生 (2015) 『数学シリーズ 数理統計学(改訂版)』, 裳華房．</li>
+</ul>
+<p><br></p>
+<hr />
+<p><br></p>
+<!--
+@reference:[### ベイズの定理
+$$
+\begin{aligned}
+&^\forall i, j \\
+&A_i, A_j, B : \text{event} \\
+&A_i \cap A_j = \emptyset \\
+&B \subseteq \bigcup_{i} A_i \\
+\\
+&P(A \vert B) = \frac{P(B \vert A) P(A)}{P(B)} \\
+\\
+&P(A_j \vert B) = \frac{P(B \vert A_j) P(A_j)}{\sum_{i}{P(B \vert A_i) P(A_i)}}
+\end{aligned}
+$$]
+-->
+<!--
+footer
+@update:2020/07/06
+@title:bayess_theorem
+@class0:mathematics
+@class1:statistics
+@class2:
+@tags:mathematics,proposition,theorem
+@synonym:bayess_theorem,bayess_rule,ベイズの法則
+-->
+
+<p><br> 更新日: 2020/07/06<br>
+<p><br> Copyright (C) 2020 laplaciannin102 All Rights Reserved.<br>
+
+</div> <!-- content -->
+</div> <!-- body -->
+
+<script type="text/javascript" src="../assets/js/bookmark_pages.js"></script>
+<script async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=html&lang=python&lang=lang-latex&skin=desert"></script>
+<script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+</body>
+</html>
