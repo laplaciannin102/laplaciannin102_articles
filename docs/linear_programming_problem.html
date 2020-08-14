@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>線形計画問題</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<link rel="shortcut icon" href="../assets/ico/nanika_big.ico" type="image/vnd.microsoft.icon">
+<link rel="stylesheet" type="text/css" href="../assets/css/annn_articles.css">
+<style>
+</style>
+</head>
+<body>
+
+<div id="navigation_bar">
+<ul id="nav_bar_ul">
+    <!-- <li><p id="nbar_title">線形計画問題</p></li> -->
+    <li id="nav_logo"><a id="nav_logo_a" href="./index.html">
+        <div id="nav_logo_div"></div>
+    </a></li>
+
+    <!--
+    <li id="nav_hamburger">
+        <div id="div_hamburger">
+            <div class="ham_line"></div>
+            <div class="ham_line"></div>
+            <div class="ham_line"></div>
+        </div>
+    </li>
+    -->
+
+    <li id="nav_menu"><a id="nav_menu_a" href="./table_of_contents.html">Menu</a></li>
+    <li id="nav_page_top"><a id="nav_page_top_a" href="#article_body">PageTop</a></li>
+</ul>
+</div>
+
+<div id="article_body"> <!-- body -->
+<div id="article_content"> <!-- content -->
+
+<h1 id="線形計画問題">線形計画問題</h1>
+<h2 id="概要">概要</h2>
+<ul>
+<li>目的関数および制約条件が1次式で書かれた<span class="ref_span">
+    <a class="referrer" href="./optimization_problem.html">最適化問題</a>
+    <object class="ref_html" data="../assets/ref_html/ref_optimization_problem.html" type="text/plain"></object>
+</span></li>
+</ul>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="定義">定義</h2>
+<p><strong><span class="ref_span">
+    <a class="referrer" href="./optimization_problem.html">最適化問題</a>
+    <object class="ref_html" data="../assets/ref_html/ref_optimization_problem.html" type="text/plain"></object>
+</span></strong>のうち, 以下の条件を満たすものを <strong>線形計画問題(linear programming problem)</strong> と呼ぶ.</p>
+<p><strong>LP問題</strong> とも呼ぶ.</p>
+<ul>
+<li><strong>全体集合</strong> が <strong><span class="math inline"><em>n</em></span>次元ユークリッド空間</strong></li>
+<li><strong>制約条件</strong> 有限本の<strong>1次等式</strong>または<strong>1次不等式</strong></li>
+<li><strong>目的関数</strong> が <strong>1次関数</strong></li>
+</ul>
+<p><strong>線形計画問題</strong> は次のように表記できる.</p>
+<div class="square_box">
+<p><br /><span class="math display">$$
+\begin{aligned}
+x_{j} , a_{ij} , b_{i} , c_{j} \in \mathbb{R}
+\end{aligned}
+$$</span><br /></p>
+<p><br /><span class="math display">$$
+\begin{aligned}
+\left \Vert \quad
+\begin{aligned}
+&amp;\textbf{min.} \quad
+&amp;&amp;\sum_{j=1}^{n} c_{j} x_{j} \in \mathbb{R} \\
+\\
+&amp;\textbf{s.t.} \quad
+&amp;&amp;\sum_{j=1}^{n} a_{ij} x_{j} \leq b_{i} \, (i = 1, \cdots , k) \\
+&amp;&amp;&amp;\sum_{j=1}^{n} a_{ij} x_{j} = b_{i} \, (i = k + 1, \cdots , k + l)
+\end{aligned}
+\right.
+\end{aligned}
+$$</span><br /></p>
+</div>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="定式化">定式化</h2>
+<p>以下,</p>
+<p><br /><span class="math display">$$
+\begin{aligned}
+x_{j} , a_{ij} , b_{i} , c_{j} \in \mathbb{R}
+\end{aligned}
+$$</span><br /></p>
+<p>とする.</p>
+<p><strong><span class="ref_span">
+    <a class="referrer" href="./optimization_problem.html">最適化問題</a>
+    <object class="ref_html" data="../assets/ref_html/ref_optimization_problem.html" type="text/plain"></object>
+</span>(最小化)</strong> は</p>
+<div class="square_box">
+<p><br /><span class="math display">$$
+\begin{aligned}
+f : X \supset S \rightarrow \mathbb{R}
+\end{aligned}
+$$</span><br /></p>
+<p><br /><span class="math display">$$
+\begin{aligned}
+\left \Vert \quad
+\begin{aligned}
+&amp;\textbf{min.} \quad f(x) \\
+&amp;\textbf{s.t.} \quad x \in S \\
+\end{aligned}
+\right.
+\end{aligned}
+$$</span><br /></p>
+</div>
+<p>と書けるので, <strong>線形計画問題</strong> は条件を順に書けば,</p>
+<div class="square_box">
+<p><br /><span class="math display">$$
+\begin{aligned}
+&amp;X = \mathbb{R} ^n \\
+&amp;S = \begin{Bmatrix}
+\left.
+\boldsymbol{x} = \left(
+\begin{array}{c}
+x_1 \\
+\vdots \\
+x_j \\
+\vdots \\
+x_n
+\end{array}
+\right)
+\in X \, \right| \,
+\begin{aligned}
+&amp;\sum_{j=1}^{n} a_{ij} x_j \leq b_i \, (i = 1, \cdots , k) \\
+&amp;\sum_{j=1}^{n} a_{ij} x_j = b_i \, (i = k + 1, \cdots , k + l)
+\end{aligned}
+\end{Bmatrix} \\
+&amp;f : X \supset S \ni \boldsymbol{x} \longmapsto f( \boldsymbol{x} ) = \sum_{j=1}^{n} c_j x_j \in \mathbb{R} \\
+&amp;\left \Vert \quad
+\begin{aligned}
+&amp;\textbf{min.} \quad f( \boldsymbol{x} ) \\
+&amp;\textbf{s.t.} \quad \boldsymbol{x} \in S \\
+\end{aligned}
+\right.
+\end{aligned}
+$$</span><br /></p>
+</div>
+<p>となる.</p>
+<p>まとめて書けば,</p>
+<div class="square_box">
+<p><br /><span class="math display">$$
+\begin{aligned}
+\left \Vert \quad
+\begin{aligned}
+&amp;\textbf{min.} \quad f( \boldsymbol{x} ) = \sum_{j=1}^{n} c_j x_j \in \mathbb{R} \\
+&amp;\textbf{s.t.} \quad \boldsymbol{x} \in
+\begin{Bmatrix}
+\left.
+\boldsymbol{x} = \left(
+\begin{array}{c}
+x_1 \\
+\vdots \\
+x_j \\
+\vdots \\
+x_n
+\end{array}
+\right)
+\in X \, \right| \,
+\begin{aligned}
+&amp;\sum_{j=1}^{n} a_{ij} x_j \leq b_i \, (i = 1, \cdots , k) \\
+&amp;\sum_{j=1}^{n} a_{ij} x_j = b_i \, (i = k + 1, \cdots , k + l)
+\end{aligned}
+\end{Bmatrix}
+\end{aligned}
+\right.
+\end{aligned}
+$$</span><br /></p>
+</div>
+<p>つまり, <strong>線形計画問題</strong> は以下で書ける.</p>
+<div class="square_box">
+<p><br /><span class="math display">$$
+\begin{aligned}
+\left \Vert \quad
+\begin{aligned}
+&amp;\textbf{min.} \quad
+&amp;&amp;\sum_{j=1}^{n} c_{j} x_{j} \in \mathbb{R} \\
+\\
+&amp;\textbf{s.t.} \quad
+&amp;&amp;\sum_{j=1}^{n} a_{ij} x_{j} \leq b_{i} \, (i = 1, \cdots , k) \\
+&amp;&amp;&amp;\sum_{j=1}^{n} a_{ij} x_{j} = b_{i} \, (i = k + 1, \cdots , k + l)
+\end{aligned}
+\right.
+\end{aligned}
+$$</span><br /></p>
+</div>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="不等式標準形">不等式標準形</h2>
+<p>以下の形の<strong>線形計画問題</strong>を<strong>不等式標準形</strong>と呼ぶ.</p>
+<div class="square_box">
+<p><br /><span class="math display">$$
+\begin{aligned}
+x_{j} , a_{ij} , b_{i} , c_{j} \in \mathbb{R}
+\end{aligned}
+$$</span><br /></p>
+<p><br /><span class="math display">$$
+\begin{aligned}
+\left \Vert \quad
+\begin{aligned}
+&amp;\textbf{min.} \quad
+&amp;&amp;\sum_{j=1}^{n} c_{j} x_{j} \in \mathbb{R} \\
+\\
+&amp;\textbf{s.t.} \quad
+&amp;&amp;\sum_{j=1}^{n} a_{ij} x_{j} \geq b_{i} \, (i = 1, \cdots , m) \\
+&amp;&amp;&amp;x_{j} \geq 0 \, (j = 1, \cdots , n)
+\end{aligned}
+\right.
+\end{aligned}
+$$</span><br /></p>
+</div>
+<p><span class="math inline"><strong>x</strong></span> , <span class="math inline"><em>C</em></span> , <span class="math inline"><em>B</em></span> , <span class="math inline"><em>A</em></span> を</p>
+<p><br /><span class="math display">$$
+\begin{aligned}
+&amp;\boldsymbol{x} = \left(
+\begin{array}{c}
+x_{1} \cdots x_{j} \cdots x_{n}
+\end{array}
+\right) ^ \mathrm{T} \in \mathbb{R} ^n \\
+&amp;C = \left(
+\begin{array}{c}
+c_{1} \cdots c_{j} \cdots c_{n}
+\end{array}
+\right) ^ \mathrm{T} \in \mathbb{R} ^n \\
+&amp;B = \left(
+\begin{array}{c}
+b_{1} \cdots b_{i} \cdots b_{m}
+\end{array}
+\right) ^ \mathrm{T} \in \mathbb{R} ^m \\
+&amp;A = \left(
+\begin{array}{ccccc}
+a_{11} &amp; \cdots &amp; a_{1j} &amp; \cdots &amp; a_{1n} \\
+\vdots &amp;&amp; \vdots &amp;&amp; \vdots \\
+a_{i1} &amp; \cdots &amp; a_{ij} &amp; \cdots &amp; a_{in} \\
+\vdots &amp;&amp; \vdots &amp;&amp; \vdots \\
+a_{m1} &amp; \cdots &amp; a_{mj} &amp; \cdots &amp; a_{mn} \\
+\end{array}
+\right) \in \mathbb{R} ^ {m \times n}
+\end{aligned}
+$$</span><br /></p>
+<p>とすると,</p>
+<p><br /><span class="math display">$$
+\begin{aligned}
+C ^\mathrm{T} \boldsymbol{x} &amp;= \left(
+\begin{array}{c}
+c_{1} \cdots c_{j} \cdots c_{n}
+\end{array}
+\right)
+\left(
+\begin{array}{c}
+x_{1} \\
+\vdots \\
+x_{j} \\
+\vdots \\
+x_{n}
+\end{array}
+\right) \\
+\\
+&amp;= \sum_{j=1}^{n} c_{j} x_{j}
+\end{aligned}
+$$</span><br /></p>
+<p>であり,</p>
+<p><br /><span class="math display">$$
+\begin{aligned}
+A \boldsymbol{x} &amp;= \left(
+\begin{array}{ccccc}
+a_{11} &amp; \cdots &amp; a_{1j} &amp; \cdots &amp; a_{1n} \\
+\vdots &amp;&amp; \vdots &amp;&amp; \vdots \\
+a_{i1} &amp; \cdots &amp; a_{ij} &amp; \cdots &amp; a_{in} \\
+\vdots &amp;&amp; \vdots &amp;&amp; \vdots \\
+a_{m1} &amp; \cdots &amp; a_{mj} &amp; \cdots &amp; a_{mn} \\
+\end{array}
+\right)
+\left(
+\begin{array}{c}
+x_{1} \\
+\vdots \\
+x_{j} \\
+\vdots \\
+x_{n}
+\end{array}
+\right) \\
+\\
+&amp;= \left(
+\begin{array}{c}
+\sum_{j=1}^{n} a_{1j} x_{j} \\
+\vdots \\
+\sum_{j=1}^{n} a_{ij} x_{j} \\
+\vdots \\
+\sum_{j=1}^{n} a_{mj} x_{j}
+\end{array}
+\right)
+\end{aligned}
+$$</span><br /></p>
+<p>より,</p>
+<p><strong>不等式標準形</strong>は</p>
+<div class="square_box">
+<p><br /><span class="math display">$$
+\begin{aligned}
+&amp;\boldsymbol{x} = \left(
+\begin{array}{ccc}
+x_{1} &amp; \cdots &amp; x_{n}
+\end{array}
+\right) ^ \mathrm{T} \in \mathbb{R} ^n \\
+&amp;C = \left(
+\begin{array}{ccc}
+c_{1} &amp; \cdots &amp; c_{n}
+\end{array}
+\right) ^ \mathrm{T} \in \mathbb{R} ^n \\
+&amp;B = \left(
+\begin{array}{ccc}
+b_{1} &amp; \cdots &amp; b_{m}
+\end{array}
+\right) ^ \mathrm{T} \in \mathbb{R} ^m \\
+&amp;A = \left(
+\begin{array}{c}
+a_{ij}
+\end{array}
+\right) \in \mathbb{R} ^ {m \times n}
+\end{aligned}
+$$</span><br /></p>
+<p><br /><span class="math display">$$
+\begin{aligned}
+\left \Vert \quad
+\begin{aligned}
+&amp;\textbf{min.} \quad
+&amp;&amp;f(x) = C ^\mathrm{T} \boldsymbol{x} \\
+&amp;\textbf{s.t.} \quad
+&amp;&amp;A \boldsymbol{x} \geq B \\
+&amp;&amp;&amp;\boldsymbol{x} \geq \boldsymbol{0}
+\end{aligned}
+\right.
+\end{aligned}
+$$</span><br /></p>
+</div>
+<p>と書ける.</p>
+<p>ただし,</p>
+<p><br /><span class="math display">$$
+\begin{aligned}
+&amp;\boldsymbol{0} =
+\left(\begin{array}{c}
+0 \cdots 0
+\end{array}\right) : \text{zero vector} \\
+&amp;\boldsymbol{u} = (\cdots u_i \cdots)^\mathrm{T}
+\geq (\cdots v_i \cdots)^\mathrm{T}
+= \boldsymbol{v} \overset{\text{def.}}{\Longleftrightarrow}
+^\forall i , u_i \geq v_i
+\end{aligned}
+$$</span><br /></p>
+<p>とする.</p>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="等式標準形">等式標準形</h2>
+<p>以下の形の<strong>線形計画問題</strong>を<strong>等式標準形</strong>と呼ぶ.</p>
+<div class="square_box">
+<p><br /><span class="math display">$$
+\begin{aligned}
+x_{j} , a_{ij} , b_{i} , c_{j} \in \mathbb{R}
+\end{aligned}
+$$</span><br /></p>
+<p><br /><span class="math display">$$
+\begin{aligned}
+\left \Vert \quad
+\begin{aligned}
+&amp;\textbf{min.} \quad
+&amp;&amp;\sum_{j=1}^{n} c_{j} x_{j} \in \mathbb{R} \\
+\\
+&amp;\textbf{s.t.} \quad
+&amp;&amp;\sum_{j=1}^{n} a_{ij} x_{j} = b_{i} \, (i = 1, \cdots , m) \\
+&amp;&amp;&amp;x_{j} \geq 0 \, (j = 1, \cdots , n)
+\end{aligned}
+\right.
+\end{aligned}
+$$</span><br /></p>
+</div>
+<p>不等式標準形と同様に,</p>
+<div class="square_box">
+<p><br /><span class="math display">$$
+\begin{aligned}
+&amp;\boldsymbol{x} = \left(
+\begin{array}{ccc}
+x_{1} &amp; \cdots &amp; x_{n}
+\end{array}
+\right) ^ \mathrm{T} \in \mathbb{R} ^n \\
+&amp;C = \left(
+\begin{array}{ccc}
+c_{1} &amp; \cdots &amp; c_{n}
+\end{array}
+\right) ^ \mathrm{T} \in \mathbb{R} ^n \\
+&amp;B = \left(
+\begin{array}{ccc}
+b_{1} &amp; \cdots &amp; b_{m}
+\end{array}
+\right) ^ \mathrm{T} \in \mathbb{R} ^m \\
+&amp;A = \left(
+\begin{array}{c}
+a_{ij}
+\end{array}
+\right) \in \mathbb{R} ^ {m \times n}
+\end{aligned}
+$$</span><br /></p>
+<p><br /><span class="math display">$$
+\begin{aligned}
+\left \Vert \quad
+\begin{aligned}
+&amp;\textbf{min.} \quad
+&amp;&amp;f(x) = C ^\mathrm{T} \boldsymbol{x} \\
+&amp;\textbf{s.t.} \quad
+&amp;&amp;A \boldsymbol{x} = B \\
+&amp;&amp;&amp;\boldsymbol{x} \geq \boldsymbol{0}
+\end{aligned}
+\right.
+\end{aligned}
+$$</span><br /></p>
+</div>
+<p>と書ける.</p>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="解法">解法</h2>
+<p><strong>線形計画問題</strong>は, <strong>単体法</strong>や<strong>内点法</strong>を用いて解くことができる.</p>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="関連項目">関連項目</h2>
+<ul>
+<li><span class="ref_span">
+    <a class="referrer" href="./optimization_problem.html">最適化問題</a>
+    <object class="ref_html" data="../assets/ref_html/ref_optimization_problem.html" type="text/plain"></object>
+</span></li>
+<li>単体法(シンプレックス法)</li>
+<li>内点法</li>
+</ul>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li>田村明久・村松正和 (2018) 『最適化法』, 共立出版株式会社．</li>
+</ul>
+<p><br></p>
+<hr />
+<p><br></p>
+<!--
+@reference:[### 線形計画問題
+
+$$
+\begin{aligned}
+x_{j} , a_{ij} , b_{i} , c_{j} \in \mathbb{R}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\left \Vert \quad
+\begin{aligned}
+&\textbf{min.} \quad
+&&\sum_{j=1}^{n} c_{j} x_{j} \in \mathbb{R} \\
+\\
+&\textbf{s.t.} \quad
+&&\sum_{j=1}^{n} a_{ij} x_{j} \leq b_{i} \, (i = 1, \cdots , k) \\
+&&&\sum_{j=1}^{n} a_{ij} x_{j} = b_{i} \, (i = k + 1, \cdots , k + l)
+\end{aligned}
+\right.
+\end{aligned}
+$$
+
+### 不等式標準形
+
+$$
+\begin{aligned}
+x_{j} , a_{ij} , b_{i} , c_{j} \in \mathbb{R}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\left \Vert \quad
+\begin{aligned}
+&\textbf{min.} \quad
+&&\sum_{j=1}^{n} c_{j} x_{j} \in \mathbb{R} \\
+\\
+&\textbf{s.t.} \quad
+&&\sum_{j=1}^{n} a_{ij} x_{j} \geq b_{i} \, (i = 1, \cdots , m) \\
+&&&x_{j} \geq 0 \, (j = 1, \cdots , n)
+\end{aligned}
+\right.
+\end{aligned}
+$$
+
+### 等式標準形
+
+$$
+\begin{aligned}
+x_{j} , a_{ij} , b_{i} , c_{j} \in \mathbb{R}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\left \Vert \quad
+\begin{aligned}
+&\textbf{min.} \quad
+&&\sum_{j=1}^{n} c_{j} x_{j} \in \mathbb{R} \\
+\\
+&\textbf{s.t.} \quad
+&&\sum_{j=1}^{n} a_{ij} x_{j} = b_{i} \, (i = 1, \cdots , m) \\
+&&&x_{j} \geq 0 \, (j = 1, \cdots , n)
+\end{aligned}
+\right.
+\end{aligned}
+$$]
+-->
+<!--
+footer
+@update:2020/08/07
+@title:linear_programming_problem
+@class0:mathematics
+@class1:applied_mathematics
+@class2:optimization
+@tags:mathematics,optimization,applied_mathematics
+@synonym:lp
+-->
+
+<p><br> 更新日: 2020/08/07<br>
+<p><br> Copyright (C) 2020 laplaciannin102 All Rights Reserved.<br>
+
+</div> <!-- content -->
+</div> <!-- body -->
+
+<script type="text/javascript" src="../assets/js/bookmark_pages.js"></script>
+<script async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=html&lang=python&lang=lang-latex&skin=desert"></script>
+<script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+</body>
+</html>
