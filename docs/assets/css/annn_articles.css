@@ -8,14 +8,16 @@ html{
     height: 100%; 
 }
 
-body {} /* article_bodyに書くことにする */
+body {
+    background-color: rgb(216, 248, 248); /*背景色*/
+} /* article_bodyに書くことにする */
 
 div#article_body {
     width: 1000px;
     height: 100%;
     margin-right: auto;
     margin-left : auto;
-    background-color: #fbffff; /*背景色*/
+    background-color: #fbffff; /*背景色 効果なし*/
 }
 
 
@@ -53,7 +55,7 @@ div#article_content {
     height: auto;
     min-height: 100%;
     text-align: left;
-    background-color: #ddffff;
+    background-color: rgb(250, 255, 255); /*背景*/
     color: black;
 }
 
@@ -161,22 +163,26 @@ h1 {
 
 
 h2 {
-    background-color: #bbffff;
+    background-color: rgba(180, 245, 255, 0.5);
     /* border-top: 5px solid #00ccee; */
-    border-bottom: 5px solid #00ccff;
+    border-bottom: 5px solid rgb(0, 220, 255);
     /* border-left: 5px solid #00ccff; */
     padding: 7px;
     /* display:inline-block; */
 }
 
 h3 {
-    background-color: #bbffff;
+    background-color: rgba(180, 245, 255, 0.5);
 }
 
 h4 {
-    background-color: #bbffff;
+    background-color: rgba(180, 245, 255, 0.5);
 }
 
+/*
+アコーディオン(折りたたみ)
+*/
+details {}
 
 
 /*
@@ -187,7 +193,20 @@ div.square_box {
     margin: 2em 0;
     font-weight: bold;
     color: black;/*文字色*/
-    border: solid black 3px;/*線*/
+    border: solid rgb(120, 120, 120) 3px; /*枠線*/
+    background-color: rgb(224, 240, 240); /*背景色*/
+}
+
+
+/*
+枠のない四角い箱
+*/
+div.no_border_square_box {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    color: black;/*文字色*/
+    background-color: rgb(224, 240, 240); /*背景色*/
 }
 
 
@@ -199,8 +218,21 @@ div.round_box {
     margin: 2em 0;
     font-weight: bold;
     color: black;/*文字色*/
-    border: solid black 3px;/*線*/
+    border: solid rgb(120, 120, 120) 3px; /*枠線*/
+    background-color: rgb(224, 240, 240); /*背景色*/
     border-radius: 10px;/*角の丸み*/
+}
+
+
+/*
+目次の枠
+*/
+div.table_of_contents {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    color: black;/*文字色*/
+    background-color: rgb(224, 240, 240); /*背景色*/
 }
 
 
