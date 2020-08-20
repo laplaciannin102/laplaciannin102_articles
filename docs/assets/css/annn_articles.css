@@ -9,6 +9,7 @@ html{
 }
 
 body {
+    margin: 0;
     background-color: rgb(216, 248, 248); /*背景色*/
 } /* article_bodyに書くことにする */
 
