@@ -45,10 +45,11 @@ function delAA() {
 
 /*
 スマートフォン判定
-max-device-width: 640px
+max-device-width:
+候補: 640px, 1280px
 */
 function isSmartPhone() {
-  if (window.matchMedia && window.matchMedia("(max-device-width: 1280px)").matches) {
+  if (window.matchMedia && window.matchMedia("(max-device-width: 1024px)").matches) {
     return true;
   } else {
     return false;
@@ -63,9 +64,26 @@ function setPCStyle() {
 
 /*スマートフォンスタイル*/
 function setSmartPhoneStyle() {
+
+  /*ナビゲーションバー*/
+  var navigation_bar_obj = document.getElementById("navigation_bar");
+  navigation_bar_obj.style.fontSize = "32pt"
+
+  var nav_logo_obj = document.getElementById("nav_logo_div");
+  nav_logo_obj.style.width = "180px"
+  nav_logo_obj.style.height = "80px"
+
+  /*article body*/
   var article_body_obj = document.getElementById("article_body");
-  article_body_obj.style.fontSize = "16pt"
-  article_body_obj.style.width = "40em"
+  article_body_obj.style.fontSize = "28pt"
+  article_body_obj.style.width = "24em"
+
+  /*ソースコード*/
+  var source_code_elements = document.getElementsByClassName("sourceCode");
+
+  for (ii=0; ii < source_code_elements.length; ii++) {
+    source_code_elements[ii].style.fontSize = "28pt"
+  }
 }
 
 

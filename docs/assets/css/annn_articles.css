@@ -203,6 +203,7 @@ div.square_box {
 枠のない四角い箱
 */
 div.no_border_square_box {
+    overflow-x: auto;
     padding: 0.5em 1em;
     margin: 2em 0;
     font-weight: bold;
@@ -244,6 +245,11 @@ div.sourceCode {
     font-size: large;
     font-weight: normal;
     /*border: solid #00ccff 3px;線*/
+}
+
+/*横スクロールさせる*/
+pre.prettyprint {
+	overflow-x: auto;
 }
 
 
