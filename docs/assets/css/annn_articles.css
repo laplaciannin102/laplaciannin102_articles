@@ -180,6 +180,12 @@ h4 {
     background-color: rgba(180, 245, 255, 0.5);
 }
 
+/*青いspan*/
+span.blue_span {
+    color: blue;
+}
+
+
 /*
 アコーディオン(折りたたみ)
 */
@@ -338,21 +344,17 @@ table, th, td {
 }
 
 
-table{
+table {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; /*中央寄せ*/
     border-collapse:separate;
     border-spacing: 0;
 }
 
-table th:first-child{
-    border-radius: 5px 0 0 0;
-}
 
-table th:last-child{
-    border-radius: 0 5px 0 0;
-    border-right: 1px solid #3c6690;
-}
-
-table th{
+/*表のタイトル*/
+table th {
     text-align: center;
     color:white;
     background: linear-gradient(#829ebc,#225588);
@@ -360,21 +362,30 @@ table th{
     border-top: 1px solid #3c6690;
     border-bottom: 1px solid #3c6690;
     box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
-    width: 25%;
-    padding: 10px 0;
+    padding: 0.5em 0.75em;
 }
 
-table td{
+
+/*表の要素*/
+table td {
     text-align: center;
     border-left: 1px solid #a8b7c5;
     border-bottom: 1px solid #a8b7c5;
     border-top:none;
     box-shadow: 0px -3px 5px 1px #eee inset;
-    width: 25%;
-    padding: 10px 0;
+    padding: 0.25em 0.75em;
 }
 
-table td:last-child{
+table th:first-child {
+    border-radius: 5px 0 0 0;
+}
+
+table th:last-child {
+    border-radius: 0 5px 0 0;
+    border-right: 1px solid #3c6690;
+}
+
+table td:last-child {
     border-right: 1px solid #a8b7c5;
 }
 
