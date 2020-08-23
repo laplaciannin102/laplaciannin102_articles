@@ -212,7 +212,7 @@ div.no_border_square_box {
     overflow-x: auto;
     padding: 0.5em 1em;
     margin: 2em 0;
-    font-weight: bold;
+    /*font-weight: bold;*/
     color: black;/*文字色*/
     background-color: rgb(224, 240, 240); /*背景色*/
 }

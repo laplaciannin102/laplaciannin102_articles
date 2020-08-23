@@ -1,0 +1,336 @@
+<!--
+    author: laplaciannin102
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>完全加法族</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<link rel="shortcut icon" href="../assets/ico/nanika_big.ico" type="image/vnd.microsoft.icon">
+<link rel="stylesheet" type="text/css" href="../assets/css/annn_articles.css">
+<style>
+</style>
+</head>
+<body>
+
+<div id="navigation_bar">
+<ul id="nav_bar_ul">
+    <!-- <li><p id="nbar_title">完全加法族</p></li> -->
+    <li id="nav_logo"><a id="nav_logo_a" href="../index.html">
+        <div id="nav_logo_div"></div>
+    </a></li>
+
+    <!--
+    <li id="nav_hamburger">
+        <div id="div_hamburger">
+            <div class="ham_line"></div>
+            <div class="ham_line"></div>
+            <div class="ham_line"></div>
+        </div>
+    </li>
+    -->
+
+    <li id="nav_menu"><a id="nav_menu_a" href="./table_of_contents.html">Menu</a></li>
+    <li id="nav_page_top"><a id="nav_page_top_a" href="#article_body">PageTop</a></li>
+</ul>
+</div>
+
+<div id="article_body"> <!-- body -->
+<div id="article_content"> <!-- content -->
+
+<h1 id="完全加法族">完全加法族</h1>
+<h2 id="概要">概要</h2>
+<ul>
+<li>特定の条件を満たす部分集合族.</li>
+</ul>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="目次">目次</h2>
+<div class="table_of_contents">
+<details open>
+<p><summary>目次詳細</summary></p>
+<ul>
+<li><a href="#完全加法族">完全加法族</a>
+<ul>
+<li><a href="#概要">概要</a></li>
+<li><a href="#目次">目次</a></li>
+<li><a href="#定義">定義</a></li>
+<li><a href="#性質">性質</a></li>
+<li><a href="#証明">証明</a></li>
+<li><a href="#集合の性質補足">集合の性質補足</a></li>
+<li><a href="#補足の証明">補足の証明</a></li>
+<li><a href="#同義語">同義語</a></li>
+<li><a href="#関連項目">関連項目</a></li>
+<li><a href="#参考文献">参考文献</a></li>
+</ul></li>
+</ul>
+</details>
+</div>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="定義">定義</h2>
+<p><span class="math inline"><em>X</em></span>を<strong>集合</strong>, <span class="math inline"><strong>B</strong></span>を<span class="math inline"><em>X</em></span>の<strong>部分集合族</strong>とする.</p>
+<p><br /><span class="math display">$$
+\begin{aligned}
+&amp;X : \text{set} \\
+&amp;\boldsymbol{B} \subset \mathfrak{P}(X) : \text{family of subsets of } X
+\end{aligned}
+$$</span><br /></p>
+<p><span class="math inline"><strong>B</strong></span>が次の条件を満たす時, <span class="math inline"><strong>B</strong></span>を<span class="math inline"><em>X</em></span>上の <strong>完全加法族(completely additive class of sets)</strong> という.</p>
+<p><br /><span class="math display">$$
+\begin{aligned}
+&amp;\text{(1)} \quad
+\phi \in \boldsymbol{B} \\
+&amp;\text{(2)} \quad
+A \in \boldsymbol{B}
+\Longrightarrow A ^ c = X - A \in \boldsymbol{B} \\
+&amp;\text{(3)} \quad
+n \in \mathbb{N} , \quad A_{n} \in \boldsymbol{B}
+\Longrightarrow \overset{\infty}{\underset{n=1}{\bigcup}} A_{n} \in \boldsymbol{B}
+\end{aligned}
+$$</span><br /></p>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="性質">性質</h2>
+<p><br /><span class="math display">$$
+\begin{aligned}
+&amp;\text{(4)} \quad
+X \in \boldsymbol{B} \\
+&amp;\text{(5)} \quad
+n \in \mathbb{N} , \quad A_{n} \in \boldsymbol{B}
+\Longrightarrow \overset{\infty}{\underset{n=1}{\bigcap}} A_{n} \in \boldsymbol{B}
+\end{aligned}
+$$</span><br /></p>
+<p>(1)の代わりに(4)で定義することもある.</p>
+<p>(3)と(5)は完全加法族の元同士の和集合, 積集合もその完全加法族の元となる, ということ.</p>
+<h2 id="証明">証明</h2>
+<ul>
+<li>(4)の証明</li>
+</ul>
+<div class="no_border_square_box">
+<details>
+<p><summary>証明詳細</summary></p>
+<p>(1), (2)より,</p>
+<p><br /><span class="math display">$$
+\begin{aligned}
+X = X - \phi \in \boldsymbol{B}
+\end{aligned}
+$$</span><br /></p>
+<p>[証明終わり]</p>
+</details>
+</div>
+<p><br></p>
+<ul>
+<li>(5)の証明</li>
+</ul>
+<div class="no_border_square_box">
+<details>
+<p><summary>証明詳細</summary></p>
+<p>(2), (3)より,</p>
+<p><br /><span class="math display">$$
+\begin{aligned}
+n \in \mathbb{N} , \quad A_{n} \in \boldsymbol{B}
+\end{aligned}
+$$</span><br /></p>
+<p>ならば</p>
+<p><br /><span class="math display">$$
+\begin{aligned}
+\overset{\infty}{\underset{n=1}{\bigcap}} A_{n}
+= \left( \overset{\infty}{\underset{n=1}{\bigcup}} A_{n}^{c} \right) ^{c}
+\in \boldsymbol{B}
+\end{aligned}
+$$</span><br /></p>
+<p>[証明終わり]</p>
+</details>
+</div>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="集合の性質補足">集合の性質補足</h2>
+<p><br /><span class="math display">$$
+\begin{aligned}
+\overset{\infty}{\underset{n=1}{\bigcap}} A_{n}
+= \left( \overset{\infty}{\underset{n=1}{\bigcup}} A_{n}^{c} \right) ^{c}
+\end{aligned}
+$$</span><br /></p>
+<p>について</p>
+<h2 id="補足の証明">補足の証明</h2>
+<div class="no_border_square_box">
+<details>
+<p><summary>証明詳細</summary></p>
+<p><br /><span class="math display">$$
+\begin{aligned}
+^{\forall} n \in \mathbb{N}, \quad
+\overset{\infty}{\underset{n=1}{\bigcap}} A_{n}
+\subset A_{n}
+\subset \overset{\infty}{\underset{n=1}{\bigcup}} A_{n}
+\end{aligned}
+$$</span><br /></p>
+<p>が成り立つ. 補集合を取ると,</p>
+<p><br /><span class="math display">$$
+\begin{aligned}
+^{\forall} n \in \mathbb{N}, \quad
+\left( \overset{\infty}{\underset{n=1}{\bigcap}} A_{n} \right) ^{c}
+\supset A_{n}^{c}
+\supset \left( \overset{\infty}{\underset{n=1}{\bigcup}} A_{n} \right) ^{c}
+\end{aligned}
+$$</span><br /></p>
+<p>であるため,</p>
+<p><br /><span class="math display">$$
+\begin{aligned}
+\overset{\infty}{\underset{n=1}{\bigcup}} A_{n}^{c}
+\subset \left( \overset{\infty}{\underset{n=1}{\bigcap}} A_{n} \right) ^{c}
+\qquad \text{(i)} \\
+\\
+\left( \overset{\infty}{\underset{n=1}{\bigcup}} A_{n} \right) ^{c}
+\subset \overset{\infty}{\underset{n=1}{\bigcap}} A_{n}^{c}
+\qquad \text{(ii)}
+\end{aligned}
+$$</span><br /></p>
+<p>が成り立つ.</p>
+<p>(i), (ii)より,</p>
+<p><br /><span class="math display">$$
+\begin{aligned}
+\left( \overset{\infty}{\underset{n=1}{\bigcap}} A_{n} \right) ^{c}
+= \overset{\infty}{\underset{n=1}{\bigcup}} A_{n}^{c}
+\end{aligned}
+$$</span><br /></p>
+<p>補集合を取れば,</p>
+<p><br /><span class="math display">$$
+\begin{aligned}
+\overset{\infty}{\underset{n=1}{\bigcap}} A_{n}
+= \left( \overset{\infty}{\underset{n=1}{\bigcup}} A_{n}^{c} \right) ^{c}
+\end{aligned}
+$$</span><br /></p>
+<p>[証明終わり]</p>
+</details>
+</div>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="同義語">同義語</h2>
+<p><strong>完全加法族</strong>は次に挙げる他の呼び方がある.</p>
+<ul>
+<li>加法族(additive class of sets)</li>
+<li>可算加法族(countably additive class of sets)</li>
+<li><span class="math inline"><em>σ</em></span>-代数(<span class="math inline"><em>σ</em></span>-algebra)</li>
+<li><span class="math inline"><em>σ</em></span>-集合体(<span class="math inline"><em>σ</em></span>-field)</li>
+<li><span class="math inline"><em>σ</em></span>-集合代数</li>
+</ul>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="関連項目">関連項目</h2>
+<ul>
+<li>完全加法族</li>
+<li><span class="ref_span">
+    <a class="referrer" href="./measure.html">測度</a>
+    <object class="ref_html" data="../assets/ref_html/ref_measure.html" type="text/plain"></object>
+</span></li>
+<li><span class="ref_span">
+    <a class="referrer" href="./mesurable_space.html">可測空間</a>
+    <object class="ref_html" data="../assets/ref_html/ref_mesurable_space.html" type="text/plain"></object>
+</span></li>
+<li><span class="ref_span">
+    <a class="referrer" href="./measure.html">測度</a>
+    <object class="ref_html" data="../assets/ref_html/ref_measure.html" type="text/plain"></object>
+</span>空間</li>
+</ul>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li>折原明夫 (2002) 『数学シリーズ <span class="ref_span">
+    <a class="referrer" href="./measure.html">測度</a>
+    <object class="ref_html" data="../assets/ref_html/ref_measure.html" type="text/plain"></object>
+</span>と積分』, 裳華房．</li>
+<li>原啓介 (2017) 『<span class="ref_span">
+    <a class="referrer" href="./measure.html">測度</a>
+    <object class="ref_html" data="../assets/ref_html/ref_measure.html" type="text/plain"></object>
+</span>・確率・ルベーグ積分 応用への最短コース』, 講談社．</li>
+<li>伊藤清 (2004) 『確率論の基礎』, 岩波書店．</li>
+<li>佐藤坦 (1994) 『はじめての確率論 <span class="ref_span">
+    <a class="referrer" href="./measure.html">測度</a>
+    <object class="ref_html" data="../assets/ref_html/ref_measure.html" type="text/plain"></object>
+</span>から確率へ』, 共立出版株式会社．</li>
+<li>新井仁之 (2003) 『ルベーグ積分講義-ルベーグ積分と面積0の不思議な図形たち』, 日本評論社．</li>
+</ul>
+<p><br></p>
+<hr />
+<p><br></p>
+<!--
+@reference:[### 完全加法族
+
+$$
+\begin{aligned}
+&X : \text{set} \\
+&\boldsymbol{B} \subset \mathfrak{P}(X) : \text{family of subsets of } X
+\end{aligned}
+$$
+
+$\boldsymbol{B}$が次の条件を満たす時, $\boldsymbol{B}$を$X$上の **完全加法族(completely additive class of sets)** という.
+
+$$
+\begin{aligned}
+&\text{(1)} \quad
+\phi \in \boldsymbol{B} \\
+&\text{(2)} \quad
+A \in \boldsymbol{B}
+\Longrightarrow A ^ c = X - A \in \boldsymbol{B} \\
+&\text{(3)} \quad
+n \in \mathbb{N} , \quad A_{n} \in \boldsymbol{B}
+\Longrightarrow \overset{\infty}{\underset{n=1}{\bigcup}} A_{n} \in \boldsymbol{B}
+\end{aligned}
+$$]
+-->
+<!--
+footer
+@update:2020/08/23
+@title:completely_additive_class_of_sets
+@class0:mathematics
+@class1:analysis
+@class2:measure_theory
+@tags:mathematics,analysis,measure_theory
+@synonym:completely_additive_class_of_sets,sigma_algebra
+-->
+
+<br>
+<br>
+<br>
+<p>
+<img src="https://cdn.mathjax.org/mathjax/badge/mj-logo.svg" width="100" class="left">
+このページでは, 数式の表現に
+<a href="https://www.mathjax.org">MathJax</a>
+を利用しています.
+</p>
+<p>
+このページでは, シンタックスハイライト(プログラムのコードに色を付ける機能)に
+<a href="https://github.com/googlearchive/code-prettify">Google Code Prettify</a>
+を利用しています.
+</p>
+<br>
+<p>更新日: 2020/08/23</p>
+<p>Copyright (C) 2020 laplaciannin102 All Rights Reserved.</p>
+
+</div> <!-- content -->
+</div> <!-- body -->
+
+<script type="text/javascript" src="../assets/js/annn_articles.js"></script>
+
+<!--
+skin候補
+default
+desert
+sunburst
+sons-of-obsidian
+-->
+<script async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=html&lang=python&lang=lang-latex&skin=desert"></script>
+<script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+</body>
+</html>
