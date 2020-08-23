@@ -1,0 +1,237 @@
+<!--
+    author: laplaciannin102
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>測度</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<link rel="shortcut icon" href="../assets/ico/nanika_big.ico" type="image/vnd.microsoft.icon">
+<link rel="stylesheet" type="text/css" href="../assets/css/annn_articles.css">
+<style>
+</style>
+</head>
+<body>
+
+<div id="navigation_bar">
+<ul id="nav_bar_ul">
+    <!-- <li><p id="nbar_title">測度</p></li> -->
+    <li id="nav_logo"><a id="nav_logo_a" href="../index.html">
+        <div id="nav_logo_div"></div>
+    </a></li>
+
+    <!--
+    <li id="nav_hamburger">
+        <div id="div_hamburger">
+            <div class="ham_line"></div>
+            <div class="ham_line"></div>
+            <div class="ham_line"></div>
+        </div>
+    </li>
+    -->
+
+    <li id="nav_menu"><a id="nav_menu_a" href="./table_of_contents.html">Menu</a></li>
+    <li id="nav_page_top"><a id="nav_page_top_a" href="#article_body">PageTop</a></li>
+</ul>
+</div>
+
+<div id="article_body"> <!-- body -->
+<div id="article_content"> <!-- content -->
+
+<h1 id="測度">測度</h1>
+<h2 id="概要">概要</h2>
+<ul>
+<li>特定の条件を満たす, 集合関数.</li>
+<li>面積や体積などの尺度の一般化.</li>
+</ul>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="目次">目次</h2>
+<div class="table_of_contents">
+<details open>
+<p><summary>目次詳細</summary></p>
+<ul>
+<li><a href="#測度">測度</a>
+<ul>
+<li><a href="#概要">概要</a></li>
+<li><a href="#目次">目次</a></li>
+<li><a href="#定義">定義</a></li>
+<li><a href="#例">例</a>
+<ul>
+<li><a href="#ルベーグ測度">ルベーグ測度</a></li>
+<li><a href="#確率測度">確率測度</a></li>
+</ul></li>
+<li><a href="#関連項目">関連項目</a></li>
+<li><a href="#参考文献">参考文献</a></li>
+</ul></li>
+</ul>
+</details>
+</div>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="定義">定義</h2>
+<p><span class="math inline"><em>X</em></span>を <strong>集合</strong>, <span class="math inline"><strong>B</strong></span>を<span class="math inline"><em>X</em></span>上の <strong><span class="ref_span">
+    <a class="referrer" href="./completely_additive_class_of_sets.html">完全加法族</a>
+    <object class="ref_html" data="../assets/ref_html/ref_completely_additive_class_of_sets.html" type="text/plain"></object>
+</span></strong> , <span class="math inline"><em>μ</em></span>を集合を実数に対応させる <strong>関数(写像)</strong> とする.</p>
+<p><br /><span class="math display">$$
+\begin{aligned}
+&amp;X : \text{set} \\
+&amp;\boldsymbol{B} \subset \mathfrak{P}(X) : \text{completely additive class of sets of } X \\
+&amp;\mu : \boldsymbol{B} \rightarrow \mathbb{R}
+\end{aligned}
+$$</span><br /></p>
+<p>次が成り立つ時, <span class="math inline"><em>μ</em></span> を <span class="math inline">(<em>X</em>, <strong>B</strong>)</span>上の <strong>測度(measure)</strong> という.</p>
+<p><br /><span class="math display">$$
+\begin{aligned}
+&amp;\text{(1)} \quad
+&amp;&amp;^{\forall} A \in \boldsymbol{B} , \quad 0 \leqq \mu(A) \leqq \infty \\
+&amp;\text{(2)} \quad
+&amp;&amp;\mu(\phi) = 0 \\
+&amp;\text{(3)} \quad
+&amp;&amp;^{\forall} n \in \mathbb{N}, \quad A_{n} \in \boldsymbol{B} \\
+&amp;&amp;&amp;i \neq j, \quad A_{i} \cap A_{j} = \phi
+\Longrightarrow \mu \left( \overset{\infty}{\underset{n=1}{\bigcup}} A_{n} \right)
+= \sum_{n=1}^{\infty}{ \mu(A_{n}) }
+\end{aligned}
+$$</span><br /></p>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="例">例</h2>
+<ul>
+<li>ボレル測度</li>
+<li>ルベーグ測度</li>
+<li>確率測度</li>
+</ul>
+<h3 id="ルベーグ測度">ルベーグ測度</h3>
+<p><br /><span class="math display">$$
+\begin{aligned}
+&amp;\mathbb{R}^{N} : n \text{-dim Euclidian space} \\
+&amp;\mathcal{B}^{(N)} : \text{Borel sigma-algebra of } n \text{-dim Euclidian space} \\
+&amp;( \mathbb{R}^{N} , \mathcal{B}^{(N)} ) : \text{mesurable space} \\
+&amp;\mu \left( \prod_{i=1}^{N} {( a_{i}, b_{i} ]} \right) = \prod_{i=1}^{N} {(b_{i} - a_{i})}
+\end{aligned}
+$$</span><br /></p>
+<h3 id="確率測度">確率測度</h3>
+<p><br /><span class="math display">$$
+\begin{aligned}
+&amp;( \Omega, \mathcal{F} ) : \text{mesurable space} \\
+&amp;^{\forall}{A} \in \mathcal{F}, \quad 0 \leqq \mu (A) \leqq 1 \\
+&amp;\mu (\Omega) = 1 \\
+\end{aligned}
+$$</span><br /></p>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="関連項目">関連項目</h2>
+<ul>
+<li><span class="ref_span">
+    <a class="referrer" href="./completely_additive_class_of_sets.html">完全加法族</a>
+    <object class="ref_html" data="../assets/ref_html/ref_completely_additive_class_of_sets.html" type="text/plain"></object>
+</span></li>
+<li>測度</li>
+<li><span class="ref_span">
+    <a class="referrer" href="./mesurable_space.html">可測空間</a>
+    <object class="ref_html" data="../assets/ref_html/ref_mesurable_space.html" type="text/plain"></object>
+</span></li>
+<li><span class="ref_span">
+    <a class="referrer" href="./measure_space.html">測度空間</a>
+    <object class="ref_html" data="../assets/ref_html/ref_measure_space.html" type="text/plain"></object>
+</span></li>
+</ul>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li>折原明夫 (2002) 『数学シリーズ 測度と積分』, 裳華房．</li>
+<li>原啓介 (2017) 『測度・確率・ルベーグ積分 応用への最短コース』, 講談社．</li>
+<li>伊藤清 (2004) 『確率論の基礎』, 岩波書店．</li>
+<li>佐藤坦 (1994) 『はじめての確率論 測度から確率へ』, 共立出版株式会社．</li>
+<li>新井仁之 (2003) 『ルベーグ積分講義-ルベーグ積分と面積0の不思議な図形たち』, 日本評論社．</li>
+</ul>
+<p><br></p>
+<hr />
+<p><br></p>
+<!--
+@reference:[### 測度
+
+$X$を **集合**, $\boldsymbol{B}$を$X$上の **<span class="ref_span">
+    <a class="referrer" href="./completely_additive_class_of_sets.html">完全加法族</a>
+    <object class="ref_html" data="../assets/ref_html/ref_completely_additive_class_of_sets.html" type="text/plain"></object>
+</span>** , $\mu$を集合を実数に対応させる **関数(写像)** とする.
+
+$$
+\begin{aligned}
+&X : \text{set} \\
+&\boldsymbol{B} \subset \mathfrak{P}(X) : \text{completely additive class of sets of } X \\
+&\mu : \boldsymbol{B} \rightarrow \mathbb{R}
+\end{aligned}
+$$
+
+次が成り立つ時, $\mu$ を $( X, \boldsymbol{B} )$上の **測度(measure)** という.
+
+$$
+\begin{aligned}
+&\text{(1)} \quad
+&&^{\forall} A \in \boldsymbol{B} , \quad 0 \leqq \mu(A) \leqq \infty \\
+&\text{(2)} \quad
+&&\mu(\phi) = 0 \\
+&\text{(3)} \quad
+&&^{\forall} n \in \mathbb{N}, \quad A_{n} \in \boldsymbol{B} \\
+&&&i \neq j, \quad A_{i} \cap A_{j} = \phi
+\Longrightarrow \mu \left( \overset{\infty}{\underset{n=1}{\bigcup}} A_{n} \right)
+= \sum_{n=1}^{\infty}{ \mu(A_{n}) }
+\end{aligned}
+$$]
+-->
+<!--
+footer
+@update:2020/08/23
+@title:measure
+@class0:mathematics
+@class1:analysis
+@class2:measure_theory
+@tags:mathematics,analysis,measure_theory,measure
+@synonym:measure
+-->
+
+<br>
+<br>
+<br>
+<p>
+<img src="https://cdn.mathjax.org/mathjax/badge/mj-logo.svg" width="100" class="left">
+このページでは, 数式の表現に
+<a href="https://www.mathjax.org">MathJax</a>
+を利用しています.
+</p>
+<p>
+このページでは, シンタックスハイライト(プログラムのコードに色を付ける機能)に
+<a href="https://github.com/googlearchive/code-prettify">Google Code Prettify</a>
+を利用しています.
+</p>
+<br>
+<p>更新日: 2020/08/23</p>
+<p>Copyright (C) 2020 laplaciannin102 All Rights Reserved.</p>
+
+</div> <!-- content -->
+</div> <!-- body -->
+
+<script type="text/javascript" src="../assets/js/annn_articles.js"></script>
+
+<!--
+skin候補
+default
+desert
+sunburst
+sons-of-obsidian
+-->
+<script async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=html&lang=python&lang=lang-latex&skin=desert"></script>
+<script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+</body>
+</html>
