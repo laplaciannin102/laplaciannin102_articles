@@ -196,6 +196,7 @@ details {}
 四角い枠
 */
 div.square_box {
+    overflow-x: auto;
     padding: 0.5em 1em;
     margin: 2em 0;
     font-weight: bold;
@@ -222,6 +223,7 @@ div.no_border_square_box {
 丸い枠
 */
 div.round_box {
+    overflow-x: auto;
     padding: 0.5em 1em;
     margin: 2em 0;
     font-weight: bold;
@@ -236,11 +238,20 @@ div.round_box {
 目次の枠
 */
 div.table_of_contents {
+    overflow-x: auto;
     padding: 0.5em 1em;
     margin: 2em 0;
     font-weight: bold;
     color: black;/*文字色*/
     background-color: rgb(224, 240, 240); /*背景色*/
+}
+
+
+/*
+横スクロールさせるコンテナ
+*/
+div.flow_x_container {
+    overflow-x: auto;
 }
 
 

@@ -71,12 +71,15 @@
 <details open>
 <p><summary>定理詳細</summary></p>
 <p><span class="math inline"><em>A</em></span>, <span class="math inline"><em>B</em></span>を事象(event)とする. この時次が成り立つ.</p>
+<div class="flow_x_container">
 <p><br /><span class="math display">$$
 \begin{aligned}
 P(A \vert B) = \frac{P(B \vert A) P(A)}{P(B)}
 \end{aligned}
 $$</span><br /></p>
+</div>
 <p>また,</p>
+<div class="flow_x_container">
 <p><br /><span class="math display">$$
 \begin{aligned}
 &amp;^\forall i, j \\
@@ -86,12 +89,15 @@ $$</span><br /></p>
 &amp;B \subseteq \bigcup_{i} A_i
 \end{aligned}
 $$</span><br /></p>
+</div>
 <p>の時,</p>
+<div class="flow_x_container">
 <p><br /><span class="math display">$$
 \begin{aligned}
 P(A_j \vert B) = \frac{P(B \vert A_j) P(A_j)}{\sum_{i}{P(B \vert A_i) P(A_i)}}
 \end{aligned}
 $$</span><br /></p>
+</div>
 <p>が成り立つ. これを<strong>ベイズの定理(Bayes’s theorem)</strong>という.</p>
 </details>
 <p><br></p>
@@ -102,6 +108,7 @@ $$</span><br /></p>
 <details open>
 <p><summary>証明詳細</summary></p>
 <p>後半のみ行う. 条件付き確率の定義より,</p>
+<div class="flow_x_container">
 <p><br /><span class="math display">$$
 \begin{aligned}
 P(B \vert A_i) = \frac{P(A_i \cap B)}{P(A_i)} \qquad \text{(1)} \\
@@ -111,8 +118,10 @@ P(B \vert A_j) = \frac{P(A_j \cap B)}{P(A_j)} \qquad \text{(2)} \\
 P(A_j \vert B) = \frac{P(A_i \cap B)}{P(B)} \qquad \text{(3)}
 \end{aligned}
 $$</span><br /></p>
+</div>
 <p>が成り立つ.</p>
 <p><span class="math inline">(1)</span> より,</p>
+<div class="flow_x_container">
 <p><br /><span class="math display">$$
 \begin{aligned}
 \sum_{i}{P(B \vert A_i) P(A_i)} &amp;= \sum_{i}{P(A_i \cap B)} \\
@@ -122,7 +131,9 @@ $$</span><br /></p>
 &amp;= P(B)
 \end{aligned}
 $$</span><br /></p>
+</div>
 <p><span class="math inline">(2)</span> と <span class="math inline">(3)</span> と上式より,</p>
+<div class="flow_x_container">
 <p><br /><span class="math display">$$
 \begin{aligned}
 P(A_j \vert B) &amp;= \frac{P(A_i \cap B)}{P(B)} \\
@@ -132,6 +143,7 @@ P(A_j \vert B) &amp;= \frac{P(A_i \cap B)}{P(B)} \\
 &amp;= \frac{P(B \vert A_j) P(A_j)}{\sum_{i}{P(B \vert A_i) P(A_i)}}
 \end{aligned}
 $$</span><br /></p>
+</div>
 <p>が成り立つ.</p>
 <p>[証明終わり]</p>
 </details>

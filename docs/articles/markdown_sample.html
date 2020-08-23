@@ -64,8 +64,10 @@
 <li><a href="#部分集合族">部分集合族</a></li>
 <li><a href="#列ベクトル">(列)ベクトル</a></li>
 <li><a href="#行列">行列</a></li>
+<li><a href="#単位行列">単位行列</a></li>
 <li><a href="#ガウス積分">ガウス積分</a></li>
 <li><a href="#可算個の集合の和集合">可算個の集合の和集合</a></li>
+<li><a href="#確率空間">確率空間</a></li>
 <li><a href="#線形計画問題-不等式標準形"><span class="ref_span">
     <a class="referrer" href="./linear_programming_problem.html">線形計画問題</a>
     <object class="ref_html" data="../assets/ref_html/ref_linear_programming_problem.html" type="text/plain"></object>
@@ -230,6 +232,44 @@ $$</span><br /></p>
 <p><br></p>
 <hr />
 <p><br></p>
+<h3 id="単位行列">単位行列</h3>
+<ul>
+<li>Preview</li>
+</ul>
+<div class="no_border_square_box">
+<p><br /><span class="math display">$$
+\begin{aligned}
+&amp;I = \left(
+\begin{array}{ccccc}
+    1 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
+    0 &amp; 1 &amp; \ddots &amp; &amp; 0 \\
+    \vdots &amp; \ddots &amp; \ddots &amp; \ddots &amp; \vdots \\
+    0 &amp; &amp; \ddots &amp; 1 &amp; 0 \\
+    0 &amp; 0 &amp; \cdots &amp; 0 &amp; 1
+\end{array}
+\right) \in \mathbb{R}^{n \times n}
+\end{aligned}
+$$</span><br /></p>
+</div>
+<ul>
+<li>Markdownでの記法</li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="prettyprint linenums tex"><code class="sourceCode latex"><a class="sourceLine" id="cb6-1" title="1"><span class="ss">$$</span></a>
+<a class="sourceLine" id="cb6-2" title="2"><span class="sc">\begin</span><span class="ss">{aligned}</span></a>
+<a class="sourceLine" id="cb6-3" title="3"><span class="ss">&amp;I = </span><span class="sc">\left</span><span class="ss">(</span></a>
+<a class="sourceLine" id="cb6-4" title="4"><span class="sc">\begin</span><span class="ss">{array}{ccccc}</span></a>
+<a class="sourceLine" id="cb6-5" title="5"><span class="ss">    1 &amp; 0 &amp; </span><span class="sc">\cdots</span><span class="ss"> &amp; 0 &amp; 0 </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb6-6" title="6"><span class="ss">    0 &amp; 1 &amp; </span><span class="sc">\ddots</span><span class="ss"> &amp; &amp; 0 </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb6-7" title="7"><span class="ss">    </span><span class="sc">\vdots</span><span class="ss"> &amp; </span><span class="sc">\ddots</span><span class="ss"> &amp; </span><span class="sc">\ddots</span><span class="ss"> &amp; </span><span class="sc">\ddots</span><span class="ss"> &amp; </span><span class="sc">\vdots</span><span class="ss"> </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb6-8" title="8"><span class="ss">    0 &amp; &amp; </span><span class="sc">\ddots</span><span class="ss"> &amp; 1 &amp; 0 </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb6-9" title="9"><span class="ss">    0 &amp; 0 &amp; </span><span class="sc">\cdots</span><span class="ss"> &amp; 0 &amp; 1</span></a>
+<a class="sourceLine" id="cb6-10" title="10"><span class="sc">\end</span><span class="ss">{array}</span></a>
+<a class="sourceLine" id="cb6-11" title="11"><span class="sc">\right</span><span class="ss">) </span><span class="sc">\in</span><span class="ss"> </span><span class="sc">\mathbb</span><span class="ss">{R}^{n </span><span class="sc">\times</span><span class="ss"> n}</span></a>
+<a class="sourceLine" id="cb6-12" title="12"><span class="sc">\end</span><span class="ss">{aligned}</span></a>
+<a class="sourceLine" id="cb6-13" title="13"><span class="ss">$$</span></a></code></pre></div>
+<p><br></p>
+<hr />
+<p><br></p>
 <h3 id="ガウス積分">ガウス積分</h3>
 <ul>
 <li>Preview</li>
@@ -240,7 +280,7 @@ $$</span><br /></p>
 <ul>
 <li>Markdownでの記法</li>
 </ul>
-<div class="sourceCode" id="cb6"><pre class="prettyprint linenums tex"><code class="sourceCode latex"><a class="sourceLine" id="cb6-1" title="1"><span class="ss">$$</span><span class="sc">\int</span><span class="ss">_{</span><span class="sc">\mathbb</span><span class="ss">{R}}{e^{-x^2}} dx = </span><span class="sc">\sqrt</span><span class="ss">{</span><span class="sc">\pi</span><span class="ss">}$$</span></a></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="prettyprint linenums tex"><code class="sourceCode latex"><a class="sourceLine" id="cb7-1" title="1"><span class="ss">$$</span><span class="sc">\int</span><span class="ss">_{</span><span class="sc">\mathbb</span><span class="ss">{R}}{e^{-x^2}} dx = </span><span class="sc">\sqrt</span><span class="ss">{</span><span class="sc">\pi</span><span class="ss">}$$</span></a></code></pre></div>
 <p><br></p>
 <hr />
 <p><br></p>
@@ -254,7 +294,21 @@ $$</span><br /></p>
 <ul>
 <li>Markdownでの記法</li>
 </ul>
-<div class="sourceCode" id="cb7"><pre class="prettyprint linenums tex"><code class="sourceCode latex"><a class="sourceLine" id="cb7-1" title="1"><span class="ss">$$</span><span class="sc">\overset</span><span class="ss">{</span><span class="sc">\infty</span><span class="ss">}{</span><span class="sc">\underset</span><span class="ss">{n=1}{</span><span class="sc">\bigcup</span><span class="ss">}} A_{n} </span><span class="sc">\in</span><span class="ss"> </span><span class="sc">\boldsymbol</span><span class="ss">{B}$$</span></a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="prettyprint linenums tex"><code class="sourceCode latex"><a class="sourceLine" id="cb8-1" title="1"><span class="ss">$$</span><span class="sc">\overset</span><span class="ss">{</span><span class="sc">\infty</span><span class="ss">}{</span><span class="sc">\underset</span><span class="ss">{n=1}{</span><span class="sc">\bigcup</span><span class="ss">}} A_{n} </span><span class="sc">\in</span><span class="ss"> </span><span class="sc">\boldsymbol</span><span class="ss">{B}$$</span></a></code></pre></div>
+<p><br></p>
+<hr />
+<p><br></p>
+<h3 id="確率空間">確率空間</h3>
+<ul>
+<li>Preview</li>
+</ul>
+<div class="no_border_square_box">
+<p><br /><span class="math display">(<em>Ω</em>, ℱ, <em>P</em>)</span><br /></p>
+</div>
+<ul>
+<li>Markdownでの記法</li>
+</ul>
+<div class="sourceCode" id="cb9"><pre class="prettyprint linenums tex"><code class="sourceCode latex"><a class="sourceLine" id="cb9-1" title="1"><span class="ss">$$(</span><span class="sc">\Omega</span><span class="ss">, </span><span class="sc">\mathcal</span><span class="ss">{F}, P)$$</span></a></code></pre></div>
 <p><br></p>
 <hr />
 <p><br></p>
@@ -284,20 +338,20 @@ $$</span><br /></p>
 <ul>
 <li>Markdownでの記法</li>
 </ul>
-<div class="sourceCode" id="cb8"><pre class="prettyprint linenums tex"><code class="sourceCode latex"><a class="sourceLine" id="cb8-1" title="1"><span class="ss">$$</span></a>
-<a class="sourceLine" id="cb8-2" title="2"><span class="sc">\begin</span><span class="ss">{aligned}</span></a>
-<a class="sourceLine" id="cb8-3" title="3"><span class="sc">\left</span><span class="ss"> </span><span class="sc">\Vert</span><span class="ss"> </span><span class="sc">\quad</span></a>
-<a class="sourceLine" id="cb8-4" title="4"><span class="sc">\begin</span><span class="ss">{aligned}</span></a>
-<a class="sourceLine" id="cb8-5" title="5"><span class="ss">&amp;</span><span class="sc">\textbf</span><span class="ss">{min.} </span><span class="sc">\quad</span></a>
-<a class="sourceLine" id="cb8-6" title="6"><span class="ss">&amp;&amp;</span><span class="sc">\sum</span><span class="ss">_{j=1}^{n} c_{j} x_{j} </span><span class="sc">\in</span><span class="ss"> </span><span class="sc">\mathbb</span><span class="ss">{R} </span><span class="sc">\\</span></a>
-<a class="sourceLine" id="cb8-7" title="7"><span class="sc">\\</span></a>
-<a class="sourceLine" id="cb8-8" title="8"><span class="ss">&amp;</span><span class="sc">\textbf</span><span class="ss">{s.t.} </span><span class="sc">\quad</span></a>
-<a class="sourceLine" id="cb8-9" title="9"><span class="ss">&amp;&amp;</span><span class="sc">\sum</span><span class="ss">_{j=1}^{n} a_{ij} x_{j} </span><span class="sc">\geq</span><span class="ss"> b_{i} </span><span class="sc">\,</span><span class="ss"> (i = 1, </span><span class="sc">\cdots</span><span class="ss"> , m) </span><span class="sc">\\</span></a>
-<a class="sourceLine" id="cb8-10" title="10"><span class="ss">&amp;&amp;&amp;x_{j} </span><span class="sc">\geq</span><span class="ss"> 0 </span><span class="sc">\,</span><span class="ss"> (j = 1, </span><span class="sc">\cdots</span><span class="ss"> , n)</span></a>
-<a class="sourceLine" id="cb8-11" title="11"><span class="sc">\end</span><span class="ss">{aligned}</span></a>
-<a class="sourceLine" id="cb8-12" title="12"><span class="sc">\right</span><span class="ss">.</span></a>
-<a class="sourceLine" id="cb8-13" title="13"><span class="sc">\end</span><span class="ss">{aligned}</span></a>
-<a class="sourceLine" id="cb8-14" title="14"><span class="ss">$$</span></a></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="prettyprint linenums tex"><code class="sourceCode latex"><a class="sourceLine" id="cb10-1" title="1"><span class="ss">$$</span></a>
+<a class="sourceLine" id="cb10-2" title="2"><span class="sc">\begin</span><span class="ss">{aligned}</span></a>
+<a class="sourceLine" id="cb10-3" title="3"><span class="sc">\left</span><span class="ss"> </span><span class="sc">\Vert</span><span class="ss"> </span><span class="sc">\quad</span></a>
+<a class="sourceLine" id="cb10-4" title="4"><span class="sc">\begin</span><span class="ss">{aligned}</span></a>
+<a class="sourceLine" id="cb10-5" title="5"><span class="ss">&amp;</span><span class="sc">\textbf</span><span class="ss">{min.} </span><span class="sc">\quad</span></a>
+<a class="sourceLine" id="cb10-6" title="6"><span class="ss">&amp;&amp;</span><span class="sc">\sum</span><span class="ss">_{j=1}^{n} c_{j} x_{j} </span><span class="sc">\in</span><span class="ss"> </span><span class="sc">\mathbb</span><span class="ss">{R} </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb10-7" title="7"><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb10-8" title="8"><span class="ss">&amp;</span><span class="sc">\textbf</span><span class="ss">{s.t.} </span><span class="sc">\quad</span></a>
+<a class="sourceLine" id="cb10-9" title="9"><span class="ss">&amp;&amp;</span><span class="sc">\sum</span><span class="ss">_{j=1}^{n} a_{ij} x_{j} </span><span class="sc">\geq</span><span class="ss"> b_{i} </span><span class="sc">\,</span><span class="ss"> (i = 1, </span><span class="sc">\cdots</span><span class="ss"> , m) </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb10-10" title="10"><span class="ss">&amp;&amp;&amp;x_{j} </span><span class="sc">\geq</span><span class="ss"> 0 </span><span class="sc">\,</span><span class="ss"> (j = 1, </span><span class="sc">\cdots</span><span class="ss"> , n)</span></a>
+<a class="sourceLine" id="cb10-11" title="11"><span class="sc">\end</span><span class="ss">{aligned}</span></a>
+<a class="sourceLine" id="cb10-12" title="12"><span class="sc">\right</span><span class="ss">.</span></a>
+<a class="sourceLine" id="cb10-13" title="13"><span class="sc">\end</span><span class="ss">{aligned}</span></a>
+<a class="sourceLine" id="cb10-14" title="14"><span class="ss">$$</span></a></code></pre></div>
 <p><br></p>
 <hr />
 <p><br></p>
@@ -333,29 +387,29 @@ $$</span><br /></p>
 <ul>
 <li>Markdownでの記法</li>
 </ul>
-<div class="sourceCode" id="cb9"><pre class="prettyprint linenums tex"><code class="sourceCode latex"><a class="sourceLine" id="cb9-1" title="1"><span class="ss">$$</span></a>
-<a class="sourceLine" id="cb9-2" title="2"><span class="sc">\begin</span><span class="ss">{aligned}</span></a>
-<a class="sourceLine" id="cb9-3" title="3"><span class="ss">D &amp;= </span><span class="sc">\left</span><span class="ss">(</span></a>
-<a class="sourceLine" id="cb9-4" title="4"><span class="sc">\begin</span><span class="ss">{array}{c:c}</span></a>
-<a class="sourceLine" id="cb9-5" title="5"><span class="ss">0 &amp; C ^</span><span class="sc">\mathrm</span><span class="ss">{T} </span><span class="sc">\\</span></a>
-<a class="sourceLine" id="cb9-6" title="6"><span class="sc">\hdashline</span></a>
-<a class="sourceLine" id="cb9-7" title="7"><span class="ss">-B &amp; A</span></a>
-<a class="sourceLine" id="cb9-8" title="8"><span class="sc">\end</span><span class="ss">{array}</span></a>
-<a class="sourceLine" id="cb9-9" title="9"><span class="sc">\right</span><span class="ss">) </span><span class="sc">\\</span></a>
-<a class="sourceLine" id="cb9-10" title="10"><span class="sc">\\</span></a>
-<a class="sourceLine" id="cb9-11" title="11"><span class="ss">&amp;= </span><span class="sc">\left</span><span class="ss">(</span></a>
-<a class="sourceLine" id="cb9-12" title="12"><span class="sc">\begin</span><span class="ss">{array}{c:ccccc}</span></a>
-<a class="sourceLine" id="cb9-13" title="13"><span class="ss">0 &amp; c_{1} &amp; </span><span class="sc">\cdots</span><span class="ss"> &amp; c_{j} &amp; </span><span class="sc">\cdots</span><span class="ss"> &amp; c_{n} </span><span class="sc">\\</span></a>
-<a class="sourceLine" id="cb9-14" title="14"><span class="sc">\hdashline</span></a>
-<a class="sourceLine" id="cb9-15" title="15"><span class="ss">-b_{1} &amp; a_{11} &amp; </span><span class="sc">\cdots</span><span class="ss"> &amp; a_{1j} &amp; </span><span class="sc">\cdots</span><span class="ss"> &amp; a_{1n} </span><span class="sc">\\</span></a>
-<a class="sourceLine" id="cb9-16" title="16"><span class="sc">\vdots</span><span class="ss"> &amp; </span><span class="sc">\vdots</span><span class="ss"> &amp;&amp; </span><span class="sc">\vdots</span><span class="ss"> &amp;&amp; </span><span class="sc">\vdots</span><span class="ss"> </span><span class="sc">\\</span></a>
-<a class="sourceLine" id="cb9-17" title="17"><span class="ss">-b_{i}  &amp; a_{i1} &amp; </span><span class="sc">\cdots</span><span class="ss"> &amp; a_{ij} &amp; </span><span class="sc">\cdots</span><span class="ss"> &amp; a_{in} </span><span class="sc">\\</span></a>
-<a class="sourceLine" id="cb9-18" title="18"><span class="sc">\vdots</span><span class="ss"> &amp; </span><span class="sc">\vdots</span><span class="ss"> &amp;&amp; </span><span class="sc">\vdots</span><span class="ss"> &amp;&amp; </span><span class="sc">\vdots</span><span class="ss"> </span><span class="sc">\\</span></a>
-<a class="sourceLine" id="cb9-19" title="19"><span class="ss">-b_{m} &amp; a_{m1} &amp; </span><span class="sc">\cdots</span><span class="ss"> &amp; a_{mj} &amp; </span><span class="sc">\cdots</span><span class="ss"> &amp; a_{mn} </span><span class="sc">\\</span></a>
-<a class="sourceLine" id="cb9-20" title="20"><span class="sc">\end</span><span class="ss">{array}</span></a>
-<a class="sourceLine" id="cb9-21" title="21"><span class="sc">\right</span><span class="ss">) </span><span class="sc">\\</span></a>
-<a class="sourceLine" id="cb9-22" title="22"><span class="sc">\end</span><span class="ss">{aligned}</span></a>
-<a class="sourceLine" id="cb9-23" title="23"><span class="ss">$$</span></a></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="prettyprint linenums tex"><code class="sourceCode latex"><a class="sourceLine" id="cb11-1" title="1"><span class="ss">$$</span></a>
+<a class="sourceLine" id="cb11-2" title="2"><span class="sc">\begin</span><span class="ss">{aligned}</span></a>
+<a class="sourceLine" id="cb11-3" title="3"><span class="ss">D &amp;= </span><span class="sc">\left</span><span class="ss">(</span></a>
+<a class="sourceLine" id="cb11-4" title="4"><span class="sc">\begin</span><span class="ss">{array}{c:c}</span></a>
+<a class="sourceLine" id="cb11-5" title="5"><span class="ss">0 &amp; C ^</span><span class="sc">\mathrm</span><span class="ss">{T} </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb11-6" title="6"><span class="sc">\hdashline</span></a>
+<a class="sourceLine" id="cb11-7" title="7"><span class="ss">-B &amp; A</span></a>
+<a class="sourceLine" id="cb11-8" title="8"><span class="sc">\end</span><span class="ss">{array}</span></a>
+<a class="sourceLine" id="cb11-9" title="9"><span class="sc">\right</span><span class="ss">) </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb11-10" title="10"><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb11-11" title="11"><span class="ss">&amp;= </span><span class="sc">\left</span><span class="ss">(</span></a>
+<a class="sourceLine" id="cb11-12" title="12"><span class="sc">\begin</span><span class="ss">{array}{c:ccccc}</span></a>
+<a class="sourceLine" id="cb11-13" title="13"><span class="ss">0 &amp; c_{1} &amp; </span><span class="sc">\cdots</span><span class="ss"> &amp; c_{j} &amp; </span><span class="sc">\cdots</span><span class="ss"> &amp; c_{n} </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb11-14" title="14"><span class="sc">\hdashline</span></a>
+<a class="sourceLine" id="cb11-15" title="15"><span class="ss">-b_{1} &amp; a_{11} &amp; </span><span class="sc">\cdots</span><span class="ss"> &amp; a_{1j} &amp; </span><span class="sc">\cdots</span><span class="ss"> &amp; a_{1n} </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb11-16" title="16"><span class="sc">\vdots</span><span class="ss"> &amp; </span><span class="sc">\vdots</span><span class="ss"> &amp;&amp; </span><span class="sc">\vdots</span><span class="ss"> &amp;&amp; </span><span class="sc">\vdots</span><span class="ss"> </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb11-17" title="17"><span class="ss">-b_{i}  &amp; a_{i1} &amp; </span><span class="sc">\cdots</span><span class="ss"> &amp; a_{ij} &amp; </span><span class="sc">\cdots</span><span class="ss"> &amp; a_{in} </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb11-18" title="18"><span class="sc">\vdots</span><span class="ss"> &amp; </span><span class="sc">\vdots</span><span class="ss"> &amp;&amp; </span><span class="sc">\vdots</span><span class="ss"> &amp;&amp; </span><span class="sc">\vdots</span><span class="ss"> </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb11-19" title="19"><span class="ss">-b_{m} &amp; a_{m1} &amp; </span><span class="sc">\cdots</span><span class="ss"> &amp; a_{mj} &amp; </span><span class="sc">\cdots</span><span class="ss"> &amp; a_{mn} </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb11-20" title="20"><span class="sc">\end</span><span class="ss">{array}</span></a>
+<a class="sourceLine" id="cb11-21" title="21"><span class="sc">\right</span><span class="ss">) </span><span class="sc">\\</span></a>
+<a class="sourceLine" id="cb11-22" title="22"><span class="sc">\end</span><span class="ss">{aligned}</span></a>
+<a class="sourceLine" id="cb11-23" title="23"><span class="ss">$$</span></a></code></pre></div>
 <p><br></p>
 <hr />
 <p><br></p>
