@@ -75,8 +75,8 @@ function setSmartPhoneStyle() {
 
   /*article body*/
   var article_body_obj = document.getElementById("article_body");
-  article_body_obj.style.fontSize = "28pt"
-  article_body_obj.style.width = "24em"
+  article_body_obj.style.fontSize = "38pt"
+  article_body_obj.style.width = "18em"
 
   /*ソースコード*/
   var source_code_elements = document.getElementsByClassName("sourceCode");
