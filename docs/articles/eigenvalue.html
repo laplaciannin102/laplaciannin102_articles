@@ -1,0 +1,336 @@
+<!--
+    author: laplaciannin102
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>固有値</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<link rel="shortcut icon" href="../assets/ico/nanika_big.ico" type="image/vnd.microsoft.icon">
+<link rel="stylesheet" type="text/css" href="../assets/css/annn_articles.css">
+<style>
+</style>
+</head>
+<body>
+
+<div id="navigation_bar">
+<ul id="nav_bar_ul">
+    <!-- <li><p id="nbar_title">固有値</p></li> -->
+    <li id="nav_logo"><a id="nav_logo_a" href="../index.html">
+        <div id="nav_logo_div"></div>
+    </a></li>
+
+    <!--
+    <li id="nav_hamburger">
+        <div id="div_hamburger">
+            <div class="ham_line"></div>
+            <div class="ham_line"></div>
+            <div class="ham_line"></div>
+        </div>
+    </li>
+    -->
+
+    <li id="nav_menu"><a id="nav_menu_a" href="./table_of_contents.html">Menu</a></li>
+    <li id="nav_page_top"><a id="nav_page_top_a" href="#article_body">PageTop</a></li>
+</ul>
+</div>
+
+<div id="article_body"> <!-- body -->
+<div id="article_content"> <!-- content -->
+
+<h1 id="固有値">固有値</h1>
+<h2 id="概要">概要</h2>
+<ul>
+<li>正方行列の指標.</li>
+</ul>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="目次">目次</h2>
+<div class="table_of_contents">
+<details open>
+<p><summary>目次詳細</summary></p>
+<ul>
+<li><a href="#固有値">固有値</a>
+<ul>
+<li><a href="#概要">概要</a></li>
+<li><a href="#目次">目次</a></li>
+<li><a href="#定義1">定義1</a></li>
+<li><a href="#定義2">定義2</a></li>
+<li><a href="#固有値問題">固有値問題</a>
+<ul>
+<li><a href="#標準固有値問題">標準固有値問題</a></li>
+<li><a href="#一般化固有値問題">一般化固有値問題</a></li>
+</ul></li>
+<li><a href="#関連項目">関連項目</a></li>
+<li><a href="#参考文献">参考文献</a></li>
+</ul></li>
+</ul>
+</details>
+</div>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="定義1">定義1</h2>
+<p><span class="math inline"><em>A</em></span>を以下の様な<span class="math inline"><em>n</em></span>次の実正方行列とする.</p>
+<div class="flow_x_container">
+<p><br /><span class="math display">$$
+\begin{aligned}
+&amp;i, j \in \{ 1, \cdots , n \}, \quad a_{ij} \in \mathbb{R} \\
+\\
+&amp;A = \left(
+\begin{array}{ccccc}
+    a_{11} &amp; \cdots &amp; a_{1j} &amp; \cdots &amp; a_{1n} \\
+    \vdots &amp;        &amp; \vdots &amp;        &amp; \vdots \\
+    a_{i1} &amp; \cdots &amp; a_{ij} &amp; \cdots &amp; a_{in} \\
+    \vdots &amp;        &amp; \vdots &amp;        &amp; \vdots \\
+    a_{n1} &amp; \cdots &amp; a_{nj} &amp; \cdots &amp; a_{nn}
+\end{array}
+\right) = \left( a_{ij} \right) \in \mathbb{R}^{n \times n} \\
+&amp;: n \text{-dim matrix}
+\end{aligned}
+$$</span><br /></p>
+</div>
+<p>また, <span class="math inline"><em>I</em></span> を<strong>単位行列</strong> , <span class="math inline"><strong>0</strong></span> を<strong>ゼロベクトル</strong> とする.</p>
+<div class="flow_x_container">
+<p><br /><span class="math display">$$
+\begin{aligned}
+&amp;I = \left(
+\begin{array}{ccccc}
+    1 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
+    0 &amp; 1 &amp; \ddots &amp; &amp; 0 \\
+    \vdots &amp; \ddots &amp; \ddots &amp; \ddots &amp; \vdots \\
+    0 &amp; &amp; \ddots &amp; 1 &amp; 0 \\
+    0 &amp; 0 &amp; \cdots &amp; 0 &amp; 1
+\end{array}
+\right) \in \mathbb{R}^{n \times n} , \quad
+&amp;\boldsymbol{0} = \left(
+\begin{array}{c}
+0 \\
+\vdots \\
+0
+\end{array}
+\right) \in \mathbb{R} ^ {n}
+\end{aligned}
+$$</span><br /></p>
+</div>
+<p>次の式を満たす値 <span class="math inline"><em>λ</em></span> と<strong>ベクトル</strong> <span class="math inline"><strong>v</strong></span> が存在する時, <span class="math inline"><em>λ</em></span> を行列 <span class="math inline"><em>A</em></span> の<strong>固有値(eigenvalue)</strong> , <span class="math inline"><strong>v</strong></span> を <strong>固有ベクトル(eigenvector)</strong> という.</p>
+<div class="flow_x_container">
+<p><br /><span class="math display">$$
+\begin{aligned}
+&amp;\lambda \in \mathbb{C}, \quad
+&amp;\boldsymbol{v} = \left(
+\begin{array}{c}
+v_{1} \\
+\vdots \\
+v_{n}
+\end{array}
+\right) \in \mathbb{R} ^ {n} , \quad
+\boldsymbol{v} \neq \boldsymbol{0} \\
+\\
+&amp;A \boldsymbol{v} = \lambda \boldsymbol{v}
+\end{aligned}
+$$</span><br /></p>
+</div>
+<p>この関係は, 次の様に書くこともできる.</p>
+<div class="flow_x_container">
+<p><br /><span class="math display">$$
+\begin{aligned}
+(A - \lambda I) \boldsymbol{v} = \boldsymbol{0}
+\end{aligned}
+$$</span><br /></p>
+</div>
+<p>この関係式を <strong>標準固有値問題(standard eigenvalue problem)</strong> という.</p>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="定義2">定義2</h2>
+<p><span class="math inline"><em>V</em></span>を体<span class="math inline"><em>K</em></span>上の<strong>線形空間(vector space)</strong>, <span class="math inline"><em>T</em></span>を<span class="math inline"><em>V</em></span>の<strong>線形変換</strong>とする.</p>
+<div class="flow_x_container">
+<p><br /><span class="math display">$$
+\begin{aligned}
+&amp;K : \text{field} \\
+&amp;V : \text{vector space over } K \\
+&amp;T : V \rightarrow V : \text{linear transformation}
+\end{aligned}
+$$</span><br /></p>
+</div>
+<p><span class="math inline"><em>T</em></span>によって方向の変わらない<strong>ベクトル</strong><span class="math inline"><strong>v</strong></span>が存在する時, すなわち次の式を満たす値 <span class="math inline"><em>α</em></span> と<span class="math inline"><em>V</em></span>の元<span class="math inline"><strong>v</strong></span> が存在する時, <span class="math inline"><em>α</em></span> を <span class="math inline"><em>T</em></span> の<strong>固有値(eigenvalue)</strong> , <span class="math inline"><strong>v</strong></span> を <strong>固有ベクトル(eigenvector)</strong> という.</p>
+<div class="flow_x_container">
+<p><br /><span class="math display">$$
+\begin{aligned}
+&amp;\alpha \in K , \quad
+\boldsymbol{v} \in V \\
+&amp;T \boldsymbol{v} = \alpha \boldsymbol{v}
+\end{aligned}
+$$</span><br /></p>
+</div>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="固有値問題">固有値問題</h2>
+<p><span class="math inline"><em>A</em></span> , <span class="math inline"><em>B</em></span> を<span class="math inline"><em>n</em></span>次元正方行列, <span class="math inline"><strong>v</strong></span> を<span class="math inline"><em>n</em></span>次元ベクトル, <span class="math inline"><em>λ</em></span>を実数とする.</p>
+<div class="flow_x_container">
+<p><br /><span class="math display">$$
+\begin{aligned}
+&amp;A, B \in \mathbb{R}^{n \times n} : n \text{-dim matrix} \\
+&amp;\boldsymbol{v} \in \mathbb{R}^{n} : n \text{-dim vector} \\
+&amp;\lambda \in \mathbb{R} : \text{number} \\
+\end{aligned}
+$$</span><br /></p>
+</div>
+<h3 id="標準固有値問題">標準固有値問題</h3>
+<p>次の関係式を <strong>一般化固有値問題(standard eigenvalue problems)</strong> という.</p>
+<div class="flow_x_container">
+<p><br /><span class="math display">$$
+\begin{aligned}
+&amp;A \boldsymbol{v} = \lambda \boldsymbol{v}
+\end{aligned}
+$$</span><br /></p>
+</div>
+<h3 id="一般化固有値問題">一般化固有値問題</h3>
+<p>次の関係式を <strong>一般化固有値問題(generalized eigenvalue problems)</strong> という.</p>
+<div class="flow_x_container">
+<p><br /><span class="math display">$$
+\begin{aligned}
+&amp;A \boldsymbol{v} = \lambda B \boldsymbol{v}
+\end{aligned}
+$$</span><br /></p>
+</div>
+<p><span class="math inline"><em>B</em></span>が<strong>正則</strong>の時, すなわち逆行列<span class="math inline"><em>B</em><sup> − 1</sup></span>が存在する時, 両辺に左から<span class="math inline"><em>B</em><sup> − 1</sup></span>をかけることで, <strong>一般化固有値問題</strong>は<strong>標準固有値問題</strong>に帰着できる.</p>
+<div class="flow_x_container">
+<p><br /><span class="math display">$$
+\begin{aligned}
+&amp;{}^{\exists} B ^ {-1} \in \mathbb{R}^{n \times n} : n \text{-dim matrix} \\
+&amp;\Longrightarrow B ^ {-1} A \boldsymbol{v} = \lambda B ^ {-1} B \boldsymbol{v} \\
+&amp;\Longleftrightarrow B ^ {-1} A \boldsymbol{v} = \lambda \boldsymbol{v}
+\end{aligned}
+$$</span><br /></p>
+</div>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="関連項目">関連項目</h2>
+<ul>
+<li>固有値</li>
+<li>固有ベクトル</li>
+<li>固有方程式</li>
+<li>特異値</li>
+</ul>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li>一般社団法人 日本計算工学会 (2019) 『計算力学レクチャーコース 固有値計算と特異値計算』, 丸善出版．</li>
+<li>齋藤正彦 (1966) 『線形代数入門 基礎数学1』, 東京大学出版会．</li>
+</ul>
+<p><br></p>
+<hr />
+<p><br></p>
+<!--
+@reference:[### 固有値
+
+$$
+\begin{aligned}
+&i, j \in \{ 1, \cdots , n \}, \quad a_{ij} \in \mathbb{R} \\
+\\
+&A = \left(
+\begin{array}{ccccc}
+    a_{11} & \cdots & a_{1j} & \cdots & a_{1n} \\
+    \vdots &        & \vdots &        & \vdots \\
+    a_{i1} & \cdots & a_{ij} & \cdots & a_{in} \\
+    \vdots &        & \vdots &        & \vdots \\
+    a_{n1} & \cdots & a_{nj} & \cdots & a_{nn}
+\end{array}
+\right)
+= \left( a_{ij} \right) \in \mathbb{R}^{n \times n} \\
+\\
+&I = \left(
+\begin{array}{ccccc}
+    1 & 0 & \cdots & 0 & 0 \\
+    0 & 1 & \ddots & & 0 \\
+    \vdots & \ddots & \ddots & \ddots & \vdots \\
+    0 & & \ddots & 1 & 0 \\
+    0 & 0 & \cdots & 0 & 1
+\end{array}
+\right) \in \mathbb{R}^{n \times n} , \quad
+&\boldsymbol{0} = \left(
+\begin{array}{c}
+0 \\
+\vdots \\
+0
+\end{array}
+\right) \in \mathbb{R} ^ {n}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+&\lambda \in \mathbb{C}, \quad
+&\boldsymbol{v} = \left(
+\begin{array}{c}
+v_{1} \\
+\vdots \\
+v_{n}
+\end{array}
+\right) \in \mathbb{R} ^ {n} , \quad
+\boldsymbol{v} \neq \boldsymbol{0} \\
+\\
+&\boldsymbol{v} : \text{eigenvalue} \\
+&\lambda : \text{eigenvector} \\
+&\overset{\text{def.}}{\Longleftrightarrow}
+A \boldsymbol{v} = \lambda \boldsymbol{v} \\
+&\Longleftrightarrow
+(A - \lambda I) \boldsymbol{v} = \boldsymbol{0}
+\end{aligned}
+$$]
+-->
+<!--
+footer
+@update:2020/08/31
+@title:eigenvalue
+@class0:mathematics
+@class1:algebra
+@class2:linear_algebra
+@tags:mathematics,matrix,definition,algebra,eigenvalue
+@synonym:eigenvalue
+@release:true
+-->
+
+<br>
+<br>
+<br>
+<p>
+<img src="https://cdn.mathjax.org/mathjax/badge/mj-logo.svg" width="100" class="left">
+このページでは, 数式の表現に
+<a href="https://www.mathjax.org">MathJax</a>
+を利用しています.
+</p>
+<p>
+このページでは, シンタックスハイライト(プログラムのコードに色を付ける機能)に
+<a href="https://github.com/googlearchive/code-prettify">Google Code Prettify</a>
+を利用しています.
+</p>
+<br>
+<p>更新日: 2020/08/31</p>
+<p>Copyright (C) 2020 laplaciannin102 All Rights Reserved.</p>
+
+</div> <!-- content -->
+</div> <!-- body -->
+
+<script type="text/javascript" src="../assets/js/annn_articles.js"></script>
+
+<!--
+skin候補
+default
+desert
+sunburst
+sons-of-obsidian
+-->
+<script async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=html&lang=python&lang=lang-latex&skin=desert"></script>
+<script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+</body>
+</html>
