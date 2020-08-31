@@ -199,7 +199,7 @@ div.square_box {
     overflow-x: auto;
     padding: 0.5em 1em;
     margin: 2em 0;
-    font-weight: bold;
+    /*font-weight: bold;*/
     color: black;/*文字色*/
     border: solid rgb(120, 120, 120) 3px; /*枠線*/
     background-color: rgb(224, 240, 240); /*背景色*/
@@ -226,7 +226,7 @@ div.round_box {
     overflow-x: auto;
     padding: 0.5em 1em;
     margin: 2em 0;
-    font-weight: bold;
+    /*font-weight: bold;*/
     color: black;/*文字色*/
     border: solid rgb(120, 120, 120) 3px; /*枠線*/
     background-color: rgb(224, 240, 240); /*背景色*/
