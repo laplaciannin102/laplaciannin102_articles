@@ -1,0 +1,246 @@
+<!--
+    author: laplaciannin102
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>線形回帰</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<link rel="shortcut icon" href="../assets/ico/nanika_big.ico" type="image/vnd.microsoft.icon">
+<link rel="stylesheet" type="text/css" href="../assets/css/annn_articles.css">
+<style>
+</style>
+</head>
+<body>
+
+<div id="navigation_bar">
+<ul id="nav_bar_ul">
+    <!-- <li><p id="nbar_title">線形回帰</p></li> -->
+    <li id="nav_logo"><a id="nav_logo_a" href="../index.html">
+        <div id="nav_logo_div"></div>
+    </a></li>
+
+    <!--
+    <li id="nav_hamburger">
+        <div id="div_hamburger">
+            <div class="ham_line"></div>
+            <div class="ham_line"></div>
+            <div class="ham_line"></div>
+        </div>
+    </li>
+    -->
+
+    <li id="nav_menu"><a id="nav_menu_a" href="./table_of_contents.html">Menu</a></li>
+    <li id="nav_page_top"><a id="nav_page_top_a" href="#article_body">PageTop</a></li>
+</ul>
+</div>
+
+<div id="article_body"> <!-- body -->
+<div id="article_content"> <!-- content -->
+
+<h1 id="線形回帰">線形回帰</h1>
+<h2 id="概要">概要</h2>
+<ul>
+<li>正方行列の指標.</li>
+</ul>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="目次">目次</h2>
+<div class="table_of_contents">
+<details open>
+<p><summary>目次詳細</summary></p>
+<ul>
+<li><a href="#線形回帰">線形回帰</a>
+<ul>
+<li><a href="#概要">概要</a></li>
+<li><a href="#目次">目次</a></li>
+<li><a href="#定義">定義</a></li>
+<li><a href="#線形回帰という名前について">線形回帰という名前について</a></li>
+<li><a href="#関連項目">関連項目</a></li>
+<li><a href="#参考文献">参考文献</a></li>
+</ul></li>
+</ul>
+</details>
+</div>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="定義">定義</h2>
+<p><span class="math inline"><em>x</em><sub><em>j</em></sub></span>を <strong>説明変数(explanatory variable)</strong> , <span class="math inline"><em>y</em></span>を <strong>目的変数(objective variable)</strong> とする.</p>
+<div class="flow_x_container">
+<p><br /><span class="math display">$$
+\begin{aligned}
+&amp;j \in \{ 1, \ldots , m \} \subset \mathbb{N} \\
+&amp;x_{j} : \text{explanatory variable} \\
+&amp;y : \text{objective variable}
+\end{aligned}
+$$</span><br /></p>
+</div>
+<p>次のモデルを <strong>線形回帰(linear regression)モデル</strong> という.</p>
+<div class="flow_x_container">
+<p><br /><span class="math display">$$
+\begin{aligned}
+y &amp;= \beta_{0} + \beta_{1} x_{1} + \cdots + \beta_{j} x_{j} + \cdots + \beta_{m} x_{m} + \epsilon \\
+&amp;= \beta_{0} + \sum_{j=1}^{m} \beta_{j} x_{j} + \epsilon : \text{linear regression}
+\end{aligned}
+$$</span><br /></p>
+</div>
+<p><strong>ベクトル</strong>の内積として書くこともできる.</p>
+<div class="flow_x_container">
+<p><br /><span class="math display">$$
+\begin{aligned}
+y &amp;= \beta_{0} + \sum_{j=1}^{m} \beta_{j} x_{j} + \epsilon \\
+&amp;= \beta_{0} + \left(
+\begin{array}{c}
+x_{1} \\
+\vdots \\
+x_{j} \\
+\vdots \\
+x_{m}
+\end{array}
+\right) ^{\mathrm{T}}
+\left(
+\begin{array}{c}
+\beta_{1} \\
+\vdots \\
+\beta_{j} \\
+\vdots \\
+\beta_{m}
+\end{array}
+\right) + \epsilon \\
+\\
+&amp;= \left(
+\begin{array}{c}
+1 \\
+x_{1} \\
+\vdots \\
+x_{j} \\
+\vdots \\
+x_{m}
+\end{array}
+\right) ^{\mathrm{T}}
+\left(
+\begin{array}{c}
+\beta_{0} \\
+\beta_{1} \\
+\vdots \\
+\beta_{j} \\
+\vdots \\
+\beta_{m}
+\end{array}
+\right) + \epsilon \\
+\end{aligned}
+$$</span><br /></p>
+</div>
+<p><span class="math inline"><em>ϵ</em></span> は <strong>誤差(error)</strong> といい, 次を満たす <strong>確率変数</strong> である.</p>
+<div class="flow_x_container">
+<p><br /><span class="math display">$$
+\begin{aligned}
+&amp;E[ \epsilon ] = 0 \\
+&amp;\text{Var}( \epsilon ) = \sigma ^ 2
+\end{aligned}
+$$</span><br /></p>
+</div>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="線形回帰という名前について">線形回帰という名前について</h2>
+<p><strong>線形回帰モデル</strong> は, 回帰係数<span class="math inline"><em>β</em><sub><em>j</em></sub></span>について線形なモデルであるため線形回帰モデルという.</p>
+<p>よって, 次のモデルも <strong>線形回帰モデル</strong> といえる.</p>
+<div class="flow_x_container">
+<p><br /><span class="math display">$$
+\begin{aligned}
+y = \beta_{0} + \beta_{1} x + \beta_{2} x^{2} + \epsilon
+\end{aligned}
+$$</span><br /></p>
+</div>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="関連項目">関連項目</h2>
+<ul>
+<li>回帰モデル</li>
+<li>線形回帰</li>
+<li>一般線形モデル</li>
+<li>一般化線形モデル</li>
+<li>一般化加法モデル</li>
+<li>線形基底回帰モデル</li>
+</ul>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li>稲垣宣生 (2015) 『数学シリーズ 数理統計学(改訂版)』, 裳華房．</li>
+<li>久保川達也 (2017) 『共立講座 数学の魅力11 現代数理統計学の基礎』, 共立出版株式会社．</li>
+</ul>
+<p><br></p>
+<hr />
+<p><br></p>
+<!--
+@reference:[### 線形回帰
+
+$$
+\begin{aligned}
+&j \in \{ 1, \ldots , m \} \subset \mathbb{N} \\
+&x_{j} : \text{explanatory variable} \\
+&y : \text{objective variable}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+y &= \beta_{0} + \beta_{1} x_{1} + \cdots + \beta_{j} x_{j} + \cdots + \beta_{m} x_{m} + \epsilon \\
+&= \beta_{0} + \sum_{j=1}^{m} \beta_{j} x_{j} + \epsilon : \text{linear regression}
+\end{aligned}
+$$]
+-->
+<!--
+footer
+@update:2020/09/01
+@title:linear_regression
+@class0:mathematics
+@class1:statistics
+@class2:regression
+@tags:mathematics,statistics,regression
+@synonym:linear_regression,generalized_linear_model
+@release:true
+-->
+
+<br>
+<br>
+<br>
+<p>
+<img src="https://cdn.mathjax.org/mathjax/badge/mj-logo.svg" width="100" class="left">
+このページでは, 数式の表現に
+<a href="https://www.mathjax.org">MathJax</a>
+を利用しています.
+</p>
+<p>
+このページでは, シンタックスハイライト(プログラムのコードに色を付ける機能)に
+<a href="https://github.com/googlearchive/code-prettify">Google Code Prettify</a>
+を利用しています.
+</p>
+<br>
+<p>更新日: 2020/09/01</p>
+<p>Copyright (C) 2020 laplaciannin102 All Rights Reserved.</p>
+
+</div> <!-- content -->
+</div> <!-- body -->
+
+<script type="text/javascript" src="../assets/js/annn_articles.js"></script>
+
+<!--
+skin候補
+default
+desert
+sunburst
+sons-of-obsidian
+-->
+<script async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=html&lang=python&lang=lang-latex&skin=desert"></script>
+<script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+</body>
+</html>
