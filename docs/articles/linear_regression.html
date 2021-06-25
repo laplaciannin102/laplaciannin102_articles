@@ -50,7 +50,9 @@
 <h2 id="目次">目次</h2>
 <div class="table_of_contents">
 <details open>
-<p><summary>目次詳細</summary></p>
+<summary>
+目次詳細
+</summary>
 <ul>
 <li><a href="#線形回帰">線形回帰</a>
 <ul>
@@ -70,26 +72,26 @@
 <h2 id="定義">定義</h2>
 <p><span class="math inline"><em>x</em><sub><em>j</em></sub></span>を <strong>説明変数(explanatory variable)</strong> , <span class="math inline"><em>y</em></span>を <strong>目的変数(objective variable)</strong> とする.</p>
 <div class="flow_x_container">
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 &amp;j \in \{ 1, \ldots , m \} \subset \mathbb{N} \\
 &amp;x_{j} : \text{explanatory variable} \\
 &amp;y : \text{objective variable}
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 </div>
 <p>次のモデルを <strong>線形回帰(linear regression)モデル</strong> という.</p>
 <div class="flow_x_container">
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 y &amp;= \beta_{0} + \beta_{1} x_{1} + \cdots + \beta_{j} x_{j} + \cdots + \beta_{m} x_{m} + \epsilon \\
 &amp;= \beta_{0} + \sum_{j=1}^{m} \beta_{j} x_{j} + \epsilon : \text{linear regression}
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 </div>
 <p><strong>ベクトル</strong>の内積として書くこともできる.</p>
 <div class="flow_x_container">
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 y &amp;= \beta_{0} + \sum_{j=1}^{m} \beta_{j} x_{j} + \epsilon \\
 &amp;= \beta_{0} + \left(
@@ -132,16 +134,16 @@ x_{m}
 \end{array}
 \right) + \epsilon \\
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 </div>
 <p><span class="math inline"><em>ϵ</em></span> は <strong>誤差(error)</strong> といい, 次を満たす <strong>確率変数</strong> である.</p>
 <div class="flow_x_container">
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 &amp;E[ \epsilon ] = 0 \\
 &amp;\text{Var}( \epsilon ) = \sigma ^ 2
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 </div>
 <p><br></p>
 <hr />
@@ -150,11 +152,11 @@ $$</span><br /></p>
 <p><strong>線形回帰モデル</strong> は, 回帰係数<span class="math inline"><em>β</em><sub><em>j</em></sub></span>について線形なモデルであるため線形回帰モデルという.</p>
 <p>よって, 次のモデルも <strong>線形回帰モデル</strong> といえる.</p>
 <div class="flow_x_container">
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 y = \beta_{0} + \beta_{1} x + \beta_{2} x^{2} + \epsilon
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 </div>
 <p><br></p>
 <hr />

@@ -53,7 +53,9 @@
 <h2 id="目次">目次</h2>
 <div class="table_of_contents">
 <details open>
-<p><summary>目次詳細</summary></p>
+<summary>
+目次詳細
+</summary>
 <ul>
 <li><a href="#線形計画問題">線形計画問題</a>
 <ul>
@@ -86,12 +88,12 @@
 </ul>
 <p><strong>線形計画問題</strong> は次のように表記できる.</p>
 <div class="square_box">
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 x_{j} , a_{ij} , b_{i} , c_{j} \in \mathbb{R}
 \end{aligned}
-$$</span><br /></p>
-<p><br /><span class="math display">$$
+$$</span></p>
+<p><span class="math display">$$
 \begin{aligned}
 \left \Vert \quad
 \begin{aligned}
@@ -104,30 +106,30 @@ $$</span><br /></p>
 \end{aligned}
 \right.
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 </div>
 <p><br></p>
 <hr />
 <p><br></p>
 <h2 id="定式化">定式化</h2>
 <p>以下,</p>
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 x_{j} , a_{ij} , b_{i} , c_{j} \in \mathbb{R}
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 <p>とする.</p>
 <p><strong><span class="ref_span">
     <a class="referrer" href="./optimization_problem.html">最適化問題</a>
     <object class="ref_html" data="../assets/ref_html/ref_optimization_problem.html" type="text/plain"></object>
 </span>(最小化)</strong> は</p>
 <div class="square_box">
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 f : X \supset S \rightarrow \mathbb{R}
 \end{aligned}
-$$</span><br /></p>
-<p><br /><span class="math display">$$
+$$</span></p>
+<p><span class="math display">$$
 \begin{aligned}
 \left \Vert \quad
 \begin{aligned}
@@ -136,11 +138,11 @@ $$</span><br /></p>
 \end{aligned}
 \right.
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 </div>
 <p>と書けるので, <strong>線形計画問題</strong> は条件を順に書けば,</p>
 <div class="square_box">
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 &amp;X = \mathbb{R} ^n \\
 &amp;S = \begin{Bmatrix}
@@ -168,12 +170,12 @@ x_n
 \end{aligned}
 \right.
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 </div>
 <p>となる.</p>
 <p>まとめて書けば,</p>
 <div class="square_box">
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 \left \Vert \quad
 \begin{aligned}
@@ -199,11 +201,11 @@ x_n
 \end{aligned}
 \right.
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 </div>
 <p>つまり, <strong>線形計画問題</strong> は以下で書ける.</p>
 <div class="square_box">
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 \left \Vert \quad
 \begin{aligned}
@@ -216,7 +218,7 @@ $$</span><br /></p>
 \end{aligned}
 \right.
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 </div>
 <p><br></p>
 <hr />
@@ -224,12 +226,12 @@ $$</span><br /></p>
 <h2 id="不等式標準形">不等式標準形</h2>
 <p>以下の形の<strong>線形計画問題</strong>を<strong>不等式標準形</strong>という.</p>
 <div class="square_box">
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 x_{j} , a_{ij} , b_{i} , c_{j} \in \mathbb{R}
 \end{aligned}
-$$</span><br /></p>
-<p><br /><span class="math display">$$
+$$</span></p>
+<p><span class="math display">$$
 \begin{aligned}
 \left \Vert \quad
 \begin{aligned}
@@ -242,10 +244,10 @@ $$</span><br /></p>
 \end{aligned}
 \right.
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 </div>
 <p><span class="math inline"><strong>x</strong></span> , <span class="math inline"><em>C</em></span> , <span class="math inline"><em>B</em></span> , <span class="math inline"><em>A</em></span> を</p>
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 &amp;\boldsymbol{x} = \left(
 \begin{array}{c}
@@ -272,9 +274,9 @@ a_{m1} &amp; \cdots &amp; a_{mj} &amp; \cdots &amp; a_{mn} \\
 \end{array}
 \right) \in \mathbb{R} ^ {m \times n}
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 <p>とすると,</p>
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 C ^\mathrm{T} \boldsymbol{x} &amp;= \left(
 \begin{array}{c}
@@ -293,9 +295,9 @@ x_{n}
 \\
 &amp;= \sum_{j=1}^{n} c_{j} x_{j}
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 <p>であり,</p>
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 A \boldsymbol{x} &amp;= \left(
 \begin{array}{ccccc}
@@ -326,11 +328,11 @@ x_{n}
 \end{array}
 \right)
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 <p>より,</p>
 <p><strong>不等式標準形</strong>は</p>
 <div class="square_box">
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 &amp;\boldsymbol{x} = \left(
 \begin{array}{ccc}
@@ -353,8 +355,8 @@ a_{ij}
 \end{array}
 \right) \in \mathbb{R} ^ {m \times n}
 \end{aligned}
-$$</span><br /></p>
-<p><br /><span class="math display">$$
+$$</span></p>
+<p><span class="math display">$$
 \begin{aligned}
 \left \Vert \quad
 \begin{aligned}
@@ -366,11 +368,11 @@ $$</span><br /></p>
 \end{aligned}
 \right.
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 </div>
 <p>と書ける.</p>
 <p>ただし,</p>
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 &amp;\boldsymbol{0} =
 \left(\begin{array}{c}
@@ -381,7 +383,7 @@ $$</span><br /></p>
 = \boldsymbol{v} \overset{\text{def.}}{\Longleftrightarrow}
 ^\forall i , u_i \geq v_i
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 <p>とする.</p>
 <p><br></p>
 <hr />
@@ -389,12 +391,12 @@ $$</span><br /></p>
 <h2 id="等式標準形">等式標準形</h2>
 <p>以下の形の<strong>線形計画問題</strong>を<strong>等式標準形</strong>という.</p>
 <div class="square_box">
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 x_{j} , a_{ij} , b_{i} , c_{j} \in \mathbb{R}
 \end{aligned}
-$$</span><br /></p>
-<p><br /><span class="math display">$$
+$$</span></p>
+<p><span class="math display">$$
 \begin{aligned}
 \left \Vert \quad
 \begin{aligned}
@@ -407,11 +409,11 @@ $$</span><br /></p>
 \end{aligned}
 \right.
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 </div>
 <p>不等式標準形と同様に,</p>
 <div class="square_box">
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 &amp;\boldsymbol{x} = \left(
 \begin{array}{ccc}
@@ -434,8 +436,8 @@ a_{ij}
 \end{array}
 \right) \in \mathbb{R} ^ {m \times n}
 \end{aligned}
-$$</span><br /></p>
-<p><br /><span class="math display">$$
+$$</span></p>
+<p><span class="math display">$$
 \begin{aligned}
 \left \Vert \quad
 \begin{aligned}
@@ -447,7 +449,7 @@ $$</span><br /></p>
 \end{aligned}
 \right.
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 </div>
 <p>と書ける.</p>
 <p><br></p>

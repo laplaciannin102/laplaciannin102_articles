@@ -50,7 +50,9 @@
 <h2 id="目次">目次</h2>
 <div class="table_of_contents">
 <details open>
-<p><summary>目次詳細</summary></p>
+<summary>
+目次詳細
+</summary>
 <ul>
 <li><a href="#完全加法族">完全加法族</a>
 <ul>
@@ -80,16 +82,16 @@
 <h2 id="定義">定義</h2>
 <p><span class="math inline"><em>X</em></span>を<strong>集合</strong>, <span class="math inline"><strong>B</strong></span>を<span class="math inline"><em>X</em></span>の<strong>部分集合族</strong>とする.</p>
 <div class="flow_x_container">
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 &amp;X : \text{set} \\
 &amp;\boldsymbol{B} \subset \mathfrak{P}(X) : \text{family of subsets of } X
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 </div>
 <p><span class="math inline"><strong>B</strong></span>が次の条件を満たす時, <span class="math inline"><strong>B</strong></span>を<span class="math inline"><em>X</em></span>上の <strong>完全加法族(completely additive class of sets)</strong> という.</p>
 <div class="flow_x_container">
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 &amp;\text{(1)} \quad
 \phi \in \boldsymbol{B} \\
@@ -100,14 +102,14 @@ A \in \boldsymbol{B}
 n \in \mathbb{N} , \quad A_{n} \in \boldsymbol{B}
 \Longrightarrow \overset{\infty}{\underset{n=1}{\bigcup}} A_{n} \in \boldsymbol{B}
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 </div>
 <p><br></p>
 <hr />
 <p><br></p>
 <h2 id="性質">性質</h2>
 <div class="flow_x_container">
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 &amp;\text{(4)} \quad
 X \in \boldsymbol{B} \\
@@ -115,7 +117,7 @@ X \in \boldsymbol{B} \\
 n \in \mathbb{N} , \quad A_{n} \in \boldsymbol{B}
 \Longrightarrow \overset{\infty}{\underset{n=1}{\bigcap}} A_{n} \in \boldsymbol{B}
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 </div>
 <p>(1)の代わりに(4)で定義することもある.</p>
 <p>(3)と(5)は完全加法族の元同士の和集合, 積集合もその完全加法族の元となる, ということ.</p>
@@ -125,13 +127,15 @@ $$</span><br /></p>
 </ul>
 <div class="no_border_square_box">
 <details>
-<p><summary>証明詳細</summary></p>
+<summary>
+証明詳細
+</summary>
 <p>(1), (2)より,</p>
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 X = X - \phi \in \boldsymbol{B}
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 <p>[証明終わり]</p>
 </details>
 </div>
@@ -141,21 +145,23 @@ $$</span><br /></p>
 </ul>
 <div class="no_border_square_box">
 <details>
-<p><summary>証明詳細</summary></p>
+<summary>
+証明詳細
+</summary>
 <p>(2), (3)より,</p>
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 n \in \mathbb{N} , \quad A_{n} \in \boldsymbol{B}
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 <p>ならば</p>
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 \overset{\infty}{\underset{n=1}{\bigcap}} A_{n}
 = \left( \overset{\infty}{\underset{n=1}{\bigcup}} A_{n}^{c} \right) ^{c}
 \in \boldsymbol{B}
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 <p>[証明終わり]</p>
 </details>
 </div>
@@ -163,41 +169,43 @@ $$</span><br /></p>
 <hr />
 <p><br></p>
 <h2 id="集合の性質補足">集合の性質補足</h2>
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 \overset{\infty}{\underset{n=1}{\bigcap}} A_{n}
 = \left( \overset{\infty}{\underset{n=1}{\bigcup}} A_{n}^{c} \right) ^{c}
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 <p>について</p>
 <h2 id="補足の証明">補足の証明</h2>
 <div class="no_border_square_box">
 <details>
-<p><summary>証明詳細</summary></p>
+<summary>
+証明詳細
+</summary>
 <div class="flow_x_container">
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 ^{\forall} n \in \mathbb{N}, \quad
 \overset{\infty}{\underset{n=1}{\bigcap}} A_{n}
 \subset A_{n}
 \subset \overset{\infty}{\underset{n=1}{\bigcup}} A_{n}
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 </div>
 <p>が成り立つ. 補集合を取ると,</p>
 <div class="flow_x_container">
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 ^{\forall} n \in \mathbb{N}, \quad
 \left( \overset{\infty}{\underset{n=1}{\bigcap}} A_{n} \right) ^{c}
 \supset A_{n}^{c}
 \supset \left( \overset{\infty}{\underset{n=1}{\bigcup}} A_{n} \right) ^{c}
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 </div>
 <p>であるため,</p>
 <div class="flow_x_container">
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 \overset{\infty}{\underset{n=1}{\bigcup}} A_{n}^{c}
 \subset \left( \overset{\infty}{\underset{n=1}{\bigcap}} A_{n} \right) ^{c}
@@ -207,26 +215,26 @@ $$</span><br /></p>
 \subset \overset{\infty}{\underset{n=1}{\bigcap}} A_{n}^{c}
 \qquad \text{(ii)}
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 </div>
 <p>が成り立つ.</p>
 <p>(i), (ii)より,</p>
 <div class="flow_x_container">
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 \left( \overset{\infty}{\underset{n=1}{\bigcap}} A_{n} \right) ^{c}
 = \overset{\infty}{\underset{n=1}{\bigcup}} A_{n}^{c}
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 </div>
 <p>補集合を取れば,</p>
 <div class="flow_x_container">
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 \overset{\infty}{\underset{n=1}{\bigcap}} A_{n}
 = \left( \overset{\infty}{\underset{n=1}{\bigcup}} A_{n}^{c} \right) ^{c}
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 </div>
 <p>[証明終わり]</p>
 </details>
@@ -249,54 +257,56 @@ $$</span><br /></p>
 <h2 id="生成される完全加法族">生成される完全加法族</h2>
 <p><span class="math inline"><em>X</em></span>を集合, <span class="math inline"><strong>A</strong></span>を<span class="math inline"><em>X</em></span>上の任意の<strong>部分集合族</strong>, <span class="math inline">𝔅</span>を<span class="math inline"><strong>A</strong></span>を含む<span class="math inline"><em>X</em></span>上の<strong>完全加法族全体</strong>の集合とする.</p>
 <div class="flow_x_container">
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 &amp;X : \text{set} \\
 &amp;\boldsymbol{A} \subset \mathfrak{P}(X) : \text{family of subsets of } X \\
 &amp;\mathfrak{B} = \{ \boldsymbol{B} \subset \mathfrak{P}(X) : \text{completely additive class of sets of } X \mid \boldsymbol{A} \subset \boldsymbol{B} \} \\
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 </div>
 <p>この時, 任意の<span class="math inline"><em>X</em></span>の部分集合族<span class="math inline"><strong>A</strong></span>に対し, <span class="math inline"><strong>A</strong></span>を含む<strong>最小</strong>の完全加法族が存在する.</p>
 <div class="no_border_square_box">
 <details>
-<p><summary>証明詳細</summary></p>
+<summary>
+証明詳細
+</summary>
 <div class="flow_x_container">
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 \boldsymbol{A} \subset \mathfrak{P}(X) \in \mathfrak{B}
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 </div>
 <p>より,</p>
 <div class="flow_x_container">
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 \mathfrak{B} \neq \phi
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 </div>
 <p>である. ここで, 次の集合を考えるとこれは最小かつ完全加法族である.</p>
 <div class="flow_x_container">
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 \overset{}{\underset{\boldsymbol{B} \in \mathfrak{B}}{\bigcap}} \boldsymbol{B}
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 </div>
 <p>最小性は次で分かる.</p>
 <div class="flow_x_container">
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 {}^{\forall} \boldsymbol{B} \in \mathfrak{B}, \quad
 \overset{}{\underset{\boldsymbol{B} \in \mathfrak{B}}{\bigcap}} \boldsymbol{B}
 \subset \boldsymbol{B}
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 </div>
 <p>完全加法族であることは次で分かる.</p>
 <div class="flow_x_container">
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 &amp;\text{(1)} \quad
 &amp;&amp;{}^{\forall} \boldsymbol{B} , \, \phi \in \boldsymbol{B} \\
@@ -313,19 +323,19 @@ $$</span><br /></p>
 &amp;&amp;&amp;\Longrightarrow {}^{\forall} \boldsymbol{B} , \, \overset{\infty}{\underset{n=1}{\bigcup}} A_{n} \in \boldsymbol{B} \\
 &amp;&amp;&amp;\Longrightarrow \overset{\infty}{\underset{n=1}{\bigcup}} A_{n} \in \overset{}{\underset{\boldsymbol{B} \in \mathfrak{B}}{\bigcap}} \boldsymbol{B}
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 </div>
 <p>[証明終わり]</p>
 </details>
 </div>
 <p>この<strong>完全加法族</strong>を<span class="math inline"><strong>A</strong></span>から<strong>生成される完全加法族</strong>といい, 次の式で表す.</p>
 <div class="flow_x_container">
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 \boldsymbol{B} [ \boldsymbol{A} ]
 = \overset{}{\underset{\boldsymbol{B} \in \mathfrak{B}}{\bigcap}} \boldsymbol{B}
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 </div>
 <p><br></p>
 <hr />
@@ -334,20 +344,20 @@ $$</span><br /></p>
 <h3 id="定義-1">定義</h3>
 <p><span class="math inline"><em>X</em></span>を<span class="math inline"><em>n</em></span>次元<strong>ユークリッド空間</strong>, その<strong>開集合全体(開集合系)</strong> を<span class="math inline"><strong>O</strong><sup>(<em>n</em>)</sup></span>とする.</p>
 <div class="flow_x_container">
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 &amp;X = \mathbb{R} ^ {n} : \text{set} \\
 &amp;\boldsymbol{O}^{(n)} = \{ O \in X \mid O : \text{open set} \}
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 </div>
 <p>この時, 開集合系<span class="math inline"><strong>O</strong><sup>(<em>n</em>)</sup></span>から<strong>生成される加法族</strong>を<span class="math inline"><em>n</em></span>次元<strong>ボレル集合族</strong> といい, <span class="math inline"><strong>B</strong><sup>(<em>n</em>)</sup></span>で表す.</p>
 <div class="flow_x_container">
-<p><br /><span class="math display">$$
+<p><span class="math display">$$
 \begin{aligned}
 &amp;\boldsymbol{B}^{(n)} = \boldsymbol{B} [ \boldsymbol{O}^{(n)} ]
 \end{aligned}
-$$</span><br /></p>
+$$</span></p>
 </div>
 <p><strong>ボレル集合族</strong>の元を<strong>ボレル集合</strong>という.</p>
 <p>より一般に, <strong>位相空間</strong> <span class="math inline"><em>X</em></span>の<strong>開集合全体</strong> <span class="math inline"><strong>O</strong><sub><em>X</em></sub></span> から<strong>生成される加法族</strong>を<span class="math inline"><em>X</em></span>の<strong>ボレル集合族</strong>といい, <span class="math inline"><strong>B</strong><sub><em>X</em></sub></span>で表す.</p>
