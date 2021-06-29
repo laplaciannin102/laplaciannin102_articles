@@ -349,61 +349,29 @@ object.ref_html:hover {
 
 
 /*table*/
-table, th, td {
-    background-color: white;
-    border: 1.5px solid black;
-}
-
-
 table {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center; /*中央寄せ*/
-    border-collapse:separate;
-    border-spacing: 0;
-}
-
-
-/*表のタイトル*/
-table th {
+    background-color: white;
+    border: 0.5px solid black;
+    border-collapse: collapse;
     text-align: center;
-    color:white;
-    background: linear-gradient(#829ebc,#225588);
-    border-left: 1px solid #3c6690;
-    border-top: 1px solid #3c6690;
-    border-bottom: 1px solid #3c6690;
-    box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
-    padding: 0.5em 0.75em;
+    /*width: 50%;*/
 }
 
-
-/*表の要素*/
-table td {
+th, td {
     text-align: center;
-    border-left: 1px solid #a8b7c5;
-    border-bottom: 1px solid #a8b7c5;
-    border-top:none;
-    box-shadow: 0px -3px 5px 1px #eee inset;
-    padding: 0.25em 0.75em;
+    padding: 8px;
 }
 
-table th:first-child {
-    border-radius: 5px 0 0 0;
+tr:nth-child(even){
+    background-color: #f2f2f2;
 }
 
-table th:last-child {
-    border-radius: 0 5px 0 0;
-    border-right: 1px solid #3c6690;
+tr:hover {
+    background-color: #d3d3d3; /*lightgray*/
 }
 
-table td:last-child {
-    border-right: 1px solid #a8b7c5;
+th {
+    background-color: #003366;
+    color: white;
 }
 
-table tr:last-child td:first-child {
-    border-radius: 0 0 0 5px;
-}
-
-table tr:last-child td:last-child {
-    border-radius: 0 0 5px 0;
-}
