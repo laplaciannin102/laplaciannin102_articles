@@ -1,0 +1,344 @@
+<!--
+    author: laplaciannin102
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>色々な行列</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<link rel="shortcut icon" href="../assets/ico/nanika_big.ico" type="image/vnd.microsoft.icon">
+<link rel="stylesheet" type="text/css" href="../assets/css/annn_articles.css">
+<style>
+</style>
+</head>
+<body>
+
+<div id="navigation_bar">
+<ul id="nav_bar_ul">
+    <!-- <li><p id="nbar_title">色々な行列</p></li> -->
+    <li id="nav_logo"><a id="nav_logo_a" href="../index.html">
+        <div id="nav_logo_div"></div>
+    </a></li>
+
+    <!--
+    <li id="nav_hamburger">
+        <div id="div_hamburger">
+            <div class="ham_line"></div>
+            <div class="ham_line"></div>
+            <div class="ham_line"></div>
+        </div>
+    </li>
+    -->
+
+    <li id="nav_menu"><a id="nav_menu_a" href="./table_of_contents.html">Menu</a></li>
+    <li id="nav_page_top"><a id="nav_page_top_a" href="#article_body">PageTop</a></li>
+</ul>
+</div>
+
+<div id="article_body"> <!-- body -->
+<div id="article_content"> <!-- content -->
+
+<h1 id="色々な行列">色々な行列</h1>
+<h2 id="概要">概要</h2>
+<ul>
+<li>色々な行列をメモ.</li>
+</ul>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="目次">目次</h2>
+<div class="table_of_contents">
+<details open>
+<summary>
+目次詳細
+</summary>
+<ul>
+<li><a href="#色々な行列">色々な行列</a>
+<ul>
+<li><a href="#概要">概要</a></li>
+<li><a href="#目次">目次</a></li>
+<li><a href="#早見表">早見表</a></li>
+<li><a href="#行列">行列</a></li>
+<li><a href="#正方行列">正方行列</a></li>
+<li><a href="#転置行列">転置行列</a></li>
+<li><a href="#随伴行列">随伴行列</a></li>
+<li><a href="#対称行列">対称行列</a></li>
+<li><a href="#エルミート行列">エルミート行列</a></li>
+<li><a href="#直交行列">直交行列</a></li>
+<li><a href="#ユニタリ行列">ユニタリ行列</a></li>
+<li><a href="#関連項目">関連項目</a></li>
+<li><a href="#参考文献">参考文献</a></li>
+</ul></li>
+</ul>
+</details>
+</div>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="早見表">早見表</h2>
+<ul>
+<li>no contents</li>
+</ul>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="行列">行列</h2>
+<ul>
+<li><span class="math inline"><em>m</em> × <em>n</em></span> 行列</li>
+</ul>
+<div class="flow_x_container">
+<p><span class="math display">$$
+\begin{aligned}
+&amp;A = \left(
+\begin{array}{ccccc}
+a_{11} &amp; \cdots &amp; a_{1j} &amp; \cdots &amp; a_{1n} \\
+\vdots &amp;&amp; \vdots &amp;&amp; \vdots \\
+a_{i1} &amp; \cdots &amp; a_{ij} &amp; \cdots &amp; a_{in} \\
+\vdots &amp;&amp; \vdots &amp;&amp; \vdots \\
+a_{m1} &amp; \cdots &amp; a_{mj} &amp; \cdots &amp; a_{mn} \\
+\end{array}
+\right) \in \mathbb{C} ^ {m \times n} \\
+\\
+&amp;: m \times n \, \text{complex matrix}
+\end{aligned}
+$$</span></p>
+</div>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="正方行列">正方行列</h2>
+<p><span class="math inline"><em>A</em></span>を <span class="math inline"><em>m</em> × <em>n</em></span> 行列とする.</p>
+<div class="flow_x_container">
+<p><span class="math display">$$
+\begin{aligned}
+A \in \mathbb{C} ^ {m \times n} : m \times n \, \text{complex matrix}
+\end{aligned}
+$$</span></p>
+</div>
+<p>次の式</p>
+<div class="flow_x_container">
+<p><span class="math display">$$
+\begin{aligned}
+m = n
+\end{aligned}
+$$</span></p>
+</div>
+<p>が成り立つ時, つまり</p>
+<div class="flow_x_container">
+<p><span class="math display">$$
+\begin{aligned}
+&amp;A = \left(
+\begin{array}{ccccc}
+a_{11} &amp; \cdots &amp; a_{1j} &amp; \cdots &amp; a_{1n} \\
+\vdots &amp;&amp; \vdots &amp;&amp; \vdots \\
+a_{i1} &amp; \cdots &amp; a_{ij} &amp; \cdots &amp; a_{in} \\
+\vdots &amp;&amp; \vdots &amp;&amp; \vdots \\
+a_{n1} &amp; \cdots &amp; a_{nj} &amp; \cdots &amp; a_{nn} \\
+\end{array}
+\right) \in \mathbb{C} ^ {n \times n} \\
+\\
+&amp;: n \times n \, \text{complex matrix}
+\end{aligned}
+$$</span></p>
+</div>
+<p>と書ける時, 行列<span class="math inline"><em>A</em></span>を <strong>正方行列(square matrix)</strong> という.</p>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="転置行列">転置行列</h2>
+<p><span class="math inline"><em>A</em></span>を <span class="math inline"><em>m</em> × <em>n</em></span> 行列とする.</p>
+<div class="flow_x_container">
+<p><span class="math display">$$
+\begin{aligned}
+A \in \mathbb{C} ^ {m \times n} : m \times n \, \text{complex matrix}
+\end{aligned}
+$$</span></p>
+</div>
+<p>次の式</p>
+<div class="flow_x_container">
+<p><span class="math display">$$
+\begin{aligned}
+B &amp;= A ^\mathrm{T} \\
+&amp;= \left(
+\begin{array}{ccccc}
+a_{11} &amp; \cdots &amp; a_{i1} &amp; \cdots &amp; a_{m1} \\
+\vdots &amp;&amp; \vdots &amp;&amp; \vdots \\
+a_{1j} &amp; \cdots &amp; a_{ij} &amp; \cdots &amp; a_{mj} \\
+\vdots &amp;&amp; \vdots &amp;&amp; \vdots \\
+a_{1n} &amp; \cdots &amp; a_{in} &amp; \cdots &amp; a_{nm} \\
+\end{array}
+\right) \in \mathbb{R} ^ {n \times m}
+\end{aligned}
+$$</span></p>
+</div>
+<p>を満たす行列<span class="math inline"><em>B</em></span>を行列<span class="math inline"><em>A</em></span>の <strong>転置行列(transposed matrix)</strong> という.</p>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="随伴行列">随伴行列</h2>
+<p><span class="math inline"><em>A</em></span>を <span class="math inline"><em>m</em> × <em>n</em></span> 複素行列とする.</p>
+<div class="flow_x_container">
+<p><span class="math display">$$
+\begin{aligned}
+A \in \mathbb{C} ^ {m \times n} : m \times n \, \text{complex matrix}
+\end{aligned}
+$$</span></p>
+</div>
+<p>この時,</p>
+<div class="flow_x_container">
+<p><span class="math display">$$
+\begin{aligned}
+A ^\ast = \overline{ ( A ^\mathrm{T} ) } = ( \overline{A} ) ^\mathrm{T}
+\end{aligned}
+$$</span></p>
+</div>
+<p>を<span class="math inline"><em>A</em></span>の <strong>随伴行列(adjoint matrix)</strong> という.</p>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="対称行列">対称行列</h2>
+<p><span class="math inline"><em>A</em></span>を <span class="math inline"><em>n</em></span> 次実正方行列とする.</p>
+<div class="flow_x_container">
+<p><span class="math display">$$
+\begin{aligned}
+A \in \mathbb{R} ^ {n \times n} : n \text{-dim real square matrix}
+\end{aligned}
+$$</span></p>
+</div>
+<p>次の式</p>
+<div class="flow_x_container">
+<p><span class="math display">$$
+\begin{aligned}
+A = A ^\mathrm{T}
+\end{aligned}
+$$</span></p>
+</div>
+<p>が成り立つ時, <span class="math inline"><em>A</em></span>を <strong>対称行列(symmetric matrix)</strong> という.</p>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="エルミート行列">エルミート行列</h2>
+<p><span class="math inline"><em>A</em></span>を <span class="math inline"><em>n</em></span> 次複素正方行列とする.</p>
+<div class="flow_x_container">
+<p><span class="math display">$$
+\begin{aligned}
+A \in \mathbb{C} ^ {n \times n} : n \text{-dim complex square matrix}
+\end{aligned}
+$$</span></p>
+</div>
+<p>次の式</p>
+<div class="flow_x_container">
+<p><span class="math display">$$
+\begin{aligned}
+A = A ^\ast
+\end{aligned}
+$$</span></p>
+</div>
+<p>が成り立つ時, <span class="math inline"><em>A</em></span>を <strong>エルミート行列(Hermitian matrix)</strong> または <strong>自己随伴行列(self-adjoint matrix)</strong> という. <strong>直交行列</strong> は <strong>実ユニタリ行列</strong> のこと.</p>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="直交行列">直交行列</h2>
+<p><span class="math inline"><em>A</em></span>を <span class="math inline"><em>n</em></span> 次実正方行列とする.</p>
+<div class="flow_x_container">
+<p><span class="math display">$$
+\begin{aligned}
+A \in \mathbb{R} ^ {n \times n} : n \text{-dim real square matrix}
+\end{aligned}
+$$</span></p>
+</div>
+<p>次の式</p>
+<div class="flow_x_container">
+<p><span class="math display">$$
+\begin{aligned}
+A ^\mathrm{T} A = A A ^\mathrm{T} = I
+\end{aligned}
+$$</span></p>
+</div>
+<p>が成り立つ時, <span class="math inline"><em>A</em></span>を <strong>直交行列(orthogonal matrix)</strong> という.</p>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="ユニタリ行列">ユニタリ行列</h2>
+<p><span class="math inline"><em>A</em></span>を <span class="math inline"><em>n</em></span> 次複素正方行列とする.</p>
+<div class="flow_x_container">
+<p><span class="math display">$$
+\begin{aligned}
+A \in \mathbb{C} ^ {n \times n} : n \text{-dim complex square matrix}
+\end{aligned}
+$$</span></p>
+</div>
+<p>次の式</p>
+<div class="flow_x_container">
+<p><span class="math display">$$
+\begin{aligned}
+A ^\ast A = A A ^\ast = I
+\end{aligned}
+$$</span></p>
+</div>
+<p>が成り立つ時, <span class="math inline"><em>A</em></span>を <strong>ユニタリ行列(unitary matrix)</strong> という. <strong>直交行列</strong> は <strong>実ユニタリ行列</strong> のこと.</p>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="関連項目">関連項目</h2>
+<ul>
+<li>no contents</li>
+</ul>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li>no contents</li>
+</ul>
+<p><br></p>
+<hr />
+<p><br></p>
+<!--
+footer
+@update:2021/07/04
+@title:various_matrix
+@class0:mathematics
+@class1:algebra
+@class2:
+@tags:mathematics,algebra
+@synonym:
+@release:true
+-->
+
+<br>
+<br>
+<br>
+<p>
+<img src="https://cdn.mathjax.org/mathjax/badge/mj-logo.svg" width="100" class="left">
+このページでは, 数式の表現に
+<a href="https://www.mathjax.org">MathJax</a>
+を利用しています.
+</p>
+<p>
+このページでは, シンタックスハイライト(プログラムのコードに色を付ける機能)に
+<a href="https://github.com/googlearchive/code-prettify">Google Code Prettify</a>
+を利用しています.
+</p>
+<br>
+<p>更新日: 2021/07/04</p>
+<p>Copyright (C) 2020 laplaciannin102 All Rights Reserved.</p>
+
+</div> <!-- content -->
+</div> <!-- body -->
+
+<script type="text/javascript" src="../assets/js/annn_articles.js"></script>
+
+<!--
+skin候補
+default
+desert
+sunburst
+sons-of-obsidian
+-->
+<script async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=html&lang=python&lang=lang-latex&skin=desert"></script>
+<script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+</body>
+</html>
