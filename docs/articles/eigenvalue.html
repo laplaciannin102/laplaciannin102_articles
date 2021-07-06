@@ -65,6 +65,7 @@
 <li><a href="#標準固有値問題">標準固有値問題</a></li>
 <li><a href="#一般化固有値問題">一般化固有値問題</a></li>
 </ul></li>
+<li><a href="#固有分解">固有分解</a></li>
 <li><a href="#関連項目">関連項目</a></li>
 <li><a href="#参考文献">参考文献</a></li>
 </ul></li>
@@ -183,7 +184,7 @@ $$</span></p>
 $$</span></p>
 </div>
 <h3 id="標準固有値問題">標準固有値問題</h3>
-<p>次の関係式を <strong>一般化固有値問題(standard eigenvalue problems)</strong> という.</p>
+<p>次の関係式を <strong>標準固有値問題(standard eigenvalue problems)</strong> という.</p>
 <div class="flow_x_container">
 <p><span class="math display">$$
 \begin{aligned}
@@ -205,11 +206,143 @@ $$</span></p>
 <p><span class="math display">$$
 \begin{aligned}
 &amp;{}^{\exists} B ^ {-1} \in \mathbb{R}^{n \times n} : n \text{-dim matrix} \\
-&amp;\Longrightarrow B ^ {-1} A \boldsymbol{v} = \lambda B ^ {-1} B \boldsymbol{v} \\
-&amp;\Longleftrightarrow B ^ {-1} A \boldsymbol{v} = \lambda \boldsymbol{v}
+\Longrightarrow &amp; B ^ {-1} A \boldsymbol{v} = \lambda B ^ {-1} B \boldsymbol{v} \\
+\Longleftrightarrow &amp; B ^ {-1} A \boldsymbol{v} = \lambda \boldsymbol{v}
 \end{aligned}
 $$</span></p>
 </div>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="固有分解">固有分解</h2>
+<p>行列 <span class="math inline"><em>A</em></span> を <span class="math inline"><em>n</em></span> 次実正方行列とする.</p>
+<div class="flow_x_container">
+<p><span class="math display">$$
+\begin{aligned}
+&amp;A \in M_{n, n}(\mathbb{R})
+\end{aligned}
+$$</span></p>
+</div>
+<p><span class="math inline"><em>λ</em><sub><em>i</em></sub></span> を行列<span class="math inline"><em>A</em></span>の固有値, <span class="math inline"><em>λ</em><sub><em>i</em></sub></span> に対応する固有ベクトルを <span class="math inline"><strong>v</strong><sub><em>i</em></sub></span>, つまり</p>
+<div class="flow_x_container">
+<p><span class="math display">$$
+\begin{aligned}
+&amp;^\forall j = 1, \ldots , n \\
+&amp;\lambda_{j} \in \mathbb{C} , \quad \boldsymbol{v}_{j} \in \mathbb{R} ^n , \quad A \boldsymbol{v}_{j} = \lambda_{j} \boldsymbol{v}_{j}
+\end{aligned}
+$$</span></p>
+</div>
+<p>とする. この時,</p>
+<div class="flow_x_container">
+<p><span class="math display">$$
+\begin{aligned}
+A \left(
+\begin{array}{c}
+\boldsymbol{v}_{1} \\
+\vdots \\
+\boldsymbol{v}_{j} \\
+\vdots \\
+\boldsymbol{v}_{n}
+\end{array}
+\right) ^\mathrm{T} &amp;= \left(
+\begin{array}{c}
+A \boldsymbol{v}_{1} \\
+\vdots \\
+A \boldsymbol{v}_{j} \\
+\vdots \\
+A \boldsymbol{v}_{n}
+\end{array}
+\right) ^\mathrm{T} = \left(
+\begin{array}{c}
+\lambda_{1} \boldsymbol{v}_{1} \\
+\vdots \\
+\lambda_{j} \boldsymbol{v}_{j} \\
+\vdots \\
+\lambda_{n} \boldsymbol{v}_{n}
+\end{array}
+\right) ^\mathrm{T} \\
+&amp;= \left(
+\begin{array}{c}
+\boldsymbol{v}_{1} \\
+\vdots \\
+\boldsymbol{v}_{j} \\
+\vdots \\
+\boldsymbol{v}_{n}
+\end{array}
+\right) ^\mathrm{T} \left(
+\begin{array}{ccccc}
+    \lambda_{1} &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
+    0 &amp; \lambda_{2} &amp; \ddots &amp; &amp; 0 \\
+    \vdots &amp; \ddots &amp; \ddots &amp; \ddots &amp; \vdots \\
+    0 &amp; &amp; \ddots &amp; \lambda_{n-1} &amp; 0 \\
+    0 &amp; 0 &amp; \cdots &amp; 0 &amp; \lambda_{n}
+\end{array}
+\right)
+\end{aligned}
+$$</span></p>
+</div>
+<p>であるため,</p>
+<div class="flow_x_container">
+<p><span class="math display">$$
+\begin{aligned}
+&amp;V = \left(
+\begin{array}{c}
+\boldsymbol{v}_{1} \\
+\vdots \\
+\boldsymbol{v}_{j} \\
+\vdots \\
+\boldsymbol{v}_{n}
+\end{array}
+\right) ^\mathrm{T} \\
+\\
+&amp;\Lambda = \left(
+\begin{array}{ccccc}
+    \lambda_{1} &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
+    0 &amp; \lambda_{2} &amp; \ddots &amp; &amp; 0 \\
+    \vdots &amp; \ddots &amp; \ddots &amp; \ddots &amp; \vdots \\
+    0 &amp; &amp; \ddots &amp; \lambda_{n-1} &amp; 0 \\
+    0 &amp; 0 &amp; \cdots &amp; 0 &amp; \lambda_{n}
+\end{array}
+\right)
+\end{aligned}
+$$</span></p>
+</div>
+<p>とすると,</p>
+<div class="flow_x_container">
+<p><span class="math display">$$
+\begin{aligned}
+A V = V \Lambda
+\end{aligned}
+$$</span></p>
+</div>
+<p>とかける. 特に<span class="math inline"><em>V</em></span> が正則(逆行列 <span class="math inline"><em>V</em><sup> − 1</sup></span> が存在)の時,</p>
+<div class="flow_x_container">
+<p><span class="math display">$$
+\begin{aligned}
+&amp;A V = V \Lambda \\
+\Longleftrightarrow &amp;A = V \Lambda V ^{-1} \\
+\Longleftrightarrow &amp;V ^{-1} A V = \Lambda
+\end{aligned}
+$$</span></p>
+</div>
+<p>である. 次の式</p>
+<div class="flow_x_container">
+<p><span class="math display">$$
+\begin{aligned}
+&amp;A V = V \Lambda \\
+\Longleftrightarrow &amp;A = V \Lambda V ^{-1}
+\end{aligned}
+$$</span></p>
+</div>
+<p>を行列 <span class="math inline"><em>A</em></span> の <strong>固有分解(eigendecomposition)</strong> という. また,</p>
+<div class="flow_x_container">
+<p><span class="math display">$$
+\begin{aligned}
+V ^{-1} A V = \Lambda
+\end{aligned}
+$$</span></p>
+</div>
+<p>は, 行列 <span class="math inline"><em>A</em></span> の<strong>対角化</strong>になっている.</p>
 <p><br></p>
 <hr />
 <p><br></p>
@@ -291,7 +424,7 @@ $$]
 -->
 <!--
 footer
-@update:2020/08/31
+@update:2021/07/07
 @title:eigenvalue
 @class0:mathematics
 @class1:algebra
@@ -316,7 +449,7 @@ footer
 を利用しています.
 </p>
 <br>
-<p>更新日: 2020/08/31</p>
+<p>更新日: 2021/07/07</p>
 <p>Copyright (C) 2020 laplaciannin102 All Rights Reserved.</p>
 
 </div> <!-- content -->
