@@ -59,7 +59,10 @@
 <li><a href="#概要">概要</a></li>
 <li><a href="#目次">目次</a></li>
 <li><a href="#早見表">早見表</a></li>
-<li><a href="#行列">行列</a></li>
+<li><a href="#行列">行列</a>
+<ul>
+<li><a href="#表記について">表記について</a></li>
+</ul></li>
 <li><a href="#正方行列">正方行列</a></li>
 <li><a href="#転置行列">転置行列</a></li>
 <li><a href="#随伴行列">随伴行列</a></li>
@@ -67,6 +70,7 @@
 <li><a href="#エルミート行列">エルミート行列</a></li>
 <li><a href="#直交行列">直交行列</a></li>
 <li><a href="#ユニタリ行列">ユニタリ行列</a></li>
+<li><a href="#正規行列">正規行列</a></li>
 <li><a href="#関連項目">関連項目</a></li>
 <li><a href="#参考文献">参考文献</a></li>
 </ul></li>
@@ -85,7 +89,7 @@
 <p><br></p>
 <h2 id="行列">行列</h2>
 <ul>
-<li><span class="math inline"><em>m</em> × <em>n</em></span> 行列</li>
+<li><span class="math inline"><em>m</em> × <em>n</em></span> 複素行列</li>
 </ul>
 <div class="flow_x_container">
 <p><span class="math display">$$
@@ -104,6 +108,19 @@ a_{m1} &amp; \cdots &amp; a_{mj} &amp; \cdots &amp; a_{mn} \\
 \end{aligned}
 $$</span></p>
 </div>
+<p><br></p>
+<hr />
+<p><br></p>
+<h3 id="表記について">表記について</h3>
+<ul>
+<li><span class="math inline"><em>m</em> × <em>n</em></span> 実行列(要素が実数の行列)の集合に対する表記色々
+<ul>
+<li><span class="math inline"><em>M</em><sub><em>m</em>, <em>n</em></sub>(ℝ)</span></li>
+<li><span class="math inline">𝕄(<em>m</em>, <em>n</em>)</span></li>
+<li><span class="math inline">ℝ<sup><em>m</em> × <em>n</em></sup></span></li>
+<li><span class="math inline"><em>m</em> × <em>n</em> real matrix</span></li>
+</ul></li>
+</ul>
 <p><br></p>
 <hr />
 <p><br></p>
@@ -281,6 +298,27 @@ $$</span></p>
 <p><br></p>
 <hr />
 <p><br></p>
+<h2 id="正規行列">正規行列</h2>
+<p><span class="math inline"><em>A</em></span>を <span class="math inline"><em>n</em></span> 次複素正方行列とする.</p>
+<div class="flow_x_container">
+<p><span class="math display">$$
+\begin{aligned}
+A \in \mathbb{C} ^ {n \times n} : n \text{-dim complex square matrix}
+\end{aligned}
+$$</span></p>
+</div>
+<p>次の式</p>
+<div class="flow_x_container">
+<p><span class="math display">$$
+\begin{aligned}
+A ^\ast A = A A ^\ast
+\end{aligned}
+$$</span></p>
+</div>
+<p>が成り立つ時, <span class="math inline"><em>A</em></span>を <strong>正規行列(normal matrix)</strong> という. <strong>ユニタリ行列</strong> は <strong>正規行列</strong> の特殊な場合.</p>
+<p><br></p>
+<hr />
+<p><br></p>
 <h2 id="関連項目">関連項目</h2>
 <ul>
 <li>no contents</li>
@@ -297,7 +335,7 @@ $$</span></p>
 <p><br></p>
 <!--
 footer
-@update:2021/07/04
+@update:2021/07/05
 @title:various_matrix
 @class0:mathematics
 @class1:algebra
@@ -322,7 +360,7 @@ footer
 を利用しています.
 </p>
 <br>
-<p>更新日: 2021/07/04</p>
+<p>更新日: 2021/07/05</p>
 <p>Copyright (C) 2020 laplaciannin102 All Rights Reserved.</p>
 
 </div> <!-- content -->
