@@ -1,0 +1,574 @@
+<!--
+    author: laplaciannin102
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Anaconda有償化に伴いMiniconda+conda-forgeに引越しをした</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<link rel="shortcut icon" href="../assets/ico/nanika_big.ico" type="image/vnd.microsoft.icon">
+<link rel="stylesheet" type="text/css" href="../assets/css/annn_articles.css">
+<style>
+</style>
+</head>
+<body>
+
+<div id="navigation_bar">
+<ul id="nav_bar_ul">
+    <!-- <li><p id="nbar_title">Anaconda有償化に伴いMiniconda+conda-forgeに引越しをした</p></li> -->
+    <li id="nav_logo"><a id="nav_logo_a" href="../index.html">
+        <div id="nav_logo_div"></div>
+    </a></li>
+
+    <!--
+    <li id="nav_hamburger">
+        <div id="div_hamburger">
+            <div class="ham_line"></div>
+            <div class="ham_line"></div>
+            <div class="ham_line"></div>
+        </div>
+    </li>
+    -->
+
+    <li id="nav_menu"><a id="nav_menu_a" href="./table_of_contents.html">Menu</a></li>
+    <li id="nav_page_top"><a id="nav_page_top_a" href="#article_body">PageTop</a></li>
+</ul>
+</div>
+
+<div id="article_body"> <!-- body -->
+<div id="article_content"> <!-- content -->
+
+<h1 id="anaconda有償化に伴いminicondaconda-forgeに引越しをした">Anaconda有償化に伴いMiniconda+conda-forgeに引越しをした</h1>
+<h2 id="概要">概要</h2>
+<ul>
+<li>Anacondaの有償化を受けて, これまでAnaconda環境を使用していた方がAnacondaのパッケージを引き継ぎ<strong>Miniconda+conda-forge</strong>環境に移行するための手順.</li>
+<li>Pythonパッケージ一覧を<strong>出力</strong>するbatファイルを作成した.</li>
+<li>Pythonパッケージ一覧を<strong>一括でインストール</strong>するbatファイルを作成した.
+<ul>
+<li>pip版とconda版あり.</li>
+</ul></li>
+</ul>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="目次">目次</h2>
+<div class="table_of_contents">
+<details open>
+<summary>
+目次詳細
+</summary>
+<ul>
+<li><a href="#anaconda有償化に伴いminicondaconda-forgeに引越しをした">Anaconda有償化に伴いMiniconda+conda-forgeに引越しをした</a>
+<ul>
+<li><a href="#概要">概要</a></li>
+<li><a href="#目次">目次</a></li>
+<li><a href="#背景">背景</a></li>
+<li><a href="#本記事で触れない内容">本記事で触れない内容</a></li>
+<li><a href="#対象読者">対象読者</a></li>
+<li><a href="#作業環境">作業環境</a></li>
+<li><a href="#対応するgithubリポジトリとqiita記事">対応するGitHubリポジトリとQiita記事</a></li>
+<li><a href="#作業手順">作業手順</a>
+<ul>
+<li><a href="#batファイルのダウンロード">batファイルのダウンロード</a></li>
+<li><a href="#anaconda環境から引越す準備">Anaconda環境から引越す準備</a></li>
+<li><a href="#anacondaのアンインストール">Anacondaのアンインストール</a></li>
+<li><a href="#minicondaconda-forge環境構築">Miniconda+conda-forge環境構築</a></li>
+</ul></li>
+<li><a href="#appendix">Appendix</a>
+<ul>
+<li><a href="#batファイルの中身概要">batファイルの中身概要</a></li>
+</ul></li>
+<li><a href="#参考">参考</a>
+<ul>
+<li><a href="#anaconda有償化関連">Anaconda有償化関連</a></li>
+<li><a href="#anaconda全般">Anaconda全般</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</details>
+</div>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="背景">背景</h2>
+<ul>
+<li>従業員数200名以上の営利企業でのAnaconda利用が有償化された.</li>
+</ul>
+<h2 id="本記事で触れない内容">本記事で触れない内容</h2>
+<ul>
+<li>仮想環境関連
+<ul>
+<li>**env(venv, pyenv, pipenv)</li>
+<li>docker</li>
+</ul></li>
+</ul>
+<h2 id="対象読者">対象読者</h2>
+<ul>
+<li>新規にPythonをインストールする方 (以下, <strong>新規Pythonユーザ</strong>).</li>
+<li>すでにAnacondaを使用してPythonをインストールしている方 (以下, <strong>既存Anacondaユーザ</strong>).
+<ul>
+<li>かつ, AnacondaをアンインストールしてMiniconda環境に移行する方.</li>
+</ul></li>
+</ul>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="作業環境">作業環境</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">No.</th>
+<th style="text-align: center;">項目</th>
+<th style="text-align: center;">想定</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">OS</td>
+<td style="text-align: center;">Windows10</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="対応するgithubリポジトリとqiita記事">対応するGitHubリポジトリとQiita記事</h2>
+<ul>
+<li><strong>GitHubリポジトリ:</strong>
+<ul>
+<li><p>リポジトリ名: <a href="https://github.com/laplaciannin102/py_miniconda_env_construction">py_miniconda_env_construction</a></p></li>
+<li><p>URL: <a href="https://github.com/laplaciannin102/py_miniconda_env_construction">https://github.com/laplaciannin102/py_miniconda_env_construction</a></p></li>
+</ul></li>
+<li><strong>Qiita記事:</strong>
+<ul>
+<li><a href="https://qiita.com/AnnnPsinan414/private/7782a753347ff8ba448d">(Qiita)Anaconda有償化に伴いMiniconda+conda-forgeに引越しをした</a></li>
+</ul></li>
+</ul>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="作業手順">作業手順</h2>
+<h3 id="batファイルのダウンロード">batファイルのダウンロード</h3>
+<ol type="1">
+<li><a href="https://github.com/laplaciannin102/py_miniconda_env_construction">py_miniconda_env_constructionリポジトリ</a>へアクセスする.
+<ul>
+<li>URL: <a href="https://github.com/laplaciannin102/py_miniconda_env_construction">https://github.com/laplaciannin102/py_miniconda_env_construction</a></li>
+</ul></li>
+<li><strong>git clone</strong> または <strong>zipのダウンロード</strong> を行い, batファイルを取得する.
+<ul>
+<li><p>git cloneできない方:</p>
+<ol type="1">
+<li>右上の「Code」を押下する.</li>
+<li>「Download ZIP」を押下する.</li>
+<li>任意の場所に保存する.</li>
+<li>zipファイルの解凍を行う.</li>
+</ol></li>
+<li><p><strong>git clone command:</strong></p>
+<div class="sourceCode" id="cb1"><pre class="prettyprint linenums bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/laplaciannin102/py_miniconda_env_construction.git</span></code></pre></div></li>
+</ul></li>
+</ol>
+<ul>
+<li>batファイルの一覧(3種類)</li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 2%" />
+<col style="width: 26%" />
+<col style="width: 71%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">No.</th>
+<th style="text-align: left;">batファイル名</th>
+<th style="text-align: left;">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">no001_backup_python_packages.bat</td>
+<td style="text-align: left;">- Pythonにおけるインストール済みパッケージの一覧をバックアップテキストファイルとして取得する.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">no002_conda_install_from_files.bat</td>
+<td style="text-align: left;">- <code>conda install</code>を使用して, テキストファイルから一括でパッケージをインストールする.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">no003_pip_install_from_files.bat</td>
+<td style="text-align: left;">- <code>pip install</code>を使用して, テキストファイルから一括でパッケージをインストールする.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>各batファイルで大体何をしているのかは, <a href="#batファイルの中身概要">batファイルの中身概要</a>を参照.</li>
+</ul>
+<p><br></p>
+<hr />
+<p><br></p>
+<h3 id="anaconda環境から引越す準備">Anaconda環境から引越す準備</h3>
+<ul>
+<li>本手順は<strong>既存Anacondaユーザ</strong>向け手順である.
+<ul>
+<li><strong>新規Pythonユーザ</strong>は<a href="#minicondaconda-forge環境構築">Miniconda+conda-forge環境構築</a>を参照.</li>
+</ul></li>
+</ul>
+<ol type="1">
+<li>インストール済みパッケージバックアップ用batファイルを実行する.
+<ul>
+<li>ダブルクリック or 右クリックして「開く」 or 右クリックして「管理者として実行」</li>
+<li><strong>実行ファイル名:</strong>
+<ul>
+<li><strong>no001_backup_python_packages.bat</strong></li>
+</ul></li>
+<li><strong>処理概要:</strong>
+<ul>
+<li>インストール済みパッケージの一覧をバックアップテキストとして取得する.</li>
+<li>python_pkgs_filesという名前のディレクトリを作成し, その中にテキストファイルを格納する.</li>
+<li>Anacondaにプリインストールされているパッケージの一覧も同時に取得する.
+<ul>
+<li>Anaconda package lists: <a href="https://docs.anaconda.com/anaconda/packages/pkg-docs/">https://docs.anaconda.com/anaconda/packages/pkg-docs/</a></li>
+</ul></li>
+</ul></li>
+<li><strong>出力先ディレクトリ:</strong>
+<ul>
+<li>./python_pkgs_files/</li>
+</ul></li>
+<li><strong>出力ファイル一覧:</strong>
+<ul>
+<li>いわゆる<strong>requirements.txt</strong>と同様のファイル群.</li>
+<li><strong>yyyymmdd</strong>は作業日付.</li>
+</ul></li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 74%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">ファイル名</th>
+<th style="text-align: left;">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">conda_pkgs_list_raw.txt</td>
+<td style="text-align: left;">- condaのパッケージ一覧ファイル.<br>- <code>conda list --export</code>で取得.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">conda_pkgs_list_eq_<strong>yyyymmdd</strong>.txt</td>
+<td style="text-align: left;">- condaのパッケージ一覧のversionを <strong>[package]==x.x.x</strong> で設定したファイル.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">conda_pkgs_list_geq_<strong>yyyymmdd</strong>.txt</td>
+<td style="text-align: left;">- condaのパッケージ一覧のversionを <strong>[package]&gt;=x.x.x</strong> で設定したファイル.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">pip_pkgs_list_raw.txt</td>
+<td style="text-align: left;">- pipのパッケージ一覧ファイル.<br>- <code>pip list --format freeze</code>で取得.<br>- <code>pip freeze</code>だとversion部分がURLになってしまう場合がある.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">pip_pkgs_list_eq_<strong>yyyymmdd</strong>.txt</td>
+<td style="text-align: left;">- pipのパッケージ一覧のversionを <strong>[package]==x.x.x</strong> で設定したファイル.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">pip_pkgs_list_geq_<strong>yyyymmdd</strong>.txt</td>
+<td style="text-align: left;">- pipのパッケージ一覧のversionを <strong>[package]&gt;=x.x.x</strong> で設定したファイル.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">anaconda_preinstall_pkgs_list_eq_<strong>yyyymmdd</strong>.txt</td>
+<td style="text-align: left;">- Anacondaにプリインストールされているパッケージの一覧ファイル.<br>- これを使用することで, Anaconda環境と同様のパッケージをインストール可能.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">anaconda_preinstall_pkgs_list_eq_<strong>sample</strong>.txt</td>
+<td style="text-align: left;">- sampleファイル.<br>- anaconda_preinstall_pkgs_list_eq_<strong>yyyymmdd</strong>.txtと同様の内容.</td>
+</tr>
+</tbody>
+</table></li>
+</ol>
+<p><br></p>
+<hr />
+<p><br></p>
+<h3 id="anacondaのアンインストール">Anacondaのアンインストール</h3>
+<ul>
+<li>本手順は<strong>既存Anacondaユーザ</strong>向け手順である.
+<ul>
+<li><strong>新規Pythonユーザ</strong>は<a href="#minicondaconda-forge環境構築">Miniconda+conda-forge環境構築</a>を参照.</li>
+</ul></li>
+</ul>
+<ol type="1">
+<li><p>Anaconda Promptを起動する.</p></li>
+<li><p>次のコマンドを入力し, <strong>anaconda-clean</strong>というパッケージをインストールする.</p>
+<pre class="bat"><code>conda install anaconda-clean</code></pre></li>
+<li><p>次のコマンドを入力し, Anaconda関連のファイルやディレクトリを削除する.</p>
+<ul>
+<li>各項目について確認しながら削除を行う場合:</li>
+</ul>
+<pre class="bat"><code>anaconda-clean</code></pre>
+<ul>
+<li>各項目について確認せず一括で削除を行う場合:</li>
+</ul>
+<pre class="bat"><code>anaconda-clean --yes</code></pre></li>
+<li><p>Windowsの場合, コントロールパネルを起動する.</p></li>
+<li><p>プログラムと機能 &gt; プログラムのアンインストール を開く.</p></li>
+<li><p>Anacondaを選択し, アンインストールする.</p></li>
+</ol>
+<ul>
+<li>Anacondaの<a href="https://docs.anaconda.com/anaconda/install/uninstall/">公式ドキュメント(Uninstalling Anaconda)</a>も参照のこと.</li>
+</ul>
+<p><br></p>
+<hr />
+<p><br></p>
+<h3 id="minicondaconda-forge環境構築">Miniconda+conda-forge環境構築</h3>
+<ol type="1">
+<li><p>Minicondaのインストーラを下記URLからダウンロードする.</p>
+<ul>
+<li>Miniconda: <a href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.io/en/latest/miniconda.html</a></li>
+</ul></li>
+<li><p>インストーラを実行し, Minicondaをインストールする.</p>
+<ol type="1">
+<li>「Miniconda3~.exe」を実行する. セットアップウィザードが表示される.</li>
+<li>最初の画面で, 「Next」を押下する.</li>
+<li>「I Agree」を押下する.</li>
+<li>Install forはJust Meのまま「Next」を押下する.</li>
+<li>インストール先の指定では任意の場所を指定して, 「Next」を押下する.
+<ul>
+<li>好みが無い方は初期設定のままでok.</li>
+</ul></li>
+<li>「Add Miniconda3 to my PATH environment variable」にチェックを入れる.</li>
+<li>「Install」を押下する.</li>
+<li>インストールされるので待機する.</li>
+</ol></li>
+<li><p>(インストール済みMinicondaの)Anaconda Promptを立ち上げる.</p>
+<ul>
+<li>Windows10の場合, 左下の虫眼鏡アイコンから検索に「anaconda prompt」と入力すれば表示される.</li>
+<li><strong>Anaconda Prompt(Miniconda3)</strong> というソフト名.</li>
+<li>他cmdなどのコマンドラインでも可能.</li>
+</ul></li>
+<li><p>次のコマンドを入力し, condaのチャネルの設定に<strong>conda-forge</strong>チャネルを追加する.</p>
+<pre class="bat"><code>conda config --add channels conda-forge</code></pre></li>
+<li><p>次のコマンドを入力し, condaのチャネル一覧を確認する.</p>
+<pre class="bat"><code>conda config --show channels</code></pre>
+<ul>
+<li><code>conda config --get channels</code>でも可能.</li>
+</ul></li>
+<li><p>次のコマンドを入力し, condaのチャネルの設定から<strong>defaults</strong>チャネルを削除する.</p>
+<pre class="bat"><code>conda config --remove channels defaults</code></pre></li>
+<li><p>次のコマンドを入力し, condaのチャネル一覧を確認する. チャネル一覧からdefaultsが消えていることを確認する.</p>
+<pre class="bat"><code>conda config --show channels</code></pre>
+<ul>
+<li><code>conda config --get channels</code>でも可能.</li>
+</ul></li>
+<li><p>次のコマンドを入力し, conda自体を最新版にUpdateする.</p>
+<pre class="bat"><code>conda update conda</code></pre></li>
+<li><p>次のコマンドを入力し, インストール済みパッケージを全て最新版にUpdateする.</p>
+<ul>
+<li>※Miniconda使用のため, 不要.</li>
+</ul>
+<pre class="bat"><code>conda update --all</code></pre></li>
+<li><p>パッケージインストール用batファイルを実行する.</p></li>
+</ol>
+<ul>
+<li>ダブルクリック or 右クリックして「開く」 or 右クリックして「管理者として実行」</li>
+<li>使用するパッケージ管理ツール毎に実行するbatファイルが異なる.
+<ul>
+<li>condaの場合:
+<ul>
+<li><strong>no002_conda_install_from_files.bat</strong></li>
+</ul></li>
+<li>pipの場合:
+<ul>
+<li><strong>no003_pip_install_from_files.bat</strong></li>
+</ul></li>
+</ul></li>
+<li>「&gt;&gt;○○」という行は, 裏でどのようなコマンドが実行されてるか参考までに表示しているもの.</li>
+</ul>
+<ol start="11" type="1">
+<li>コマンドライン(黒い画面)が立ち上がる. 次の<strong>sample</strong>の様に, 「list of files in python_pkgs_files」の下にインストール対象となるパッケージ一覧が記載されたテキストファイルが一覧表示されていることを確認する.</li>
+</ol>
+<ul>
+<li><p><strong>新規Pythonユーザ</strong>は「anaconda_preinstall_pkgs_list_eq_sample.txt」しか表示されない.</p>
+<ul>
+<li>anaconda_preinstall_pkgs_list_eq_<strong>yyyymmdd</strong>.txt
+<ul>
+<li>Anacondaにプリインストールされているパッケージの一覧ファイル.</li>
+<li>これを使用することで, Anaconda環境と同様のパッケージをインストール可能.」</li>
+</ul></li>
+</ul></li>
+<li><p><strong>sample</strong></p>
+<pre class="cmd"><code>list of files in python_pkgs_files
+
+&gt;&gt;call dir /b python_pkgs_files
+========================================
+anaconda_preinstall_pkgs_list_eq_20210330.txt
+anaconda_preinstall_pkgs_list_eq_sample.txt
+conda_pkgs_list_eq_20210330.txt
+conda_pkgs_list_geq_20210330.txt
+conda_pkgs_list_raw.txt
+pip_pkgs_list_eq_20210330.txt
+pip_pkgs_list_geq_20210330.txt
+pip_pkgs_list_raw.txt
+========================================
+
+select a packages file name : </code></pre></li>
+</ul>
+<ol start="11" type="1">
+<li>「select a packages file name : 」の右側に, インストールしたいテキストファイル名を入力し, Enterを押下する.
+<ul>
+<li><p>入力はコピペでOK!!</p></li>
+<li><p><strong>[推奨]</strong> Anacondaで元々プリインストールされていたパッケージを全てインストールする場合は, 「anaconda_preinstall_pkgs_list_eq_<strong>yyyymmdd</strong>.txt」または「anaconda_preinstall_pkgs_list_eq_sample.txt」を選択する.</p></li>
+<li><p>次の<strong>sample</strong>は「pip_pkgs_list_geq_20210330.txt」を選択した例.</p></li>
+<li><p><strong>sample</strong></p>
+<pre class="cmd"><code>list of files in python_pkgs_files
+
+&gt;&gt;call dir /b python_pkgs_files
+========================================
+anaconda_preinstall_pkgs_list_eq_20210330.txt
+anaconda_preinstall_pkgs_list_eq_sample.txt
+conda_pkgs_list_eq_20210330.txt
+conda_pkgs_list_geq_20210330.txt
+conda_pkgs_list_raw.txt
+pip_pkgs_list_eq_20210330.txt
+pip_pkgs_list_geq_20210330.txt
+pip_pkgs_list_raw.txt
+========================================
+
+select a packages file name : pip_pkgs_list_geq_20210330.txt</code></pre></li>
+</ul></li>
+<li>pipの場合, 「Do you want to install it as a user??」と<strong>ユーザインストール</strong>を行うか聞かれるので, ユーザインストールする場合は「<strong>y</strong>」(Yesの意味), そうでない場合は「<strong>n</strong>」(Noの意味)を入力し, Enterを押下する.
+<ul>
+<li>「<strong>y</strong>」を選択すると, <code>pip install --user [package]</code>を行う.</li>
+<li>ユーザインストールが分からない方:
+<ul>
+<li>「管理者権限がある」かつ「どのユーザもパッケージを使用したい」: <strong>n</strong></li>
+<li>それ以外: <strong>y</strong></li>
+<li>迷った場合, 「<strong>y</strong>」を推奨.</li>
+</ul></li>
+</ul></li>
+<li>パッケージの一括インストールが開始される.
+<ul>
+<li>複数のパッケージ管理ツールを使用する場合, 複数のテキストファイルからパッケージをインストールする場合は10の手順を複数回実行する.</li>
+<li><strong>[注意事項]</strong> condaを使用して大量のインストールを行うと何時間もかかる場合があるので, 放置しておく.</li>
+</ul></li>
+</ol>
+<p>[終わり]</p>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="appendix">Appendix</h2>
+<h3 id="batファイルの中身概要">batファイルの中身概要</h3>
+<ul>
+<li><p>詳しくはGitHubリポジトリからbatファイルを直接見てください.</p></li>
+<li><p><strong>no001_backup_python_packages.bat</strong></p>
+<pre class="bat"><code>set py_pkgs_files_dpath=python_pkgs_files
+
+rem ディレクトリを作成する.
+echo make directory for packages files
+call mkdir %py_pkgs_files_dpath%
+
+rem エラー対策のアップデート
+echo command1 to avoid conda errors
+echo y|call conda install anaconda
+
+rem エラー対策のアップデート
+echo command2 to avoid conda errors
+echo y|call conda update --all
+
+set conda_list_file0=%py_pkgs_files_dpath%/conda_pkgs_list_raw.txt
+
+rem condaのパッケージ一覧を出力する.
+echo output conda packages file
+call conda list --export &gt; %conda_list_file0%
+
+set pip_list_file0=%py_pkgs_files_dpath%/pip_pkgs_list_raw.txt
+
+rem pipのパッケージ一覧を出力する.
+echo output pip packages file
+call pip list --format freeze &gt; %pip_list_file0%</code></pre></li>
+<li><p><strong>no002_conda_install_from_files.bat</strong></p>
+<pre class="bat"><code>rem ファイルから1行ずつ読み込んでconda installを行う.
+rem yesかnoか聞かれる場合があるので, 全てyes(y)で答える.
+rem input_pkgs_fpathにはファイルパスをセット.
+for /f %%l in (%input_pkgs_fpath%) do (
+    echo y|call conda install &quot;%%l&quot;
+)</code></pre></li>
+<li><p><strong>no003_pip_install_from_files.bat</strong></p>
+<pre class="bat"><code>rem ファイルから1行ずつ読み込んでpip installを行う.
+rem input_pkgs_fpathにはファイルパスをセット.
+for /f %%l in (%input_pkgs_fpath%) do (
+    call pip install &quot;%%l&quot;
+)</code></pre></li>
+</ul>
+<p><br></p>
+<hr />
+<p><br></p>
+<h2 id="参考">参考</h2>
+<h3 id="anaconda有償化関連">Anaconda有償化関連</h3>
+<ul>
+<li><p><a href="https://qiita.com/c60evaporator/items/ba41cef4b37465c39948">(Qiita)Anacondaが有償化されて困っている人に贈る、Pythonのパッケージ管理</a></p></li>
+<li><p><a href="https://qiita.com/tfukumori/items/f8fc2c53077b234384fc">(Qiita)Anaconda パッケージリポジトリが「大規模な」商用利用では有償になっていた</a></p></li>
+<li><p><a href="https://www.reddit.com/r/Python/comments/iqsk3y/anaconda_is_not_free_for_commercial_use_anymore/gqdqrk9/?context=3">(reddit)Anaconda is not free for commercial use (anymore) - alternatives ?</a></p></li>
+<li><p><a href="https://qiita.com/kimisyo/items/986802ea52974b92df27">Anacondaの有償化に伴いminiconda+conda-forgeでの運用を考えてみた</a></p></li>
+</ul>
+<h3 id="anaconda全般">Anaconda全般</h3>
+<ul>
+<li><p><a href="https://docs.anaconda.com/anaconda/packages/pkg-docs/">Anaconda package lists</a></p></li>
+<li><p><a href="https://docs.conda.io/projects/conda/en/latest/commands/install.html">conda install documentation</a></p></li>
+<li><p><a href="https://docs.anaconda.com/anaconda/user-guide/tasks/install-packages/">Installing conda packages Anaconda documentation</a></p></li>
+<li><p><a href="https://docs.anaconda.com/anaconda/install/uninstall/">Uninstalling Anaconda</a></p></li>
+<li><p><a href="https://qiita.com/jordi/items/cd974b668e7ecf312543">(Qiita)conda updateで「Solving environment: failed」となった時の解決法</a></p></li>
+</ul>
+<p><br></p>
+<hr />
+<p><br></p>
+<!--
+footer
+@update:2021/07/27
+@title:migration_from_anaconda_to_miniconda
+@class0:technology
+@class1:python
+@class2:env_construction
+@tags:technology,python,anaconda,miniconda,env_construction
+@synonym:
+@release:true
+-->
+
+<br>
+<br>
+<br>
+<p>
+<img src="https://cdn.mathjax.org/mathjax/badge/mj-logo.svg" width="100" class="left">
+このページでは, 数式の表現に
+<a href="https://www.mathjax.org">MathJax</a>
+を利用しています.
+</p>
+<p>
+このページでは, シンタックスハイライト(プログラムのコードに色を付ける機能)に
+<a href="https://github.com/googlearchive/code-prettify">Google Code Prettify</a>
+を利用しています.
+</p>
+<br>
+<p>更新日: 2021/07/27</p>
+<p>Copyright (C) 2020 laplaciannin102 All Rights Reserved.</p>
+
+</div> <!-- content -->
+</div> <!-- body -->
+
+<script type="text/javascript" src="../assets/js/annn_articles.js"></script>
+
+<!--
+skin候補
+default
+desert
+sunburst
+sons-of-obsidian
+-->
+<script async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=html&lang=python&lang=lang-latex&skin=desert"></script>
+<script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+</body>
+</html>
