@@ -2,24 +2,77 @@
     author: laplaciannin102
 -->
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-<title>Anaconda有償化に伴いMiniconda+conda-forgeに引越しをした</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-<meta name="keywords" content="数学,mathematics,プログラミング,programming,情報学,Python,laplaciannin102"/>
-<meta name="robots" content="all">
-<meta name="description" content="このブログは, 杏仁豆腐(laplaciannin102)が学んだこと等を書き綴っていくものです."/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anaconda有償化に伴いMiniconda+conda-forgeに引越しをした | 杏仁豆腐の備忘録</title>
+<meta name="description" content="Anaconda有償化に伴いMiniconda+conda-forgeに引越しをした: Anacondaの有償化を受けて, これまでAnaconda環境を使用していた方がAnacondaのパッケージを引き継ぎMiniconda+conda…">
+<meta name="author" content="laplaciannin102">
+<link rel="canonical" href="https://laplaciannin102.github.io/laplaciannin102_articles/articles/migration_from_anaconda_to_miniconda.html">
 
 <!-- Twitterカード(サムネイル) -->
-<meta name="twitter:card" content="summary" /> <!-- カードタイプは, "summary", "summary_large_image", "app", "player" -->
-<meta name="twitter:site" content="@mq_spark" />
-<meta property="og:url" content="https://laplaciannin102.github.io/laplaciannin102_articles/articles/migration_from_anaconda_to_miniconda.html" />
-<meta property="og:title" content="[杏仁豆腐の備忘録] Anaconda有償化に伴いMiniconda+conda-forgeに引越しをした" />
-<meta property="og:description" content="Anaconda有償化に伴いMiniconda+conda-forgeに引越しをした" />
-<meta 
-    property="og:image" 
-    content="https://laplaciannin102.github.io/laplaciannin102_articles/assets/img/lap102_blog_card.png" 
-/>
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="杏仁豆腐の備忘録">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:url" content="https://laplaciannin102.github.io/laplaciannin102_articles/articles/migration_from_anaconda_to_miniconda.html">
+<meta property="og:title" content="Anaconda有償化に伴いMiniconda+conda-forgeに引越しをした | 杏仁豆腐の備忘録">
+<meta property="og:description" content="Anaconda有償化に伴いMiniconda+conda-forgeに引越しをした: Anacondaの有償化を受けて, これまでAnaconda環境を使用していた方がAnacondaのパッケージを引き継ぎMiniconda+conda…">
+<meta property="og:image" content="https://laplaciannin102.github.io/laplaciannin102_articles/assets/img/lap102_blog_card.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@mq_spark">
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "headline": "Anaconda有償化に伴いMiniconda+conda-forgeに引越しをした",
+   "description": "Anaconda有償化に伴いMiniconda+conda-forgeに引越しをした: Anacondaの有償化を受けて, これまでAnaconda環境を使用していた方がAnacondaのパッケージを引き継ぎMiniconda+conda…",
+   "inLanguage": "ja",
+   "url": "https://laplaciannin102.github.io/laplaciannin102_articles/articles/migration_from_anaconda_to_miniconda.html",
+   "mainEntityOfPage": "https://laplaciannin102.github.io/laplaciannin102_articles/articles/migration_from_anaconda_to_miniconda.html",
+   "author": {
+    "@type": "Person",
+    "name": "laplaciannin102",
+    "url": "https://laplaciannin102.github.io/"
+   },
+   "image": "https://laplaciannin102.github.io/laplaciannin102_articles/assets/img/lap102_blog_card.png",
+   "isPartOf": {
+    "@type": "Blog",
+    "name": "杏仁豆腐の備忘録",
+    "url": "https://laplaciannin102.github.io/laplaciannin102_articles/"
+   },
+   "dateModified": "2021-07-27",
+   "keywords": "technology, python, anaconda, miniconda, env_construction"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "ホーム",
+     "item": "https://laplaciannin102.github.io/laplaciannin102_articles/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "記事一覧",
+     "item": "https://laplaciannin102.github.io/laplaciannin102_articles/articles/table_of_contents.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Anaconda有償化に伴いMiniconda+conda-forgeに引越しをした",
+     "item": "https://laplaciannin102.github.io/laplaciannin102_articles/articles/migration_from_anaconda_to_miniconda.html"
+    }
+   ]
+  }
+ ]
+}
+</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VD0EN9TK2C"></script>
@@ -31,37 +84,47 @@
   gtag('config', 'G-VD0EN9TK2C');
 </script>
 
-<link rel="shortcut icon" href="../assets/ico/nanika_big.ico" type="image/vnd.microsoft.icon">
+<link rel="icon" href="../assets/ico/nanika_big.ico" type="image/vnd.microsoft.icon">
 <link rel="stylesheet" type="text/css" href="../assets/css/annn_articles.css">
-<style>
-</style>
 </head>
 <body>
 
-<div id="navigation_bar">
-<ul id="nav_bar_ul">
-    <!-- <li><p id="nbar_title">Anaconda有償化に伴いMiniconda+conda-forgeに引越しをした</p></li> -->
-    <li id="nav_logo"><a id="nav_logo_a" href="../index.html">
-        <div id="nav_logo_div"></div>
-    </a></li>
-
-    <!--
-    <li id="nav_hamburger">
-        <div id="div_hamburger">
-            <div class="ham_line"></div>
-            <div class="ham_line"></div>
-            <div class="ham_line"></div>
-        </div>
-    </li>
-    -->
-
-    <li id="nav_menu"><a id="nav_menu_a" href="./table_of_contents.html">Menu</a></li>
-    <li id="nav_page_top"><a id="nav_page_top_a" href="#article_body">PageTop</a></li>
-</ul>
+<header id="site_header">
+<div class="site_header_inner">
+    <a class="site_logo" href="../index.html"><img src="../assets/img/lap102_logo.png" alt="杏仁豆腐の備忘録" width="80" height="40"></a>
+    <nav class="site_nav">
+        <a href="./table_of_contents.html">記事一覧</a>
+    </nav>
 </div>
+</header>
 
-<div id="article_body"> <!-- body -->
-<div id="article_content"> <!-- content -->
+<main id="article_body" class="with_toc"> <!-- body -->
+<aside class="article_toc_side" aria-label="目次">
+<p class="toc_title">目次</p>
+<ul>
+<li class="toc_h2"><a href="#概要">概要</a></li>
+<li class="toc_h2"><a href="#背景">背景</a></li>
+<li class="toc_h2"><a href="#本記事で触れない内容">本記事で触れない内容</a></li>
+<li class="toc_h2"><a href="#対象読者">対象読者</a></li>
+<li class="toc_h2"><a href="#作業環境">作業環境</a></li>
+<li class="toc_h2"><a href="#対応するgithubリポジトリとqiita記事">対応するGitHubリポジトリとQiita記事</a></li>
+<li class="toc_h2"><a href="#作業手順">作業手順</a></li>
+<li class="toc_h3"><a href="#batファイルのダウンロード">batファイルのダウンロード</a></li>
+<li class="toc_h3"><a href="#anaconda環境から引越す準備">Anaconda環境から引越す準備</a></li>
+<li class="toc_h3"><a href="#anacondaのアンインストール">Anacondaのアンインストール</a></li>
+<li class="toc_h3"><a href="#minicondaconda-forge環境構築">Miniconda+conda-forge環境構築</a></li>
+<li class="toc_h2"><a href="#appendix">Appendix</a></li>
+<li class="toc_h3"><a href="#batファイルの中身概要">batファイルの中身概要</a></li>
+<li class="toc_h2"><a href="#参考">参考</a></li>
+<li class="toc_h3"><a href="#anaconda有償化関連">Anaconda有償化関連</a></li>
+<li class="toc_h3"><a href="#anaconda全般">Anaconda全般</a></li>
+</ul>
+</aside>
+<div class="page_meta">
+<nav class="breadcrumb" aria-label="パンくずリスト"><a href="../index.html">ホーム</a><span class="sep">›</span><a href="./table_of_contents.html">記事一覧</a></nav>
+<p class="page_date">更新日 <time datetime="2021-07-27">2021/07/27</time></p>
+</div>
+<article id="article_content"> <!-- content -->
 
 <h1 id="anaconda有償化に伴いminicondaconda-forgeに引越しをした">Anaconda有償化に伴いMiniconda+conda-forgeに引越しをした</h1>
 <h2 id="概要">概要</h2>
@@ -73,48 +136,29 @@
 <li>pip版とconda版あり.</li>
 </ul></li>
 </ul>
-<p><br></p>
 <hr />
-<p><br></p>
-<h2 id="目次">目次</h2>
-<div class="table_of_contents">
-<details open>
-<summary>
-目次詳細
-</summary>
+<details class="article_toc_inline">
+<summary>目次</summary>
 <ul>
-<li><a href="#anaconda有償化に伴いminicondaconda-forgeに引越しをした">Anaconda有償化に伴いMiniconda+conda-forgeに引越しをした</a>
-<ul>
-<li><a href="#概要">概要</a></li>
-<li><a href="#目次">目次</a></li>
-<li><a href="#背景">背景</a></li>
-<li><a href="#本記事で触れない内容">本記事で触れない内容</a></li>
-<li><a href="#対象読者">対象読者</a></li>
-<li><a href="#作業環境">作業環境</a></li>
-<li><a href="#対応するgithubリポジトリとqiita記事">対応するGitHubリポジトリとQiita記事</a></li>
-<li><a href="#作業手順">作業手順</a>
-<ul>
-<li><a href="#batファイルのダウンロード">batファイルのダウンロード</a></li>
-<li><a href="#anaconda環境から引越す準備">Anaconda環境から引越す準備</a></li>
-<li><a href="#anacondaのアンインストール">Anacondaのアンインストール</a></li>
-<li><a href="#minicondaconda-forge環境構築">Miniconda+conda-forge環境構築</a></li>
-</ul></li>
-<li><a href="#appendix">Appendix</a>
-<ul>
-<li><a href="#batファイルの中身概要">batファイルの中身概要</a></li>
-</ul></li>
-<li><a href="#参考">参考</a>
-<ul>
-<li><a href="#anaconda有償化関連">Anaconda有償化関連</a></li>
-<li><a href="#anaconda全般">Anaconda全般</a></li>
-</ul></li>
-</ul></li>
+<li class="toc_h2"><a href="#概要">概要</a></li>
+<li class="toc_h2"><a href="#背景">背景</a></li>
+<li class="toc_h2"><a href="#本記事で触れない内容">本記事で触れない内容</a></li>
+<li class="toc_h2"><a href="#対象読者">対象読者</a></li>
+<li class="toc_h2"><a href="#作業環境">作業環境</a></li>
+<li class="toc_h2"><a href="#対応するgithubリポジトリとqiita記事">対応するGitHubリポジトリとQiita記事</a></li>
+<li class="toc_h2"><a href="#作業手順">作業手順</a></li>
+<li class="toc_h3"><a href="#batファイルのダウンロード">batファイルのダウンロード</a></li>
+<li class="toc_h3"><a href="#anaconda環境から引越す準備">Anaconda環境から引越す準備</a></li>
+<li class="toc_h3"><a href="#anacondaのアンインストール">Anacondaのアンインストール</a></li>
+<li class="toc_h3"><a href="#minicondaconda-forge環境構築">Miniconda+conda-forge環境構築</a></li>
+<li class="toc_h2"><a href="#appendix">Appendix</a></li>
+<li class="toc_h3"><a href="#batファイルの中身概要">batファイルの中身概要</a></li>
+<li class="toc_h2"><a href="#参考">参考</a></li>
+<li class="toc_h3"><a href="#anaconda有償化関連">Anaconda有償化関連</a></li>
+<li class="toc_h3"><a href="#anaconda全般">Anaconda全般</a></li>
 </ul>
 </details>
-</div>
-<p><br></p>
 <hr />
-<p><br></p>
 <h2 id="背景">背景</h2>
 <ul>
 <li>従業員数200名以上の営利企業でのAnaconda利用が有償化された.</li>
@@ -135,9 +179,7 @@
 <li>かつ, AnacondaをアンインストールしてMiniconda環境に移行する方.</li>
 </ul></li>
 </ul>
-<p><br></p>
 <hr />
-<p><br></p>
 <h2 id="作業環境">作業環境</h2>
 <table>
 <thead>
@@ -155,9 +197,7 @@
 </tr>
 </tbody>
 </table>
-<p><br></p>
 <hr />
-<p><br></p>
 <h2 id="対応するgithubリポジトリとqiita記事">対応するGitHubリポジトリとQiita記事</h2>
 <ul>
 <li><strong>GitHubリポジトリ:</strong>
@@ -170,9 +210,7 @@
 <li><a href="https://qiita.com/AnnnPsinan414/private/7782a753347ff8ba448d">(Qiita)Anaconda有償化に伴いMiniconda+conda-forgeに引越しをした</a></li>
 </ul></li>
 </ul>
-<p><br></p>
 <hr />
-<p><br></p>
 <h2 id="作業手順">作業手順</h2>
 <h3 id="batファイルのダウンロード">batファイルのダウンロード</h3>
 <ol type="1">
@@ -190,7 +228,7 @@
 <li>zipファイルの解凍を行う.</li>
 </ol></li>
 <li><p><strong>git clone command:</strong></p>
-<div class="sourceCode" id="cb1"><pre class="prettyprint linenums bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/laplaciannin102/py_miniconda_env_construction.git</span></code></pre></div></li>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/laplaciannin102/py_miniconda_env_construction.git</span></code></pre></div></li>
 </ul></li>
 </ol>
 <ul>
@@ -230,9 +268,7 @@
 <ul>
 <li>各batファイルで大体何をしているのかは, <a href="#batファイルの中身概要">batファイルの中身概要</a>を参照.</li>
 </ul>
-<p><br></p>
 <hr />
-<p><br></p>
 <h3 id="anaconda環境から引越す準備">Anaconda環境から引越す準備</h3>
 <ul>
 <li>本手順は<strong>既存Anacondaユーザ</strong>向け手順である.
@@ -314,9 +350,7 @@
 </tbody>
 </table></li>
 </ol>
-<p><br></p>
 <hr />
-<p><br></p>
 <h3 id="anacondaのアンインストール">Anacondaのアンインストール</h3>
 <ul>
 <li>本手順は<strong>既存Anacondaユーザ</strong>向け手順である.
@@ -327,16 +361,16 @@
 <ol type="1">
 <li><p>Anaconda Promptを起動する.</p></li>
 <li><p>次のコマンドを入力し, <strong>anaconda-clean</strong>というパッケージをインストールする.</p>
-<pre class="bat"><code>conda install anaconda-clean</code></pre></li>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bat"><code class="sourceCode dosbat"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>conda install anaconda<span class="at">-clean</span></span></code></pre></div></li>
 <li><p>次のコマンドを入力し, Anaconda関連のファイルやディレクトリを削除する.</p>
 <ul>
 <li>各項目について確認しながら削除を行う場合:</li>
 </ul>
-<pre class="bat"><code>anaconda-clean</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bat"><code class="sourceCode dosbat"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>anaconda-clean</span></code></pre></div>
 <ul>
 <li>各項目について確認せず一括で削除を行う場合:</li>
 </ul>
-<pre class="bat"><code>anaconda-clean --yes</code></pre></li>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bat"><code class="sourceCode dosbat"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>anaconda-clean -<span class="at">-yes</span></span></code></pre></div></li>
 <li><p>Windowsの場合, コントロールパネルを起動する.</p></li>
 <li><p>プログラムと機能 &gt; プログラムのアンインストール を開く.</p></li>
 <li><p>Anacondaを選択し, アンインストールする.</p></li>
@@ -344,9 +378,7 @@
 <ul>
 <li>Anacondaの<a href="https://docs.anaconda.com/anaconda/install/uninstall/">公式ドキュメント(Uninstalling Anaconda)</a>も参照のこと.</li>
 </ul>
-<p><br></p>
 <hr />
-<p><br></p>
 <h3 id="minicondaconda-forge環境構築">Miniconda+conda-forge環境構築</h3>
 <ol type="1">
 <li><p>Minicondaのインストーラを下記URLからダウンロードする.</p>
@@ -374,26 +406,26 @@
 <li>他cmdなどのコマンドラインでも可能.</li>
 </ul></li>
 <li><p>次のコマンドを入力し, condaのチャネルの設定に<strong>conda-forge</strong>チャネルを追加する.</p>
-<pre class="bat"><code>conda config --add channels conda-forge</code></pre></li>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bat"><code class="sourceCode dosbat"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>conda config -<span class="at">-add</span> channels conda<span class="at">-forge</span></span></code></pre></div></li>
 <li><p>次のコマンドを入力し, condaのチャネル一覧を確認する.</p>
-<pre class="bat"><code>conda config --show channels</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bat"><code class="sourceCode dosbat"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>conda config -<span class="at">-show</span> channels</span></code></pre></div>
 <ul>
 <li><code>conda config --get channels</code>でも可能.</li>
 </ul></li>
 <li><p>次のコマンドを入力し, condaのチャネルの設定から<strong>defaults</strong>チャネルを削除する.</p>
-<pre class="bat"><code>conda config --remove channels defaults</code></pre></li>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bat"><code class="sourceCode dosbat"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>conda config -<span class="at">-remove</span> channels defaults</span></code></pre></div></li>
 <li><p>次のコマンドを入力し, condaのチャネル一覧を確認する. チャネル一覧からdefaultsが消えていることを確認する.</p>
-<pre class="bat"><code>conda config --show channels</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bat"><code class="sourceCode dosbat"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>conda config -<span class="at">-show</span> channels</span></code></pre></div>
 <ul>
 <li><code>conda config --get channels</code>でも可能.</li>
 </ul></li>
 <li><p>次のコマンドを入力し, conda自体を最新版にUpdateする.</p>
-<pre class="bat"><code>conda update conda</code></pre></li>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bat"><code class="sourceCode dosbat"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>conda update conda</span></code></pre></div></li>
 <li><p>次のコマンドを入力し, インストール済みパッケージを全て最新版にUpdateする.</p>
 <ul>
 <li>※Miniconda使用のため, 不要.</li>
 </ul>
-<pre class="bat"><code>conda update --all</code></pre></li>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bat"><code class="sourceCode dosbat"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>conda update -<span class="at">-all</span></span></code></pre></div></li>
 <li><p>パッケージインストール用batファイルを実行する.</p></li>
 </ol>
 <ul>
@@ -424,21 +456,21 @@
 </ul></li>
 </ul></li>
 <li><p><strong>sample</strong></p>
-<pre class="cmd"><code>list of files in python_pkgs_files
-
-&gt;&gt;call dir /b python_pkgs_files
-========================================
-anaconda_preinstall_pkgs_list_eq_20210330.txt
-anaconda_preinstall_pkgs_list_eq_sample.txt
-conda_pkgs_list_eq_20210330.txt
-conda_pkgs_list_geq_20210330.txt
-conda_pkgs_list_raw.txt
-pip_pkgs_list_eq_20210330.txt
-pip_pkgs_list_geq_20210330.txt
-pip_pkgs_list_raw.txt
-========================================
-
-select a packages file name : </code></pre></li>
+<div class="sourceCode" id="cb11"><pre class="sourceCode cmd"><code class="sourceCode dosbat"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>list of files in python_pkgs_files</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&gt;&gt;</span>call <span class="bu">dir</span> <span class="at">/b</span> python_pkgs_files</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>========================================</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>anaconda_preinstall_pkgs_list_eq_20210330.txt</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>anaconda_preinstall_pkgs_list_eq_sample.txt</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>conda_pkgs_list_eq_20210330.txt</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>conda_pkgs_list_geq_20210330.txt</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>conda_pkgs_list_raw.txt</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>pip_pkgs_list_eq_20210330.txt</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>pip_pkgs_list_geq_20210330.txt</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>pip_pkgs_list_raw.txt</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>========================================</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>select a packages file name : </span></code></pre></div></li>
 </ul>
 <ol start="11" type="1">
 <li>「select a packages file name : 」の右側に, インストールしたいテキストファイル名を入力し, Enterを押下する.
@@ -447,21 +479,21 @@ select a packages file name : </code></pre></li>
 <li><p><strong>[推奨]</strong> Anacondaで元々プリインストールされていたパッケージを全てインストールする場合は, 「anaconda_preinstall_pkgs_list_eq_<strong>yyyymmdd</strong>.txt」または「anaconda_preinstall_pkgs_list_eq_sample.txt」を選択する.</p></li>
 <li><p>次の<strong>sample</strong>は「pip_pkgs_list_geq_20210330.txt」を選択した例.</p></li>
 <li><p><strong>sample</strong></p>
-<pre class="cmd"><code>list of files in python_pkgs_files
-
-&gt;&gt;call dir /b python_pkgs_files
-========================================
-anaconda_preinstall_pkgs_list_eq_20210330.txt
-anaconda_preinstall_pkgs_list_eq_sample.txt
-conda_pkgs_list_eq_20210330.txt
-conda_pkgs_list_geq_20210330.txt
-conda_pkgs_list_raw.txt
-pip_pkgs_list_eq_20210330.txt
-pip_pkgs_list_geq_20210330.txt
-pip_pkgs_list_raw.txt
-========================================
-
-select a packages file name : pip_pkgs_list_geq_20210330.txt</code></pre></li>
+<div class="sourceCode" id="cb12"><pre class="sourceCode cmd"><code class="sourceCode dosbat"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>list of files in python_pkgs_files</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&gt;&gt;</span>call <span class="bu">dir</span> <span class="at">/b</span> python_pkgs_files</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>========================================</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>anaconda_preinstall_pkgs_list_eq_20210330.txt</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>anaconda_preinstall_pkgs_list_eq_sample.txt</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>conda_pkgs_list_eq_20210330.txt</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>conda_pkgs_list_geq_20210330.txt</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>conda_pkgs_list_raw.txt</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>pip_pkgs_list_eq_20210330.txt</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>pip_pkgs_list_geq_20210330.txt</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>pip_pkgs_list_raw.txt</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>========================================</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>select a packages file name : pip_pkgs_list_geq_20210330.txt</span></code></pre></div></li>
 </ul></li>
 <li>pipの場合, 「Do you want to install it as a user??」と<strong>ユーザインストール</strong>を行うか聞かれるので, ユーザインストールする場合は「<strong>y</strong>」(Yesの意味), そうでない場合は「<strong>n</strong>」(Noの意味)を入力し, Enterを押下する.
 <ul>
@@ -480,56 +512,52 @@ select a packages file name : pip_pkgs_list_geq_20210330.txt</code></pre></li>
 </ul></li>
 </ol>
 <p>[終わり]</p>
-<p><br></p>
 <hr />
-<p><br></p>
 <h2 id="appendix">Appendix</h2>
 <h3 id="batファイルの中身概要">batファイルの中身概要</h3>
 <ul>
 <li><p>詳しくはGitHubリポジトリからbatファイルを直接見てください.</p></li>
 <li><p><strong>no001_backup_python_packages.bat</strong></p>
-<pre class="bat"><code>set py_pkgs_files_dpath=python_pkgs_files
-
-rem ディレクトリを作成する.
-echo make directory for packages files
-call mkdir %py_pkgs_files_dpath%
-
-rem エラー対策のアップデート
-echo command1 to avoid conda errors
-echo y|call conda install anaconda
-
-rem エラー対策のアップデート
-echo command2 to avoid conda errors
-echo y|call conda update --all
-
-set conda_list_file0=%py_pkgs_files_dpath%/conda_pkgs_list_raw.txt
-
-rem condaのパッケージ一覧を出力する.
-echo output conda packages file
-call conda list --export &gt; %conda_list_file0%
-
-set pip_list_file0=%py_pkgs_files_dpath%/pip_pkgs_list_raw.txt
-
-rem pipのパッケージ一覧を出力する.
-echo output pip packages file
-call pip list --format freeze &gt; %pip_list_file0%</code></pre></li>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bat"><code class="sourceCode dosbat"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span> <span class="va">py_pkgs_files_dpath</span>=python_pkgs_files</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co">rem ディレクトリを作成する.</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> make directory for packages files</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="bu">call</span> <span class="ot">mkdir</span> <span class="pp">%</span><span class="va">py_pkgs_files_dpath</span><span class="pp">%</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="co">rem エラー対策のアップデート</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> command1 to avoid conda errors</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> y<span class="kw">|</span><span class="bu">call</span> <span class="ot">conda</span> install anaconda</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="co">rem エラー対策のアップデート</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> command2 to avoid conda errors</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> y<span class="kw">|</span><span class="bu">call</span> <span class="ot">conda</span> update -<span class="at">-all</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span> <span class="va">conda_list_file0</span>=<span class="pp">%</span><span class="va">py_pkgs_files_dpath</span><span class="pp">%</span>/conda_pkgs_list_raw.txt</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="co">rem condaのパッケージ一覧を出力する.</span></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> output conda packages file</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a><span class="bu">call</span> <span class="ot">conda</span> list -<span class="at">-export</span> <span class="kw">&gt;</span> <span class="pp">%</span><span class="va">conda_list_file0</span><span class="pp">%</span></span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span> <span class="va">pip_list_file0</span>=<span class="pp">%</span><span class="va">py_pkgs_files_dpath</span><span class="pp">%</span>/pip_pkgs_list_raw.txt</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a><span class="co">rem pipのパッケージ一覧を出力する.</span></span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> output pip packages file</span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a><span class="bu">call</span> <span class="ot">pip</span> list -<span class="at">-format</span> freeze <span class="kw">&gt;</span> <span class="pp">%</span><span class="va">pip_list_file0</span><span class="pp">%</span></span></code></pre></div></li>
 <li><p><strong>no002_conda_install_from_files.bat</strong></p>
-<pre class="bat"><code>rem ファイルから1行ずつ読み込んでconda installを行う.
-rem yesかnoか聞かれる場合があるので, 全てyes(y)で答える.
-rem input_pkgs_fpathにはファイルパスをセット.
-for /f %%l in (%input_pkgs_fpath%) do (
-    echo y|call conda install &quot;%%l&quot;
-)</code></pre></li>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bat"><code class="sourceCode dosbat"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">rem ファイルから1行ずつ読み込んでconda installを行う.</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co">rem yesかnoか聞かれる場合があるので, 全てyes</span><span class="er">(</span><span class="co">y</span><span class="er">)</span><span class="co">で答える.</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co">rem input_pkgs_fpathにはファイルパスをセット.</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> <span class="at">/f</span> <span class="va">%%l</span> <span class="kw">in</span> <span class="kw">(</span><span class="pp">%</span><span class="va">input_pkgs_fpath</span><span class="pp">%</span><span class="kw">)</span> <span class="kw">do</span> <span class="kw">(</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> y<span class="kw">|</span><span class="bu">call</span> <span class="ot">conda</span> install <span class="st">&quot;</span><span class="sc">%%</span><span class="va">l</span><span class="st">&quot;</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="kw">)</span></span></code></pre></div></li>
 <li><p><strong>no003_pip_install_from_files.bat</strong></p>
-<pre class="bat"><code>rem ファイルから1行ずつ読み込んでpip installを行う.
-rem input_pkgs_fpathにはファイルパスをセット.
-for /f %%l in (%input_pkgs_fpath%) do (
-    call pip install &quot;%%l&quot;
-)</code></pre></li>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bat"><code class="sourceCode dosbat"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">rem ファイルから1行ずつ読み込んでpip installを行う.</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co">rem input_pkgs_fpathにはファイルパスをセット.</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> <span class="at">/f</span> <span class="va">%%l</span> <span class="kw">in</span> <span class="kw">(</span><span class="pp">%</span><span class="va">input_pkgs_fpath</span><span class="pp">%</span><span class="kw">)</span> <span class="kw">do</span> <span class="kw">(</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">call</span> <span class="ot">pip</span> install <span class="st">&quot;</span><span class="sc">%%</span><span class="va">l</span><span class="st">&quot;</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="kw">)</span></span></code></pre></div></li>
 </ul>
-<p><br></p>
 <hr />
-<p><br></p>
 <h2 id="参考">参考</h2>
 <h3 id="anaconda有償化関連">Anaconda有償化関連</h3>
 <ul>
@@ -546,71 +574,43 @@ for /f %%l in (%input_pkgs_fpath%) do (
 <li><p><a href="https://docs.anaconda.com/anaconda/install/uninstall/">Uninstalling Anaconda</a></p></li>
 <li><p><a href="https://qiita.com/jordi/items/cd974b668e7ecf312543">(Qiita)conda updateで「Solving environment: failed」となった時の解決法</a></p></li>
 </ul>
-<p><br></p>
 <hr />
-<p><br></p>
-<!--
-footer
-@update:2021/07/27
-@title:migration_from_anaconda_to_miniconda
-@class0:technology
-@class1:python
-@class2:env_construction
-@tags:technology,python,anaconda,miniconda,env_construction
-@synonym:
-@release:true
--->
 
-<br>
+</article> <!-- content -->
+
+<div class="article_share">
 <!-- twitter button -->
-<a 
-href="https://twitter.com/intent/tweet" 
-class="twitter-share-button" 
-data-size="large" 
-data-text="[杏仁豆腐の備忘録] Anaconda有償化に伴いMiniconda+conda-forgeに引越しをした" 
-data-url="https://laplaciannin102.github.io/laplaciannin102_articles/articles/migration_from_anaconda_to_miniconda.html" 
-data-hashtags="laplaciannin102" 
-data-show-count="false" 
-data-lang="en" 
-data-via="mq_spark" 
+<a
+href="https://twitter.com/intent/tweet"
+class="twitter-share-button"
+data-size="large"
+data-text="Anaconda有償化に伴いMiniconda+conda-forgeに引越しをした | 杏仁豆腐の備忘録"
+data-url="https://laplaciannin102.github.io/laplaciannin102_articles/articles/migration_from_anaconda_to_miniconda.html"
+data-hashtags="laplaciannin102"
+data-show-count="false"
+data-lang="en"
+data-via="mq_spark"
 data-related="mq_spark"
 >Tweet #laplaciannin102</a>
-<script 
-async src="https://platform.twitter.com/widgets.js" 
+<script
+async src="https://platform.twitter.com/widgets.js"
 charset="utf-8"
 ></script>
-<br>
-<br>
-<br>
+</div>
+</main> <!-- body -->
+
+<footer id="site_footer">
+<p class="update_date">更新日: 2021/07/27</p>
 <p>
-<img src="https://cdn.mathjax.org/mathjax/badge/mj-logo.svg" width="100" class="left">
-このページでは, 数式の表現に
-<a href="https://www.mathjax.org">MathJax</a>
-を利用しています.
+このページでは, 数式の表現に <a href="https://www.mathjax.org">MathJax</a> を利用しています.
 </p>
-<p>
-このページでは, シンタックスハイライト(プログラムのコードに色を付ける機能)に
-<a href="https://github.com/googlearchive/code-prettify">Google Code Prettify</a>
-を利用しています.
-</p>
-<br>
-<p>更新日: 2021/07/27</p>
 <p>Copyright (C) 2020 laplaciannin102 All Rights Reserved.</p>
+</footer>
 
-</div> <!-- content -->
-</div> <!-- body -->
+<a id="page_top" href="#" aria-label="ページの先頭へ">↑</a>
 
-<script type="text/javascript" src="../assets/js/annn_articles.js"></script>
-
-<!--
-skin候補
-default
-desert
-sunburst
-sons-of-obsidian
--->
-<script async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=html&lang=python&lang=lang-latex&skin=desert"></script>
-<script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script src="../assets/js/article.js"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
 </body>
 </html>

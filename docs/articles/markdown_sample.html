@@ -2,24 +2,77 @@
     author: laplaciannin102
 -->
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-<title>Markdown向けサンプル</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-<meta name="keywords" content="数学,mathematics,プログラミング,programming,情報学,Python,laplaciannin102"/>
-<meta name="robots" content="all">
-<meta name="description" content="このブログは, 杏仁豆腐(laplaciannin102)が学んだこと等を書き綴っていくものです."/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Markdown向けサンプル | 杏仁豆腐の備忘録</title>
+<meta name="description" content="Markdown向けサンプル: Markdownで記事を書くための数式サンプルをまとめた. (半分自分用)">
+<meta name="author" content="laplaciannin102">
+<link rel="canonical" href="https://laplaciannin102.github.io/laplaciannin102_articles/articles/markdown_sample.html">
 
 <!-- Twitterカード(サムネイル) -->
-<meta name="twitter:card" content="summary" /> <!-- カードタイプは, "summary", "summary_large_image", "app", "player" -->
-<meta name="twitter:site" content="@mq_spark" />
-<meta property="og:url" content="https://laplaciannin102.github.io/laplaciannin102_articles/articles/markdown_sample.html" />
-<meta property="og:title" content="[杏仁豆腐の備忘録] Markdown向けサンプル" />
-<meta property="og:description" content="Markdown向けサンプル" />
-<meta 
-    property="og:image" 
-    content="https://laplaciannin102.github.io/laplaciannin102_articles/assets/img/lap102_blog_card.png" 
-/>
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="杏仁豆腐の備忘録">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:url" content="https://laplaciannin102.github.io/laplaciannin102_articles/articles/markdown_sample.html">
+<meta property="og:title" content="Markdown向けサンプル | 杏仁豆腐の備忘録">
+<meta property="og:description" content="Markdown向けサンプル: Markdownで記事を書くための数式サンプルをまとめた. (半分自分用)">
+<meta property="og:image" content="https://laplaciannin102.github.io/laplaciannin102_articles/assets/img/lap102_blog_card.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@mq_spark">
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "headline": "Markdown向けサンプル",
+   "description": "Markdown向けサンプル: Markdownで記事を書くための数式サンプルをまとめた. (半分自分用)",
+   "inLanguage": "ja",
+   "url": "https://laplaciannin102.github.io/laplaciannin102_articles/articles/markdown_sample.html",
+   "mainEntityOfPage": "https://laplaciannin102.github.io/laplaciannin102_articles/articles/markdown_sample.html",
+   "author": {
+    "@type": "Person",
+    "name": "laplaciannin102",
+    "url": "https://laplaciannin102.github.io/"
+   },
+   "image": "https://laplaciannin102.github.io/laplaciannin102_articles/assets/img/lap102_blog_card.png",
+   "isPartOf": {
+    "@type": "Blog",
+    "name": "杏仁豆腐の備忘録",
+    "url": "https://laplaciannin102.github.io/laplaciannin102_articles/"
+   },
+   "dateModified": "2021-06-25",
+   "keywords": "blog, technology, tex, sample, markdown"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "ホーム",
+     "item": "https://laplaciannin102.github.io/laplaciannin102_articles/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "記事一覧",
+     "item": "https://laplaciannin102.github.io/laplaciannin102_articles/articles/table_of_contents.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Markdown向けサンプル",
+     "item": "https://laplaciannin102.github.io/laplaciannin102_articles/articles/markdown_sample.html"
+    }
+   ]
+  }
+ ]
+}
+</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VD0EN9TK2C"></script>
@@ -31,37 +84,45 @@
   gtag('config', 'G-VD0EN9TK2C');
 </script>
 
-<link rel="shortcut icon" href="../assets/ico/nanika_big.ico" type="image/vnd.microsoft.icon">
+<link rel="icon" href="../assets/ico/nanika_big.ico" type="image/vnd.microsoft.icon">
 <link rel="stylesheet" type="text/css" href="../assets/css/annn_articles.css">
-<style>
-</style>
 </head>
 <body>
 
-<div id="navigation_bar">
-<ul id="nav_bar_ul">
-    <!-- <li><p id="nbar_title">Markdown向けサンプル</p></li> -->
-    <li id="nav_logo"><a id="nav_logo_a" href="../index.html">
-        <div id="nav_logo_div"></div>
-    </a></li>
-
-    <!--
-    <li id="nav_hamburger">
-        <div id="div_hamburger">
-            <div class="ham_line"></div>
-            <div class="ham_line"></div>
-            <div class="ham_line"></div>
-        </div>
-    </li>
-    -->
-
-    <li id="nav_menu"><a id="nav_menu_a" href="./table_of_contents.html">Menu</a></li>
-    <li id="nav_page_top"><a id="nav_page_top_a" href="#article_body">PageTop</a></li>
-</ul>
+<header id="site_header">
+<div class="site_header_inner">
+    <a class="site_logo" href="../index.html"><img src="../assets/img/lap102_logo.png" alt="杏仁豆腐の備忘録" width="80" height="40"></a>
+    <nav class="site_nav">
+        <a href="./table_of_contents.html">記事一覧</a>
+    </nav>
 </div>
+</header>
 
-<div id="article_body"> <!-- body -->
-<div id="article_content"> <!-- content -->
+<main id="article_body" class="with_toc"> <!-- body -->
+<aside class="article_toc_side" aria-label="目次">
+<p class="toc_title">目次</p>
+<ul>
+<li class="toc_h2"><a href="#概要">概要</a></li>
+<li class="toc_h2"><a href="#tex数式サンプル">TeX数式サンプル</a></li>
+<li class="toc_h3"><a href="#定義の矢印">定義の矢印</a></li>
+<li class="toc_h3"><a href="#任意のforall">任意の(forall)</a></li>
+<li class="toc_h3"><a href="#部分集合族">部分集合族</a></li>
+<li class="toc_h3"><a href="#列ベクトル">(列)ベクトル</a></li>
+<li class="toc_h3"><a href="#行列">行列</a></li>
+<li class="toc_h3"><a href="#単位行列">単位行列</a></li>
+<li class="toc_h3"><a href="#ガウス積分">ガウス積分</a></li>
+<li class="toc_h3"><a href="#可算個の集合の和集合">可算個の集合の和集合</a></li>
+<li class="toc_h3"><a href="#確率空間">確率空間</a></li>
+<li class="toc_h3"><a href="#線形計画問題-不等式標準形">線形計画問題 不等式標準形</a></li>
+<li class="toc_h3"><a href="#単体法-辞書">単体法 辞書</a></li>
+<li class="toc_h2"><a href="#参考文献">参考文献</a></li>
+</ul>
+</aside>
+<div class="page_meta">
+<nav class="breadcrumb" aria-label="パンくずリスト"><a href="../index.html">ホーム</a><span class="sep">›</span><a href="./table_of_contents.html">記事一覧</a></nav>
+<p class="page_date">更新日 <time datetime="2021-06-25">2021/06/25</time></p>
+</div>
+<article id="article_content"> <!-- content -->
 
 <h1 id="markdown向けサンプル">Markdown向けサンプル</h1>
 <h2 id="概要">概要</h2>
@@ -69,45 +130,27 @@
 <li>Markdownで記事を書くための数式サンプルをまとめた.</li>
 <li>(半分自分用)</li>
 </ul>
-<p><br></p>
 <hr />
-<p><br></p>
-<h2 id="目次">目次</h2>
-<div class="table_of_contents">
-<details open>
-<summary>
-目次詳細
-</summary>
+<details class="article_toc_inline">
+<summary>目次</summary>
 <ul>
-<li><a href="#markdown向けサンプル">Markdown向けサンプル</a>
-<ul>
-<li><a href="#概要">概要</a></li>
-<li><a href="#目次">目次</a></li>
-<li><a href="#tex数式サンプル">TeX数式サンプル</a>
-<ul>
-<li><a href="#定義の矢印">定義の矢印</a></li>
-<li><a href="#任意のforall">任意の(forall)</a></li>
-<li><a href="#部分集合族">部分集合族</a></li>
-<li><a href="#列ベクトル">(列)ベクトル</a></li>
-<li><a href="#行列">行列</a></li>
-<li><a href="#単位行列">単位行列</a></li>
-<li><a href="#ガウス積分">ガウス積分</a></li>
-<li><a href="#可算個の集合の和集合">可算個の集合の和集合</a></li>
-<li><a href="#確率空間">確率空間</a></li>
-<li><a href="#線形計画問題-不等式標準形"><span class="ref_span">
-    <a class="referrer" href="./linear_programming_problem.html">線形計画問題</a>
-    <object class="ref_html" data="../assets/ref_html/ref_linear_programming_problem.html" type="text/plain"></object>
-</span> 不等式標準形</a></li>
-<li><a href="#単体法-辞書">単体法 辞書</a></li>
-</ul></li>
-<li><a href="#参考文献">参考文献</a></li>
-</ul></li>
+<li class="toc_h2"><a href="#概要">概要</a></li>
+<li class="toc_h2"><a href="#tex数式サンプル">TeX数式サンプル</a></li>
+<li class="toc_h3"><a href="#定義の矢印">定義の矢印</a></li>
+<li class="toc_h3"><a href="#任意のforall">任意の(forall)</a></li>
+<li class="toc_h3"><a href="#部分集合族">部分集合族</a></li>
+<li class="toc_h3"><a href="#列ベクトル">(列)ベクトル</a></li>
+<li class="toc_h3"><a href="#行列">行列</a></li>
+<li class="toc_h3"><a href="#単位行列">単位行列</a></li>
+<li class="toc_h3"><a href="#ガウス積分">ガウス積分</a></li>
+<li class="toc_h3"><a href="#可算個の集合の和集合">可算個の集合の和集合</a></li>
+<li class="toc_h3"><a href="#確率空間">確率空間</a></li>
+<li class="toc_h3"><a href="#線形計画問題-不等式標準形">線形計画問題 不等式標準形</a></li>
+<li class="toc_h3"><a href="#単体法-辞書">単体法 辞書</a></li>
+<li class="toc_h2"><a href="#参考文献">参考文献</a></li>
 </ul>
 </details>
-</div>
-<p><br></p>
 <hr />
-<p><br></p>
 <h2 id="tex数式サンプル">TeX数式サンプル</h2>
 <p>こちら, 随時更新予定.</p>
 <h3 id="定義の矢印">定義の矢印</h3>
@@ -115,63 +158,59 @@
 <li>Preview</li>
 </ul>
 <div class="no_border_square_box">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 \overset{\text{def.}}{\Longleftrightarrow}
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
 <ul>
 <li>Markdownでの記法</li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="prettyprint linenums tex"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">aligned</span>}</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="sc">\overset</span><span class="ss">{</span><span class="sc">\text</span>{def.}<span class="ss">}{</span><span class="sc">\Longleftrightarrow</span><span class="ss">}</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">aligned</span>}</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span></code></pre></div>
-<p><br></p>
 <hr />
-<p><br></p>
 <h3 id="任意のforall">任意の(forall)</h3>
 <ul>
 <li>Preview</li>
 </ul>
 <div class="no_border_square_box">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 ^\forall \epsilon
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
 <ul>
 <li>Markdownでの記法</li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="prettyprint linenums tex"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span>
+<div class="sourceCode" id="cb2"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">aligned</span>}</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ss">^</span><span class="sc">\forall</span><span class="ss"> </span><span class="sc">\epsilon</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">aligned</span>}</span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span></code></pre></div>
-<p><br></p>
 <hr />
-<p><br></p>
 <h3 id="部分集合族">部分集合族</h3>
 <ul>
 <li>Preview</li>
 </ul>
 <div class="no_border_square_box">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 &amp;X : \text{set} \\
 &amp;\mathfrak{P}(X)
 \coloneqq \{ A : \text{set} \mid A \subset X \} : \text{power set of } X \\
 &amp;\boldsymbol{B} \subset \mathfrak{P}(X) : \text{family of subsets of } X
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
 <ul>
 <li>Markdownでの記法</li>
 </ul>
-<div class="sourceCode" id="cb3"><pre class="prettyprint linenums tex"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span>
+<div class="sourceCode" id="cb3"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">aligned</span>}</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ss">&amp;X : </span><span class="sc">\text</span>{set}<span class="ss"> </span><span class="sc">\\</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ss">&amp;</span><span class="sc">\mathfrak</span><span class="ss">{P}(X)</span></span>
@@ -179,15 +218,13 @@ $$</span></p>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="ss">&amp;</span><span class="sc">\boldsymbol</span><span class="ss">{B} </span><span class="sc">\subset</span><span class="ss"> </span><span class="sc">\mathfrak</span><span class="ss">{P}(X) : </span><span class="sc">\text</span>{family of subsets of }<span class="ss"> X</span></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">aligned</span>}</span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span></code></pre></div>
-<p><br></p>
 <hr />
-<p><br></p>
 <h3 id="列ベクトル">(列)ベクトル</h3>
 <ul>
 <li>Preview</li>
 </ul>
 <div class="no_border_square_box">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 \boldsymbol{x} = \left(
 \begin{array}{c}
@@ -199,12 +236,12 @@ x_{n}
 \end{array}
 \right)
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
 <ul>
 <li>Markdownでの記法</li>
 </ul>
-<div class="sourceCode" id="cb4"><pre class="prettyprint linenums tex"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span>
+<div class="sourceCode" id="cb4"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">aligned</span>}</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="sc">\boldsymbol</span><span class="ss">{x} = </span><span class="sc">\left</span><span class="ss">(</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">array</span>}<span class="ss">{c}</span></span>
@@ -217,15 +254,13 @@ $$</span></p>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="sc">\right</span><span class="ss">)</span></span>
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">aligned</span>}</span>
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span></code></pre></div>
-<p><br></p>
 <hr />
-<p><br></p>
 <h3 id="行列">行列</h3>
 <ul>
 <li>Preview</li>
 </ul>
 <div class="no_border_square_box">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 &amp;A = \left(
 \begin{array}{ccccc}
@@ -237,12 +272,12 @@ a_{m1} &amp; \cdots &amp; a_{mj} &amp; \cdots &amp; a_{mn} \\
 \end{array}
 \right) \in \mathbb{R} ^ {m \times n}
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
 <ul>
 <li>Markdownでの記法</li>
 </ul>
-<div class="sourceCode" id="cb5"><pre class="prettyprint linenums tex"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span>
+<div class="sourceCode" id="cb5"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">aligned</span>}</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ss">&amp;A = </span><span class="sc">\left</span><span class="ss">(</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">array</span>}<span class="ss">{ccccc}</span></span>
@@ -255,15 +290,13 @@ $$</span></p>
 <span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="sc">\right</span><span class="ss">) </span><span class="sc">\in</span><span class="ss"> </span><span class="sc">\mathbb</span><span class="ss">{R} ^ {m </span><span class="sc">\times</span><span class="ss"> n}</span></span>
 <span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">aligned</span>}</span>
 <span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span></code></pre></div>
-<p><br></p>
 <hr />
-<p><br></p>
 <h3 id="単位行列">単位行列</h3>
 <ul>
 <li>Preview</li>
 </ul>
 <div class="no_border_square_box">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 &amp;I = \left(
 \begin{array}{ccccc}
@@ -275,12 +308,12 @@ $$</span></p>
 \end{array}
 \right) \in \mathbb{R}^{n \times n}
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
 <ul>
 <li>Markdownでの記法</li>
 </ul>
-<div class="sourceCode" id="cb6"><pre class="prettyprint linenums tex"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span>
+<div class="sourceCode" id="cb6"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">aligned</span>}</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ss">&amp;I = </span><span class="sc">\left</span><span class="ss">(</span></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">array</span>}<span class="ss">{ccccc}</span></span>
@@ -293,60 +326,49 @@ $$</span></p>
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="sc">\right</span><span class="ss">) </span><span class="sc">\in</span><span class="ss"> </span><span class="sc">\mathbb</span><span class="ss">{R}^{n </span><span class="sc">\times</span><span class="ss"> n}</span></span>
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">aligned</span>}</span>
 <span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span></code></pre></div>
-<p><br></p>
 <hr />
-<p><br></p>
 <h3 id="ガウス積分">ガウス積分</h3>
 <ul>
 <li>Preview</li>
 </ul>
 <div class="no_border_square_box">
-<p><span class="math display">$$\int_{\mathbb{R}}{e^{-x^2}} dx = \sqrt{\pi}$$</span></p>
+<p><span class="math display">\[\int_{\mathbb{R}}{e^{-x^2}} dx = \sqrt{\pi}\]</span></p>
 </div>
 <ul>
 <li>Markdownでの記法</li>
 </ul>
-<div class="sourceCode" id="cb7"><pre class="prettyprint linenums tex"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span><span class="sc">\int</span><span class="ss">_{</span><span class="sc">\mathbb</span><span class="ss">{R}}{e^{-x^2}} dx = </span><span class="sc">\sqrt</span><span class="ss">{</span><span class="sc">\pi</span><span class="ss">}$$</span></span></code></pre></div>
-<p><br></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span><span class="sc">\int</span><span class="ss">_{</span><span class="sc">\mathbb</span><span class="ss">{R}}{e^{-x^2}} dx = </span><span class="sc">\sqrt</span><span class="ss">{</span><span class="sc">\pi</span><span class="ss">}$$</span></span></code></pre></div>
 <hr />
-<p><br></p>
 <h3 id="可算個の集合の和集合">可算個の集合の和集合</h3>
 <ul>
 <li>Preview</li>
 </ul>
 <div class="no_border_square_box">
-<p><span class="math display">$$\overset{\infty}{\underset{n=1}{\bigcup}} A_{n} \in \boldsymbol{B}$$</span></p>
+<p><span class="math display">\[\overset{\infty}{\underset{n=1}{\bigcup}} A_{n} \in \boldsymbol{B}\]</span></p>
 </div>
 <ul>
 <li>Markdownでの記法</li>
 </ul>
-<div class="sourceCode" id="cb8"><pre class="prettyprint linenums tex"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span><span class="sc">\overset</span><span class="ss">{</span><span class="sc">\infty</span><span class="ss">}{</span><span class="sc">\underset</span><span class="ss">{n=1}{</span><span class="sc">\bigcup</span><span class="ss">}} A_{n} </span><span class="sc">\in</span><span class="ss"> </span><span class="sc">\boldsymbol</span><span class="ss">{B}$$</span></span></code></pre></div>
-<p><br></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span><span class="sc">\overset</span><span class="ss">{</span><span class="sc">\infty</span><span class="ss">}{</span><span class="sc">\underset</span><span class="ss">{n=1}{</span><span class="sc">\bigcup</span><span class="ss">}} A_{n} </span><span class="sc">\in</span><span class="ss"> </span><span class="sc">\boldsymbol</span><span class="ss">{B}$$</span></span></code></pre></div>
 <hr />
-<p><br></p>
 <h3 id="確率空間">確率空間</h3>
 <ul>
 <li>Preview</li>
 </ul>
 <div class="no_border_square_box">
-<p><span class="math display">(<em>Ω</em>, ℱ, <em>P</em>)</span></p>
+<p><span class="math display">\[(\Omega, \mathcal{F}, P)\]</span></p>
 </div>
 <ul>
 <li>Markdownでの記法</li>
 </ul>
-<div class="sourceCode" id="cb9"><pre class="prettyprint linenums tex"><code class="sourceCode latex"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$(</span><span class="sc">\Omega</span><span class="ss">, </span><span class="sc">\mathcal</span><span class="ss">{F}, P)$$</span></span></code></pre></div>
-<p><br></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$(</span><span class="sc">\Omega</span><span class="ss">, </span><span class="sc">\mathcal</span><span class="ss">{F}, P)$$</span></span></code></pre></div>
 <hr />
-<p><br></p>
-<h3 id="線形計画問題-不等式標準形"><span class="ref_span">
-    <a class="referrer" href="./linear_programming_problem.html">線形計画問題</a>
-    <object class="ref_html" data="../assets/ref_html/ref_linear_programming_problem.html" type="text/plain"></object>
-</span> 不等式標準形</h3>
+<h3 id="線形計画問題-不等式標準形"><span class="ref_span"><a class="referrer" href="./linear_programming_problem.html">線形計画問題</a><object class="ref_html" data="../assets/ref_html/ref_linear_programming_problem.html" type="text/html"></object></span> 不等式標準形</h3>
 <ul>
 <li>Preview</li>
 </ul>
 <div class="no_border_square_box">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 \left \Vert \quad
 \begin{aligned}
@@ -359,12 +381,12 @@ $$</span></p>
 \end{aligned}
 \right.
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
 <ul>
 <li>Markdownでの記法</li>
 </ul>
-<div class="sourceCode" id="cb10"><pre class="prettyprint linenums tex"><code class="sourceCode latex"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span>
+<div class="sourceCode" id="cb10"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">aligned</span>}</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="sc">\left</span><span class="ss"> </span><span class="sc">\Vert</span><span class="ss"> </span><span class="sc">\quad</span></span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">aligned</span>}</span>
@@ -378,15 +400,13 @@ $$</span></p>
 <span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="sc">\right</span><span class="ss">.</span></span>
 <span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">aligned</span>}</span>
 <span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span></code></pre></div>
-<p><br></p>
 <hr />
-<p><br></p>
 <h3 id="単体法-辞書">単体法 辞書</h3>
 <ul>
 <li>Preview</li>
 </ul>
 <div class="no_border_square_box">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 D &amp;= \left(
 \begin{array}{c:c}
@@ -408,12 +428,12 @@ D &amp;= \left(
 \end{array}
 \right) \\
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
 <ul>
 <li>Markdownでの記法</li>
 </ul>
-<div class="sourceCode" id="cb11"><pre class="prettyprint linenums tex"><code class="sourceCode latex"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span>
+<div class="sourceCode" id="cb11"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">aligned</span>}</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="ss">D &amp;= </span><span class="sc">\left</span><span class="ss">(</span></span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">array</span>}<span class="ss">{c:c}</span></span>
@@ -436,78 +456,48 @@ $$</span></p>
 <span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a><span class="sc">\right</span><span class="ss">) </span><span class="sc">\\</span></span>
 <span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">aligned</span>}</span>
 <span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span></code></pre></div>
-<p><br></p>
 <hr />
-<p><br></p>
 <h2 id="参考文献">参考文献</h2>
 <ul>
 <li>Netlify「Supported Functions・KaTeX」, <a href="https://katex.org/docs/supported.html" class="uri">https://katex.org/docs/supported.html</a> (2020年8月14日閲覧)．</li>
 </ul>
-<p><br></p>
 <hr />
-<p><br></p>
-<!--
-footer
-@update:2021/06/25
-@title:markdown_sample
-@class0:technology
-@class1:tex
-@class2:
-@tags:blog,technology,tex,sample,markdown
-@synonym:
-@release:true
--->
 
-<br>
+</article> <!-- content -->
+
+<div class="article_share">
 <!-- twitter button -->
-<a 
-href="https://twitter.com/intent/tweet" 
-class="twitter-share-button" 
-data-size="large" 
-data-text="[杏仁豆腐の備忘録] Markdown向けサンプル" 
-data-url="https://laplaciannin102.github.io/laplaciannin102_articles/articles/markdown_sample.html" 
-data-hashtags="laplaciannin102" 
-data-show-count="false" 
-data-lang="en" 
-data-via="mq_spark" 
+<a
+href="https://twitter.com/intent/tweet"
+class="twitter-share-button"
+data-size="large"
+data-text="Markdown向けサンプル | 杏仁豆腐の備忘録"
+data-url="https://laplaciannin102.github.io/laplaciannin102_articles/articles/markdown_sample.html"
+data-hashtags="laplaciannin102"
+data-show-count="false"
+data-lang="en"
+data-via="mq_spark"
 data-related="mq_spark"
 >Tweet #laplaciannin102</a>
-<script 
-async src="https://platform.twitter.com/widgets.js" 
+<script
+async src="https://platform.twitter.com/widgets.js"
 charset="utf-8"
 ></script>
-<br>
-<br>
-<br>
+</div>
+</main> <!-- body -->
+
+<footer id="site_footer">
+<p class="update_date">更新日: 2021/06/25</p>
 <p>
-<img src="https://cdn.mathjax.org/mathjax/badge/mj-logo.svg" width="100" class="left">
-このページでは, 数式の表現に
-<a href="https://www.mathjax.org">MathJax</a>
-を利用しています.
+このページでは, 数式の表現に <a href="https://www.mathjax.org">MathJax</a> を利用しています.
 </p>
-<p>
-このページでは, シンタックスハイライト(プログラムのコードに色を付ける機能)に
-<a href="https://github.com/googlearchive/code-prettify">Google Code Prettify</a>
-を利用しています.
-</p>
-<br>
-<p>更新日: 2021/06/25</p>
 <p>Copyright (C) 2020 laplaciannin102 All Rights Reserved.</p>
+</footer>
 
-</div> <!-- content -->
-</div> <!-- body -->
+<a id="page_top" href="#" aria-label="ページの先頭へ">↑</a>
 
-<script type="text/javascript" src="../assets/js/annn_articles.js"></script>
-
-<!--
-skin候補
-default
-desert
-sunburst
-sons-of-obsidian
--->
-<script async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=html&lang=python&lang=lang-latex&skin=desert"></script>
-<script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script src="../assets/js/article.js"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
 </body>
 </html>
