@@ -2,24 +2,77 @@
     author: laplaciannin102
 -->
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-<title>固有値</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-<meta name="keywords" content="数学,mathematics,プログラミング,programming,情報学,Python,laplaciannin102"/>
-<meta name="robots" content="all">
-<meta name="description" content="このブログは, 杏仁豆腐(laplaciannin102)が学んだこと等を書き綴っていくものです."/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>固有値 | 杏仁豆腐の備忘録</title>
+<meta name="description" content="固有値: 正方行列の指標.">
+<meta name="author" content="laplaciannin102">
+<link rel="canonical" href="https://laplaciannin102.github.io/laplaciannin102_articles/articles/eigenvalue.html">
 
 <!-- Twitterカード(サムネイル) -->
-<meta name="twitter:card" content="summary" /> <!-- カードタイプは, "summary", "summary_large_image", "app", "player" -->
-<meta name="twitter:site" content="@mq_spark" />
-<meta property="og:url" content="https://laplaciannin102.github.io/laplaciannin102_articles/articles/eigenvalue.html" />
-<meta property="og:title" content="[杏仁豆腐の備忘録] 固有値" />
-<meta property="og:description" content="固有値" />
-<meta 
-    property="og:image" 
-    content="https://laplaciannin102.github.io/laplaciannin102_articles/assets/img/lap102_blog_card.png" 
-/>
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="杏仁豆腐の備忘録">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:url" content="https://laplaciannin102.github.io/laplaciannin102_articles/articles/eigenvalue.html">
+<meta property="og:title" content="固有値 | 杏仁豆腐の備忘録">
+<meta property="og:description" content="固有値: 正方行列の指標.">
+<meta property="og:image" content="https://laplaciannin102.github.io/laplaciannin102_articles/assets/img/lap102_blog_card.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@mq_spark">
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "headline": "固有値",
+   "description": "固有値: 正方行列の指標.",
+   "inLanguage": "ja",
+   "url": "https://laplaciannin102.github.io/laplaciannin102_articles/articles/eigenvalue.html",
+   "mainEntityOfPage": "https://laplaciannin102.github.io/laplaciannin102_articles/articles/eigenvalue.html",
+   "author": {
+    "@type": "Person",
+    "name": "laplaciannin102",
+    "url": "https://laplaciannin102.github.io/"
+   },
+   "image": "https://laplaciannin102.github.io/laplaciannin102_articles/assets/img/lap102_blog_card.png",
+   "isPartOf": {
+    "@type": "Blog",
+    "name": "杏仁豆腐の備忘録",
+    "url": "https://laplaciannin102.github.io/laplaciannin102_articles/"
+   },
+   "dateModified": "2021-07-07",
+   "keywords": "mathematics, matrix, definition, algebra, eigenvalue"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "ホーム",
+     "item": "https://laplaciannin102.github.io/laplaciannin102_articles/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "記事一覧",
+     "item": "https://laplaciannin102.github.io/laplaciannin102_articles/articles/table_of_contents.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "固有値",
+     "item": "https://laplaciannin102.github.io/laplaciannin102_articles/articles/eigenvalue.html"
+    }
+   ]
+  }
+ ]
+}
+</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VD0EN9TK2C"></script>
@@ -31,78 +84,66 @@
   gtag('config', 'G-VD0EN9TK2C');
 </script>
 
-<link rel="shortcut icon" href="../assets/ico/nanika_big.ico" type="image/vnd.microsoft.icon">
+<link rel="icon" href="../assets/ico/nanika_big.ico" type="image/vnd.microsoft.icon">
 <link rel="stylesheet" type="text/css" href="../assets/css/annn_articles.css">
-<style>
-</style>
 </head>
 <body>
 
-<div id="navigation_bar">
-<ul id="nav_bar_ul">
-    <!-- <li><p id="nbar_title">固有値</p></li> -->
-    <li id="nav_logo"><a id="nav_logo_a" href="../index.html">
-        <div id="nav_logo_div"></div>
-    </a></li>
-
-    <!--
-    <li id="nav_hamburger">
-        <div id="div_hamburger">
-            <div class="ham_line"></div>
-            <div class="ham_line"></div>
-            <div class="ham_line"></div>
-        </div>
-    </li>
-    -->
-
-    <li id="nav_menu"><a id="nav_menu_a" href="./table_of_contents.html">Menu</a></li>
-    <li id="nav_page_top"><a id="nav_page_top_a" href="#article_body">PageTop</a></li>
-</ul>
+<header id="site_header">
+<div class="site_header_inner">
+    <a class="site_logo" href="../index.html"><img src="../assets/img/lap102_logo.png" alt="杏仁豆腐の備忘録" width="80" height="40"></a>
+    <nav class="site_nav">
+        <a href="./table_of_contents.html">記事一覧</a>
+    </nav>
 </div>
+</header>
 
-<div id="article_body"> <!-- body -->
-<div id="article_content"> <!-- content -->
+<main id="article_body" class="with_toc"> <!-- body -->
+<aside class="article_toc_side" aria-label="目次">
+<p class="toc_title">目次</p>
+<ul>
+<li class="toc_h2"><a href="#概要">概要</a></li>
+<li class="toc_h2"><a href="#定義1">定義1</a></li>
+<li class="toc_h2"><a href="#定義2">定義2</a></li>
+<li class="toc_h2"><a href="#固有値問題">固有値問題</a></li>
+<li class="toc_h3"><a href="#標準固有値問題">標準固有値問題</a></li>
+<li class="toc_h3"><a href="#一般化固有値問題">一般化固有値問題</a></li>
+<li class="toc_h2"><a href="#固有分解">固有分解</a></li>
+<li class="toc_h2"><a href="#関連項目">関連項目</a></li>
+<li class="toc_h2"><a href="#参考文献">参考文献</a></li>
+</ul>
+</aside>
+<div class="page_meta">
+<nav class="breadcrumb" aria-label="パンくずリスト"><a href="../index.html">ホーム</a><span class="sep">›</span><a href="./table_of_contents.html">記事一覧</a></nav>
+<p class="page_date">更新日 <time datetime="2021-07-07">2021/07/07</time></p>
+</div>
+<article id="article_content"> <!-- content -->
 
 <h1 id="固有値">固有値</h1>
 <h2 id="概要">概要</h2>
 <ul>
 <li>正方行列の指標.</li>
 </ul>
-<p><br></p>
 <hr />
-<p><br></p>
-<h2 id="目次">目次</h2>
-<div class="table_of_contents">
-<details open>
-<summary>
-目次詳細
-</summary>
+<details class="article_toc_inline">
+<summary>目次</summary>
 <ul>
-<li><a href="#固有値">固有値</a>
-<ul>
-<li><a href="#概要">概要</a></li>
-<li><a href="#目次">目次</a></li>
-<li><a href="#定義1">定義1</a></li>
-<li><a href="#定義2">定義2</a></li>
-<li><a href="#固有値問題">固有値問題</a>
-<ul>
-<li><a href="#標準固有値問題">標準固有値問題</a></li>
-<li><a href="#一般化固有値問題">一般化固有値問題</a></li>
-</ul></li>
-<li><a href="#固有分解">固有分解</a></li>
-<li><a href="#関連項目">関連項目</a></li>
-<li><a href="#参考文献">参考文献</a></li>
-</ul></li>
+<li class="toc_h2"><a href="#概要">概要</a></li>
+<li class="toc_h2"><a href="#定義1">定義1</a></li>
+<li class="toc_h2"><a href="#定義2">定義2</a></li>
+<li class="toc_h2"><a href="#固有値問題">固有値問題</a></li>
+<li class="toc_h3"><a href="#標準固有値問題">標準固有値問題</a></li>
+<li class="toc_h3"><a href="#一般化固有値問題">一般化固有値問題</a></li>
+<li class="toc_h2"><a href="#固有分解">固有分解</a></li>
+<li class="toc_h2"><a href="#関連項目">関連項目</a></li>
+<li class="toc_h2"><a href="#参考文献">参考文献</a></li>
 </ul>
 </details>
-</div>
-<p><br></p>
 <hr />
-<p><br></p>
 <h2 id="定義1">定義1</h2>
-<p><span class="math inline"><em>A</em></span>を以下の様な<span class="math inline"><em>n</em></span>次の実正方行列とする.</p>
+<p><span class="math inline">\(A\)</span>を以下の様な<span class="math inline">\(n\)</span>次の実正方行列とする.</p>
 <div class="flow_x_container">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 &amp;i, j \in \{ 1, \cdots , n \}, \quad a_{ij} \in \mathbb{R} \\
 \\
@@ -117,11 +158,11 @@
 \right) = \left( a_{ij} \right) \in \mathbb{R}^{n \times n} \\
 &amp;: n \text{-dim matrix}
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
-<p>また, <span class="math inline"><em>I</em></span> を<strong>単位行列</strong> , <span class="math inline"><strong>0</strong></span> を<strong>ゼロベクトル</strong> とする.</p>
+<p>また, <span class="math inline">\(I\)</span> を<strong>単位行列</strong> , <span class="math inline">\(\boldsymbol{0}\)</span> を<strong>ゼロベクトル</strong> とする.</p>
 <div class="flow_x_container">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 &amp;I = \left(
 \begin{array}{ccccc}
@@ -140,11 +181,11 @@ $$</span></p>
 \end{array}
 \right) \in \mathbb{R} ^ {n}
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
-<p>次の式を満たす値 <span class="math inline"><em>λ</em></span> と<strong>ベクトル</strong> <span class="math inline"><strong>v</strong></span> が存在する時, <span class="math inline"><em>λ</em></span> を行列 <span class="math inline"><em>A</em></span> の<strong>固有値(eigenvalue)</strong> , <span class="math inline"><strong>v</strong></span> を <strong>固有ベクトル(eigenvector)</strong> という.</p>
+<p>次の式を満たす値 <span class="math inline">\(\lambda\)</span> と<strong>ベクトル</strong> <span class="math inline">\(\boldsymbol{v}\)</span> が存在する時, <span class="math inline">\(\lambda\)</span> を行列 <span class="math inline">\(A\)</span> の<strong>固有値(eigenvalue)</strong> , <span class="math inline">\(\boldsymbol{v}\)</span> を <strong>固有ベクトル(eigenvector)</strong> という.</p>
 <div class="flow_x_container">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 &amp;\lambda \in \mathbb{C}, \quad
 &amp;\boldsymbol{v} = \left(
@@ -158,107 +199,101 @@ v_{n}
 \\
 &amp;A \boldsymbol{v} = \lambda \boldsymbol{v}
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
 <p>この関係は, 次の様に書くこともできる.</p>
 <div class="flow_x_container">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 (A - \lambda I) \boldsymbol{v} = \boldsymbol{0}
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
 <p>この関係式を <strong>標準固有値問題(standard eigenvalue problem)</strong> という.</p>
-<p><br></p>
 <hr />
-<p><br></p>
 <h2 id="定義2">定義2</h2>
-<p><span class="math inline"><em>V</em></span>を体<span class="math inline"><em>K</em></span>上の<strong>線形空間(vector space)</strong>, <span class="math inline"><em>T</em></span>を<span class="math inline"><em>V</em></span>の<strong>線形変換</strong>とする.</p>
+<p><span class="math inline">\(V\)</span>を体<span class="math inline">\(K\)</span>上の<strong>線形空間(vector space)</strong>, <span class="math inline">\(T\)</span>を<span class="math inline">\(V\)</span>の<strong>線形変換</strong>とする.</p>
 <div class="flow_x_container">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 &amp;K : \text{field} \\
 &amp;V : \text{vector space over } K \\
 &amp;T : V \rightarrow V : \text{linear transformation}
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
-<p><span class="math inline"><em>T</em></span>によって方向の変わらない<strong>ベクトル</strong><span class="math inline"><strong>v</strong></span>が存在する時, すなわち次の式を満たす値 <span class="math inline"><em>α</em></span> と<span class="math inline"><em>V</em></span>の元<span class="math inline"><strong>v</strong></span> が存在する時, <span class="math inline"><em>α</em></span> を <span class="math inline"><em>T</em></span> の<strong>固有値(eigenvalue)</strong> , <span class="math inline"><strong>v</strong></span> を <strong>固有ベクトル(eigenvector)</strong> という.</p>
+<p><span class="math inline">\(T\)</span>によって方向の変わらない<strong>ベクトル</strong><span class="math inline">\(\boldsymbol{v}\)</span>が存在する時, すなわち次の式を満たす値 <span class="math inline">\(\alpha\)</span> と<span class="math inline">\(V\)</span>の元<span class="math inline">\(\boldsymbol{v}\)</span> が存在する時, <span class="math inline">\(\alpha\)</span> を <span class="math inline">\(T\)</span> の<strong>固有値(eigenvalue)</strong> , <span class="math inline">\(\boldsymbol{v}\)</span> を <strong>固有ベクトル(eigenvector)</strong> という.</p>
 <div class="flow_x_container">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 &amp;\alpha \in K , \quad
 \boldsymbol{v} \in V \\
 &amp;T \boldsymbol{v} = \alpha \boldsymbol{v}
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
-<p><br></p>
 <hr />
-<p><br></p>
 <h2 id="固有値問題">固有値問題</h2>
-<p><span class="math inline"><em>A</em></span> , <span class="math inline"><em>B</em></span> を<span class="math inline"><em>n</em></span>次元正方行列, <span class="math inline"><strong>v</strong></span> を<span class="math inline"><em>n</em></span>次元ベクトル, <span class="math inline"><em>λ</em></span>を実数とする.</p>
+<p><span class="math inline">\(A\)</span> , <span class="math inline">\(B\)</span> を<span class="math inline">\(n\)</span>次元正方行列, <span class="math inline">\(\boldsymbol{v}\)</span> を<span class="math inline">\(n\)</span>次元ベクトル, <span class="math inline">\(\lambda\)</span>を実数とする.</p>
 <div class="flow_x_container">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 &amp;A, B \in \mathbb{R}^{n \times n} : n \text{-dim matrix} \\
 &amp;\boldsymbol{v} \in \mathbb{R}^{n} : n \text{-dim vector} \\
 &amp;\lambda \in \mathbb{R} : \text{number} \\
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
 <h3 id="標準固有値問題">標準固有値問題</h3>
 <p>次の関係式を <strong>標準固有値問題(standard eigenvalue problems)</strong> という.</p>
 <div class="flow_x_container">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 &amp;A \boldsymbol{v} = \lambda \boldsymbol{v}
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
 <h3 id="一般化固有値問題">一般化固有値問題</h3>
 <p>次の関係式を <strong>一般化固有値問題(generalized eigenvalue problems)</strong> という.</p>
 <div class="flow_x_container">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 &amp;A \boldsymbol{v} = \lambda B \boldsymbol{v}
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
-<p><span class="math inline"><em>B</em></span>が<strong>正則</strong>の時, すなわち逆行列<span class="math inline"><em>B</em><sup> − 1</sup></span>が存在する時, 両辺に左から<span class="math inline"><em>B</em><sup> − 1</sup></span>をかけることで, <strong>一般化固有値問題</strong>は<strong>標準固有値問題</strong>に帰着できる.</p>
+<p><span class="math inline">\(B\)</span>が<strong>正則</strong>の時, すなわち逆行列<span class="math inline">\(B ^ {-1}\)</span>が存在する時, 両辺に左から<span class="math inline">\(B ^ {-1}\)</span>をかけることで, <strong>一般化固有値問題</strong>は<strong>標準固有値問題</strong>に帰着できる.</p>
 <div class="flow_x_container">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 &amp;{}^{\exists} B ^ {-1} \in \mathbb{R}^{n \times n} : n \text{-dim matrix} \\
 \Longrightarrow &amp; B ^ {-1} A \boldsymbol{v} = \lambda B ^ {-1} B \boldsymbol{v} \\
 \Longleftrightarrow &amp; B ^ {-1} A \boldsymbol{v} = \lambda \boldsymbol{v}
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
-<p><br></p>
 <hr />
-<p><br></p>
 <h2 id="固有分解">固有分解</h2>
-<p>行列 <span class="math inline"><em>A</em></span> を <span class="math inline"><em>n</em></span> 次実正方行列とする.</p>
+<p>行列 <span class="math inline">\(A\)</span> を <span class="math inline">\(n\)</span> 次実正方行列とする.</p>
 <div class="flow_x_container">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 &amp;A \in M_{n, n}(\mathbb{R})
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
-<p><span class="math inline"><em>λ</em><sub><em>i</em></sub></span> を行列<span class="math inline"><em>A</em></span>の固有値, <span class="math inline"><em>λ</em><sub><em>i</em></sub></span> に対応する固有ベクトルを <span class="math inline"><strong>v</strong><sub><em>i</em></sub></span>, つまり</p>
+<p><span class="math inline">\(\lambda_{i}\)</span> を行列<span class="math inline">\(A\)</span>の固有値, <span class="math inline">\(\lambda_{i}\)</span> に対応する固有ベクトルを <span class="math inline">\(\boldsymbol{v}_{i}\)</span>, つまり</p>
 <div class="flow_x_container">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 &amp;^\forall j = 1, \ldots , n \\
 &amp;\lambda_{j} \in \mathbb{C} , \quad \boldsymbol{v}_{j} \in \mathbb{R} ^n , \quad A \boldsymbol{v}_{j} = \lambda_{j} \boldsymbol{v}_{j}
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
 <p>とする. この時,</p>
 <div class="flow_x_container">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 A \left(
 \begin{array}{c}
@@ -303,11 +338,11 @@ A \boldsymbol{v}_{n}
 \end{array}
 \right)
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
 <p>であるため,</p>
 <div class="flow_x_container">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 &amp;V = \left(
 \begin{array}{c}
@@ -329,47 +364,45 @@ $$</span></p>
 \end{array}
 \right)
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
 <p>とすると,</p>
 <div class="flow_x_container">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 A V = V \Lambda
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
-<p>とかける. 特に<span class="math inline"><em>V</em></span> が正則(逆行列 <span class="math inline"><em>V</em><sup> − 1</sup></span> が存在)の時,</p>
+<p>とかける. 特に<span class="math inline">\(V\)</span> が正則(逆行列 <span class="math inline">\(V ^{-1}\)</span> が存在)の時,</p>
 <div class="flow_x_container">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 &amp;A V = V \Lambda \\
 \Longleftrightarrow &amp;A = V \Lambda V ^{-1} \\
 \Longleftrightarrow &amp;V ^{-1} A V = \Lambda
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
 <p>である. 次の式</p>
 <div class="flow_x_container">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 &amp;A V = V \Lambda \\
 \Longleftrightarrow &amp;A = V \Lambda V ^{-1}
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
-<p>を行列 <span class="math inline"><em>A</em></span> の <strong>固有分解(eigendecomposition)</strong> という. また,</p>
+<p>を行列 <span class="math inline">\(A\)</span> の <strong>固有分解(eigendecomposition)</strong> という. また,</p>
 <div class="flow_x_container">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 V ^{-1} A V = \Lambda
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
-<p>は, 行列 <span class="math inline"><em>A</em></span> の<strong>対角化</strong>になっている.</p>
-<p><br></p>
+<p>は, 行列 <span class="math inline">\(A\)</span> の<strong>対角化</strong>になっている.</p>
 <hr />
-<p><br></p>
 <h2 id="関連項目">関連項目</h2>
 <ul>
 <li>固有値</li>
@@ -377,137 +410,49 @@ $$</span></p>
 <li>固有方程式</li>
 <li>特異値</li>
 </ul>
-<p><br></p>
 <hr />
-<p><br></p>
 <h2 id="参考文献">参考文献</h2>
 <ul>
 <li>一般社団法人 日本計算工学会 (2019) 『計算力学レクチャーコース 固有値計算と特異値計算』, 丸善出版．</li>
 <li>齋藤正彦 (1966) 『線形代数入門 基礎数学1』, 東京大学出版会．</li>
 </ul>
-<p><br></p>
 <hr />
-<p><br></p>
-<!--
-@reference:[### 固有値
 
-$$
-\begin{aligned}
-&i, j \in \{ 1, \cdots , n \}, \quad a_{ij} \in \mathbb{R} \\
-\\
-&A = \left(
-\begin{array}{ccccc}
-    a_{11} & \cdots & a_{1j} & \cdots & a_{1n} \\
-    \vdots &        & \vdots &        & \vdots \\
-    a_{i1} & \cdots & a_{ij} & \cdots & a_{in} \\
-    \vdots &        & \vdots &        & \vdots \\
-    a_{n1} & \cdots & a_{nj} & \cdots & a_{nn}
-\end{array}
-\right)
-= \left( a_{ij} \right) \in \mathbb{R}^{n \times n} \\
-\\
-&I = \left(
-\begin{array}{ccccc}
-    1 & 0 & \cdots & 0 & 0 \\
-    0 & 1 & \ddots & & 0 \\
-    \vdots & \ddots & \ddots & \ddots & \vdots \\
-    0 & & \ddots & 1 & 0 \\
-    0 & 0 & \cdots & 0 & 1
-\end{array}
-\right) \in \mathbb{R}^{n \times n} , \quad
-&\boldsymbol{0} = \left(
-\begin{array}{c}
-0 \\
-\vdots \\
-0
-\end{array}
-\right) \in \mathbb{R} ^ {n}
-\end{aligned}
-$$
+</article> <!-- content -->
 
-$$
-\begin{aligned}
-&\lambda \in \mathbb{C}, \quad
-&\boldsymbol{v} = \left(
-\begin{array}{c}
-v_{1} \\
-\vdots \\
-v_{n}
-\end{array}
-\right) \in \mathbb{R} ^ {n} , \quad
-\boldsymbol{v} \neq \boldsymbol{0} \\
-\\
-&\boldsymbol{v} : \text{eigenvalue} \\
-&\lambda : \text{eigenvector} \\
-&\overset{\text{def.}}{\Longleftrightarrow}
-A \boldsymbol{v} = \lambda \boldsymbol{v} \\
-&\Longleftrightarrow
-(A - \lambda I) \boldsymbol{v} = \boldsymbol{0}
-\end{aligned}
-$$]
--->
-<!--
-footer
-@update:2021/07/07
-@title:eigenvalue
-@class0:mathematics
-@class1:algebra
-@class2:linear_algebra
-@tags:mathematics,matrix,definition,algebra,eigenvalue
-@synonym:eigenvalue
-@release:true
--->
-
-<br>
+<div class="article_share">
 <!-- twitter button -->
-<a 
-href="https://twitter.com/intent/tweet" 
-class="twitter-share-button" 
-data-size="large" 
-data-text="[杏仁豆腐の備忘録] 固有値" 
-data-url="https://laplaciannin102.github.io/laplaciannin102_articles/articles/eigenvalue.html" 
-data-hashtags="laplaciannin102" 
-data-show-count="false" 
-data-lang="en" 
-data-via="mq_spark" 
+<a
+href="https://twitter.com/intent/tweet"
+class="twitter-share-button"
+data-size="large"
+data-text="固有値 | 杏仁豆腐の備忘録"
+data-url="https://laplaciannin102.github.io/laplaciannin102_articles/articles/eigenvalue.html"
+data-hashtags="laplaciannin102"
+data-show-count="false"
+data-lang="en"
+data-via="mq_spark"
 data-related="mq_spark"
 >Tweet #laplaciannin102</a>
-<script 
-async src="https://platform.twitter.com/widgets.js" 
+<script
+async src="https://platform.twitter.com/widgets.js"
 charset="utf-8"
 ></script>
-<br>
-<br>
-<br>
+</div>
+</main> <!-- body -->
+
+<footer id="site_footer">
+<p class="update_date">更新日: 2021/07/07</p>
 <p>
-<img src="https://cdn.mathjax.org/mathjax/badge/mj-logo.svg" width="100" class="left">
-このページでは, 数式の表現に
-<a href="https://www.mathjax.org">MathJax</a>
-を利用しています.
+このページでは, 数式の表現に <a href="https://www.mathjax.org">MathJax</a> を利用しています.
 </p>
-<p>
-このページでは, シンタックスハイライト(プログラムのコードに色を付ける機能)に
-<a href="https://github.com/googlearchive/code-prettify">Google Code Prettify</a>
-を利用しています.
-</p>
-<br>
-<p>更新日: 2021/07/07</p>
 <p>Copyright (C) 2020 laplaciannin102 All Rights Reserved.</p>
+</footer>
 
-</div> <!-- content -->
-</div> <!-- body -->
+<a id="page_top" href="#" aria-label="ページの先頭へ">↑</a>
 
-<script type="text/javascript" src="../assets/js/annn_articles.js"></script>
-
-<!--
-skin候補
-default
-desert
-sunburst
-sons-of-obsidian
--->
-<script async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=html&lang=python&lang=lang-latex&skin=desert"></script>
-<script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script src="../assets/js/article.js"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
 </body>
 </html>

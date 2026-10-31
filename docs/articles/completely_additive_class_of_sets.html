@@ -2,24 +2,77 @@
     author: laplaciannin102
 -->
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-<title>完全加法族</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-<meta name="keywords" content="数学,mathematics,プログラミング,programming,情報学,Python,laplaciannin102"/>
-<meta name="robots" content="all">
-<meta name="description" content="このブログは, 杏仁豆腐(laplaciannin102)が学んだこと等を書き綴っていくものです."/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>完全加法族 | 杏仁豆腐の備忘録</title>
+<meta name="description" content="完全加法族: 特定の条件を満たす部分集合族.">
+<meta name="author" content="laplaciannin102">
+<link rel="canonical" href="https://laplaciannin102.github.io/laplaciannin102_articles/articles/completely_additive_class_of_sets.html">
 
 <!-- Twitterカード(サムネイル) -->
-<meta name="twitter:card" content="summary" /> <!-- カードタイプは, "summary", "summary_large_image", "app", "player" -->
-<meta name="twitter:site" content="@mq_spark" />
-<meta property="og:url" content="https://laplaciannin102.github.io/laplaciannin102_articles/articles/completely_additive_class_of_sets.html" />
-<meta property="og:title" content="[杏仁豆腐の備忘録] 完全加法族" />
-<meta property="og:description" content="完全加法族" />
-<meta 
-    property="og:image" 
-    content="https://laplaciannin102.github.io/laplaciannin102_articles/assets/img/lap102_blog_card.png" 
-/>
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="杏仁豆腐の備忘録">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:url" content="https://laplaciannin102.github.io/laplaciannin102_articles/articles/completely_additive_class_of_sets.html">
+<meta property="og:title" content="完全加法族 | 杏仁豆腐の備忘録">
+<meta property="og:description" content="完全加法族: 特定の条件を満たす部分集合族.">
+<meta property="og:image" content="https://laplaciannin102.github.io/laplaciannin102_articles/assets/img/lap102_blog_card.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@mq_spark">
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "headline": "完全加法族",
+   "description": "完全加法族: 特定の条件を満たす部分集合族.",
+   "inLanguage": "ja",
+   "url": "https://laplaciannin102.github.io/laplaciannin102_articles/articles/completely_additive_class_of_sets.html",
+   "mainEntityOfPage": "https://laplaciannin102.github.io/laplaciannin102_articles/articles/completely_additive_class_of_sets.html",
+   "author": {
+    "@type": "Person",
+    "name": "laplaciannin102",
+    "url": "https://laplaciannin102.github.io/"
+   },
+   "image": "https://laplaciannin102.github.io/laplaciannin102_articles/assets/img/lap102_blog_card.png",
+   "isPartOf": {
+    "@type": "Blog",
+    "name": "杏仁豆腐の備忘録",
+    "url": "https://laplaciannin102.github.io/laplaciannin102_articles/"
+   },
+   "dateModified": "2020-09-01",
+   "keywords": "mathematics, analysis, measure_theory"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "ホーム",
+     "item": "https://laplaciannin102.github.io/laplaciannin102_articles/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "記事一覧",
+     "item": "https://laplaciannin102.github.io/laplaciannin102_articles/articles/table_of_contents.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "完全加法族",
+     "item": "https://laplaciannin102.github.io/laplaciannin102_articles/articles/completely_additive_class_of_sets.html"
+    }
+   ]
+  }
+ ]
+}
+</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VD0EN9TK2C"></script>
@@ -31,91 +84,83 @@
   gtag('config', 'G-VD0EN9TK2C');
 </script>
 
-<link rel="shortcut icon" href="../assets/ico/nanika_big.ico" type="image/vnd.microsoft.icon">
+<link rel="icon" href="../assets/ico/nanika_big.ico" type="image/vnd.microsoft.icon">
 <link rel="stylesheet" type="text/css" href="../assets/css/annn_articles.css">
-<style>
-</style>
 </head>
 <body>
 
-<div id="navigation_bar">
-<ul id="nav_bar_ul">
-    <!-- <li><p id="nbar_title">完全加法族</p></li> -->
-    <li id="nav_logo"><a id="nav_logo_a" href="../index.html">
-        <div id="nav_logo_div"></div>
-    </a></li>
-
-    <!--
-    <li id="nav_hamburger">
-        <div id="div_hamburger">
-            <div class="ham_line"></div>
-            <div class="ham_line"></div>
-            <div class="ham_line"></div>
-        </div>
-    </li>
-    -->
-
-    <li id="nav_menu"><a id="nav_menu_a" href="./table_of_contents.html">Menu</a></li>
-    <li id="nav_page_top"><a id="nav_page_top_a" href="#article_body">PageTop</a></li>
-</ul>
+<header id="site_header">
+<div class="site_header_inner">
+    <a class="site_logo" href="../index.html"><img src="../assets/img/lap102_logo.png" alt="杏仁豆腐の備忘録" width="80" height="40"></a>
+    <nav class="site_nav">
+        <a href="./table_of_contents.html">記事一覧</a>
+    </nav>
 </div>
+</header>
 
-<div id="article_body"> <!-- body -->
-<div id="article_content"> <!-- content -->
+<main id="article_body" class="with_toc"> <!-- body -->
+<aside class="article_toc_side" aria-label="目次">
+<p class="toc_title">目次</p>
+<ul>
+<li class="toc_h2"><a href="#概要">概要</a></li>
+<li class="toc_h2"><a href="#定義">定義</a></li>
+<li class="toc_h2"><a href="#性質">性質</a></li>
+<li class="toc_h2"><a href="#証明">証明</a></li>
+<li class="toc_h2"><a href="#集合の性質補足">集合の性質補足</a></li>
+<li class="toc_h2"><a href="#補足の証明">補足の証明</a></li>
+<li class="toc_h2"><a href="#同義語">同義語</a></li>
+<li class="toc_h2"><a href="#生成される完全加法族">生成される完全加法族</a></li>
+<li class="toc_h2"><a href="#ボレル集合族">ボレル集合族</a></li>
+<li class="toc_h3"><a href="#定義-1">定義</a></li>
+<li class="toc_h3"><a href="#性質-1">性質</a></li>
+<li class="toc_h2"><a href="#関連項目">関連項目</a></li>
+<li class="toc_h2"><a href="#参考文献">参考文献</a></li>
+</ul>
+</aside>
+<div class="page_meta">
+<nav class="breadcrumb" aria-label="パンくずリスト"><a href="../index.html">ホーム</a><span class="sep">›</span><a href="./table_of_contents.html">記事一覧</a></nav>
+<p class="page_date">更新日 <time datetime="2020-09-01">2020/09/01</time></p>
+</div>
+<article id="article_content"> <!-- content -->
 
 <h1 id="完全加法族">完全加法族</h1>
 <h2 id="概要">概要</h2>
 <ul>
 <li>特定の条件を満たす部分集合族.</li>
 </ul>
-<p><br></p>
 <hr />
-<p><br></p>
-<h2 id="目次">目次</h2>
-<div class="table_of_contents">
-<details open>
-<summary>
-目次詳細
-</summary>
+<details class="article_toc_inline">
+<summary>目次</summary>
 <ul>
-<li><a href="#完全加法族">完全加法族</a>
-<ul>
-<li><a href="#概要">概要</a></li>
-<li><a href="#目次">目次</a></li>
-<li><a href="#定義">定義</a></li>
-<li><a href="#性質">性質</a></li>
-<li><a href="#証明">証明</a></li>
-<li><a href="#集合の性質補足">集合の性質補足</a></li>
-<li><a href="#補足の証明">補足の証明</a></li>
-<li><a href="#同義語">同義語</a></li>
-<li><a href="#生成される完全加法族">生成される完全加法族</a></li>
-<li><a href="#ボレル集合族">ボレル集合族</a>
-<ul>
-<li><a href="#定義-1">定義</a></li>
-<li><a href="#性質-1">性質</a></li>
-</ul></li>
-<li><a href="#関連項目">関連項目</a></li>
-<li><a href="#参考文献">参考文献</a></li>
-</ul></li>
+<li class="toc_h2"><a href="#概要">概要</a></li>
+<li class="toc_h2"><a href="#定義">定義</a></li>
+<li class="toc_h2"><a href="#性質">性質</a></li>
+<li class="toc_h2"><a href="#証明">証明</a></li>
+<li class="toc_h2"><a href="#集合の性質補足">集合の性質補足</a></li>
+<li class="toc_h2"><a href="#補足の証明">補足の証明</a></li>
+<li class="toc_h2"><a href="#同義語">同義語</a></li>
+<li class="toc_h2"><a href="#生成される完全加法族">生成される完全加法族</a></li>
+<li class="toc_h2"><a href="#ボレル集合族">ボレル集合族</a></li>
+<li class="toc_h3"><a href="#定義-1">定義</a></li>
+<li class="toc_h3"><a href="#性質-1">性質</a></li>
+<li class="toc_h2"><a href="#関連項目">関連項目</a></li>
+<li class="toc_h2"><a href="#参考文献">参考文献</a></li>
 </ul>
 </details>
-</div>
-<p><br></p>
 <hr />
-<p><br></p>
 <h2 id="定義">定義</h2>
-<p><span class="math inline"><em>X</em></span>を<strong>集合</strong>, <span class="math inline"><strong>B</strong></span>を<span class="math inline"><em>X</em></span>の<strong>部分集合族</strong>とする.</p>
+<p><span class="math inline">\(X\)</span>を<strong>集合</strong>, <span class="math inline">\(\boldsymbol{B}\)</span>を<span class="math inline">\(X\)</span>の<strong>部分集合族</strong>とする.</p>
 <div class="flow_x_container">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 &amp;X : \text{set} \\
 &amp;\boldsymbol{B} \subset \mathfrak{P}(X) : \text{family of subsets of } X
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
-<p><span class="math inline"><strong>B</strong></span>が次の条件を満たす時, <span class="math inline"><strong>B</strong></span>を<span class="math inline"><em>X</em></span>上の <strong>完全加法族(completely additive class of sets)</strong> という.</p>
+<p><span class="math inline">\(\boldsymbol{B}\)</span>が次の条件を満たす時, <span class="math inline">\(\boldsymbol{B}\)</span>を<span class="math inline">\(X\)</span>上の <strong>完全加法族(completely additive class of sets)</strong> という.</p>
 <div class="flow_x_container">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 &amp;\text{(1)} \quad
 \phi \in \boldsymbol{B} \\
@@ -126,14 +171,12 @@ A \in \boldsymbol{B}
 n \in \mathbb{N} , \quad A_{n} \in \boldsymbol{B}
 \Longrightarrow \overset{\infty}{\underset{n=1}{\bigcup}} A_{n} \in \boldsymbol{B}
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
-<p><br></p>
 <hr />
-<p><br></p>
 <h2 id="性質">性質</h2>
 <div class="flow_x_container">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 &amp;\text{(4)} \quad
 X \in \boldsymbol{B} \\
@@ -141,7 +184,7 @@ X \in \boldsymbol{B} \\
 n \in \mathbb{N} , \quad A_{n} \in \boldsymbol{B}
 \Longrightarrow \overset{\infty}{\underset{n=1}{\bigcap}} A_{n} \in \boldsymbol{B}
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
 <p>(1)の代わりに(4)で定義することもある.</p>
 <p>(3)と(5)は完全加法族の元同士の和集合, 積集合もその完全加法族の元となる, ということ.</p>
@@ -155,11 +198,11 @@ $$</span></p>
 証明詳細
 </summary>
 <p>(1), (2)より,</p>
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 X = X - \phi \in \boldsymbol{B}
 \end{aligned}
-$$</span></p>
+\]</span></p>
 <p>[証明終わり]</p>
 </details>
 </div>
@@ -173,32 +216,30 @@ $$</span></p>
 証明詳細
 </summary>
 <p>(2), (3)より,</p>
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 n \in \mathbb{N} , \quad A_{n} \in \boldsymbol{B}
 \end{aligned}
-$$</span></p>
+\]</span></p>
 <p>ならば</p>
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 \overset{\infty}{\underset{n=1}{\bigcap}} A_{n}
 = \left( \overset{\infty}{\underset{n=1}{\bigcup}} A_{n}^{c} \right) ^{c}
 \in \boldsymbol{B}
 \end{aligned}
-$$</span></p>
+\]</span></p>
 <p>[証明終わり]</p>
 </details>
 </div>
-<p><br></p>
 <hr />
-<p><br></p>
 <h2 id="集合の性質補足">集合の性質補足</h2>
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 \overset{\infty}{\underset{n=1}{\bigcap}} A_{n}
 = \left( \overset{\infty}{\underset{n=1}{\bigcup}} A_{n}^{c} \right) ^{c}
 \end{aligned}
-$$</span></p>
+\]</span></p>
 <p>について</p>
 <h2 id="補足の証明">補足の証明</h2>
 <div class="no_border_square_box">
@@ -207,29 +248,29 @@ $$</span></p>
 証明詳細
 </summary>
 <div class="flow_x_container">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 ^{\forall} n \in \mathbb{N}, \quad
 \overset{\infty}{\underset{n=1}{\bigcap}} A_{n}
 \subset A_{n}
 \subset \overset{\infty}{\underset{n=1}{\bigcup}} A_{n}
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
 <p>が成り立つ. 補集合を取ると,</p>
 <div class="flow_x_container">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 ^{\forall} n \in \mathbb{N}, \quad
 \left( \overset{\infty}{\underset{n=1}{\bigcap}} A_{n} \right) ^{c}
 \supset A_{n}^{c}
 \supset \left( \overset{\infty}{\underset{n=1}{\bigcup}} A_{n} \right) ^{c}
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
 <p>であるため,</p>
 <div class="flow_x_container">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 \overset{\infty}{\underset{n=1}{\bigcup}} A_{n}^{c}
 \subset \left( \overset{\infty}{\underset{n=1}{\bigcap}} A_{n} \right) ^{c}
@@ -239,98 +280,94 @@ $$</span></p>
 \subset \overset{\infty}{\underset{n=1}{\bigcap}} A_{n}^{c}
 \qquad \text{(ii)}
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
 <p>が成り立つ.</p>
 <p>(i), (ii)より,</p>
 <div class="flow_x_container">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 \left( \overset{\infty}{\underset{n=1}{\bigcap}} A_{n} \right) ^{c}
 = \overset{\infty}{\underset{n=1}{\bigcup}} A_{n}^{c}
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
 <p>補集合を取れば,</p>
 <div class="flow_x_container">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 \overset{\infty}{\underset{n=1}{\bigcap}} A_{n}
 = \left( \overset{\infty}{\underset{n=1}{\bigcup}} A_{n}^{c} \right) ^{c}
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
 <p>[証明終わり]</p>
 </details>
 </div>
-<p><br></p>
 <hr />
-<p><br></p>
 <h2 id="同義語">同義語</h2>
 <p><strong>完全加法族</strong>は次に挙げる他の呼び方がある.</p>
 <ul>
 <li>加法族(additive class of sets)</li>
 <li>可算加法族(countably additive class of sets)</li>
-<li><span class="math inline"><em>σ</em></span>-代数(<span class="math inline"><em>σ</em></span>-algebra)</li>
-<li><span class="math inline"><em>σ</em></span>-集合体(<span class="math inline"><em>σ</em></span>-field)</li>
-<li><span class="math inline"><em>σ</em></span>-集合代数</li>
+<li><span class="math inline">\(\sigma\)</span>-代数(<span class="math inline">\(\sigma\)</span>-algebra)</li>
+<li><span class="math inline">\(\sigma\)</span>-集合体(<span class="math inline">\(\sigma\)</span>-field)</li>
+<li><span class="math inline">\(\sigma\)</span>-集合代数</li>
 </ul>
-<p><br></p>
 <hr />
-<p><br></p>
 <h2 id="生成される完全加法族">生成される完全加法族</h2>
-<p><span class="math inline"><em>X</em></span>を集合, <span class="math inline"><strong>A</strong></span>を<span class="math inline"><em>X</em></span>上の任意の<strong>部分集合族</strong>, <span class="math inline">𝔅</span>を<span class="math inline"><strong>A</strong></span>を含む<span class="math inline"><em>X</em></span>上の<strong>完全加法族全体</strong>の集合とする.</p>
+<p><span class="math inline">\(X\)</span>を集合, <span class="math inline">\(\boldsymbol{A}\)</span>を<span class="math inline">\(X\)</span>上の任意の<strong>部分集合族</strong>, <span class="math inline">\(\mathfrak{B}\)</span>を<span class="math inline">\(\boldsymbol{A}\)</span>を含む<span class="math inline">\(X\)</span>上の<strong>完全加法族全体</strong>の集合とする.</p>
 <div class="flow_x_container">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 &amp;X : \text{set} \\
 &amp;\boldsymbol{A} \subset \mathfrak{P}(X) : \text{family of subsets of } X \\
 &amp;\mathfrak{B} = \{ \boldsymbol{B} \subset \mathfrak{P}(X) : \text{completely additive class of sets of } X \mid \boldsymbol{A} \subset \boldsymbol{B} \} \\
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
-<p>この時, 任意の<span class="math inline"><em>X</em></span>の部分集合族<span class="math inline"><strong>A</strong></span>に対し, <span class="math inline"><strong>A</strong></span>を含む<strong>最小</strong>の完全加法族が存在する.</p>
+<p>この時, 任意の<span class="math inline">\(X\)</span>の部分集合族<span class="math inline">\(\boldsymbol{A}\)</span>に対し, <span class="math inline">\(\boldsymbol{A}\)</span>を含む<strong>最小</strong>の完全加法族が存在する.</p>
 <div class="no_border_square_box">
 <details>
 <summary>
 証明詳細
 </summary>
 <div class="flow_x_container">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 \boldsymbol{A} \subset \mathfrak{P}(X) \in \mathfrak{B}
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
 <p>より,</p>
 <div class="flow_x_container">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 \mathfrak{B} \neq \phi
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
 <p>である. ここで, 次の集合を考えるとこれは最小かつ完全加法族である.</p>
 <div class="flow_x_container">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 \overset{}{\underset{\boldsymbol{B} \in \mathfrak{B}}{\bigcap}} \boldsymbol{B}
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
 <p>最小性は次で分かる.</p>
 <div class="flow_x_container">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 {}^{\forall} \boldsymbol{B} \in \mathfrak{B}, \quad
 \overset{}{\underset{\boldsymbol{B} \in \mathfrak{B}}{\bigcap}} \boldsymbol{B}
 \subset \boldsymbol{B}
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
 <p>完全加法族であることは次で分かる.</p>
 <div class="flow_x_container">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 &amp;\text{(1)} \quad
 &amp;&amp;{}^{\forall} \boldsymbol{B} , \, \phi \in \boldsymbol{B} \\
@@ -347,175 +384,98 @@ $$</span></p>
 &amp;&amp;&amp;\Longrightarrow {}^{\forall} \boldsymbol{B} , \, \overset{\infty}{\underset{n=1}{\bigcup}} A_{n} \in \boldsymbol{B} \\
 &amp;&amp;&amp;\Longrightarrow \overset{\infty}{\underset{n=1}{\bigcup}} A_{n} \in \overset{}{\underset{\boldsymbol{B} \in \mathfrak{B}}{\bigcap}} \boldsymbol{B}
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
 <p>[証明終わり]</p>
 </details>
 </div>
-<p>この<strong>完全加法族</strong>を<span class="math inline"><strong>A</strong></span>から<strong>生成される完全加法族</strong>といい, 次の式で表す.</p>
+<p>この<strong>完全加法族</strong>を<span class="math inline">\(\boldsymbol{A}\)</span>から<strong>生成される完全加法族</strong>といい, 次の式で表す.</p>
 <div class="flow_x_container">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 \boldsymbol{B} [ \boldsymbol{A} ]
 = \overset{}{\underset{\boldsymbol{B} \in \mathfrak{B}}{\bigcap}} \boldsymbol{B}
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
-<p><br></p>
 <hr />
-<p><br></p>
 <h2 id="ボレル集合族">ボレル集合族</h2>
 <h3 id="定義-1">定義</h3>
-<p><span class="math inline"><em>X</em></span>を<span class="math inline"><em>n</em></span>次元<strong>ユークリッド空間</strong>, その<strong>開集合全体(開集合系)</strong> を<span class="math inline"><strong>O</strong><sup>(<em>n</em>)</sup></span>とする.</p>
+<p><span class="math inline">\(X\)</span>を<span class="math inline">\(n\)</span>次元<strong>ユークリッド空間</strong>, その<strong>開集合全体(開集合系)</strong> を<span class="math inline">\(\boldsymbol{O}^{(n)}\)</span>とする.</p>
 <div class="flow_x_container">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 &amp;X = \mathbb{R} ^ {n} : \text{set} \\
 &amp;\boldsymbol{O}^{(n)} = \{ O \in X \mid O : \text{open set} \}
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
-<p>この時, 開集合系<span class="math inline"><strong>O</strong><sup>(<em>n</em>)</sup></span>から<strong>生成される加法族</strong>を<span class="math inline"><em>n</em></span>次元<strong>ボレル集合族</strong> といい, <span class="math inline"><strong>B</strong><sup>(<em>n</em>)</sup></span>で表す.</p>
+<p>この時, 開集合系<span class="math inline">\(\boldsymbol{O}^{(n)}\)</span>から<strong>生成される加法族</strong>を<span class="math inline">\(n\)</span>次元<strong>ボレル集合族</strong> といい, <span class="math inline">\(\boldsymbol{B}^{(n)}\)</span>で表す.</p>
 <div class="flow_x_container">
-<p><span class="math display">$$
+<p><span class="math display">\[
 \begin{aligned}
 &amp;\boldsymbol{B}^{(n)} = \boldsymbol{B} [ \boldsymbol{O}^{(n)} ]
 \end{aligned}
-$$</span></p>
+\]</span></p>
 </div>
 <p><strong>ボレル集合族</strong>の元を<strong>ボレル集合</strong>という.</p>
-<p>より一般に, <strong>位相空間</strong> <span class="math inline"><em>X</em></span>の<strong>開集合全体</strong> <span class="math inline"><strong>O</strong><sub><em>X</em></sub></span> から<strong>生成される加法族</strong>を<span class="math inline"><em>X</em></span>の<strong>ボレル集合族</strong>といい, <span class="math inline"><strong>B</strong><sub><em>X</em></sub></span>で表す.</p>
+<p>より一般に, <strong>位相空間</strong> <span class="math inline">\(X\)</span>の<strong>開集合全体</strong> <span class="math inline">\(\boldsymbol{O}_{X}\)</span> から<strong>生成される加法族</strong>を<span class="math inline">\(X\)</span>の<strong>ボレル集合族</strong>といい, <span class="math inline">\(\boldsymbol{B}_{X}\)</span>で表す.</p>
 <h3 id="性質-1">性質</h3>
 <p>完全加法族の定義からボレル集合族は <strong>閉集合全体(閉集合系)</strong> を含む.</p>
-<p><br></p>
 <hr />
-<p><br></p>
 <h2 id="関連項目">関連項目</h2>
 <ul>
 <li>完全加法族</li>
-<li><span class="ref_span">
-    <a class="referrer" href="./measure.html">測度</a>
-    <object class="ref_html" data="../assets/ref_html/ref_measure.html" type="text/plain"></object>
-</span></li>
-<li><span class="ref_span">
-    <a class="referrer" href="./mesurable_space.html">可測空間</a>
-    <object class="ref_html" data="../assets/ref_html/ref_mesurable_space.html" type="text/plain"></object>
-</span></li>
-<li><span class="ref_span">
-    <a class="referrer" href="./measure.html">測度</a>
-    <object class="ref_html" data="../assets/ref_html/ref_measure.html" type="text/plain"></object>
-</span>空間</li>
+<li><span class="ref_span"><a class="referrer" href="./measure.html">測度</a><object class="ref_html" data="../assets/ref_html/ref_measure.html" type="text/html"></object></span></li>
+<li><span class="ref_span"><a class="referrer" href="./mesurable_space.html">可測空間</a><object class="ref_html" data="../assets/ref_html/ref_mesurable_space.html" type="text/html"></object></span></li>
+<li><span class="ref_span"><a class="referrer" href="./measure_space.html">測度空間</a><object class="ref_html" data="../assets/ref_html/ref_measure_space.html" type="text/html"></object></span></li>
 </ul>
-<p><br></p>
 <hr />
-<p><br></p>
 <h2 id="参考文献">参考文献</h2>
 <ul>
-<li>折原明夫 (2002) 『数学シリーズ <span class="ref_span">
-    <a class="referrer" href="./measure.html">測度</a>
-    <object class="ref_html" data="../assets/ref_html/ref_measure.html" type="text/plain"></object>
-</span>と積分』, 裳華房．</li>
-<li>原啓介 (2017) 『<span class="ref_span">
-    <a class="referrer" href="./measure.html">測度</a>
-    <object class="ref_html" data="../assets/ref_html/ref_measure.html" type="text/plain"></object>
-</span>・確率・ルベーグ積分 応用への最短コース』, 講談社．</li>
+<li>折原明夫 (2002) 『数学シリーズ <span class="ref_span"><a class="referrer" href="./measure.html">測度</a><object class="ref_html" data="../assets/ref_html/ref_measure.html" type="text/html"></object></span>と積分』, 裳華房．</li>
+<li>原啓介 (2017) 『<span class="ref_span"><a class="referrer" href="./measure.html">測度</a><object class="ref_html" data="../assets/ref_html/ref_measure.html" type="text/html"></object></span>・確率・ルベーグ積分 応用への最短コース』, 講談社．</li>
 <li>伊藤清 (2004) 『確率論の基礎』, 岩波書店．</li>
-<li>佐藤坦 (1994) 『はじめての確率論 <span class="ref_span">
-    <a class="referrer" href="./measure.html">測度</a>
-    <object class="ref_html" data="../assets/ref_html/ref_measure.html" type="text/plain"></object>
-</span>から確率へ』, 共立出版株式会社．</li>
+<li>佐藤坦 (1994) 『はじめての確率論 <span class="ref_span"><a class="referrer" href="./measure.html">測度</a><object class="ref_html" data="../assets/ref_html/ref_measure.html" type="text/html"></object></span>から確率へ』, 共立出版株式会社．</li>
 <li>新井仁之 (2003) 『ルベーグ積分講義-ルベーグ積分と面積0の不思議な図形たち』, 日本評論社．</li>
 </ul>
-<p><br></p>
 <hr />
-<p><br></p>
-<!--
-@reference:[### 完全加法族
 
-$$
-\begin{aligned}
-&X : \text{set} \\
-&\boldsymbol{B} \subset \mathfrak{P}(X) : \text{family of subsets of } X
-\end{aligned}
-$$
+</article> <!-- content -->
 
-$\boldsymbol{B}$が次の条件を満たす時, $\boldsymbol{B}$を$X$上の **完全加法族(completely additive class of sets)** という.
-
-$$
-\begin{aligned}
-&\text{(1)} \quad
-\phi \in \boldsymbol{B} \\
-&\text{(2)} \quad
-A \in \boldsymbol{B}
-\Longrightarrow A ^ c = X - A \in \boldsymbol{B} \\
-&\text{(3)} \quad
-n \in \mathbb{N} , \quad A_{n} \in \boldsymbol{B}
-\Longrightarrow \overset{\infty}{\underset{n=1}{\bigcup}} A_{n} \in \boldsymbol{B}
-\end{aligned}
-$$]
--->
-<!--
-footer
-@update:2020/09/01
-@title:completely_additive_class_of_sets
-@class0:mathematics
-@class1:analysis
-@class2:measure_theory
-@tags:mathematics,analysis,measure_theory
-@synonym:completely_additive_class_of_sets,sigma_algebra
-@release:true
--->
-
-<br>
+<div class="article_share">
 <!-- twitter button -->
-<a 
-href="https://twitter.com/intent/tweet" 
-class="twitter-share-button" 
-data-size="large" 
-data-text="[杏仁豆腐の備忘録] 完全加法族" 
-data-url="https://laplaciannin102.github.io/laplaciannin102_articles/articles/completely_additive_class_of_sets.html" 
-data-hashtags="laplaciannin102" 
-data-show-count="false" 
-data-lang="en" 
-data-via="mq_spark" 
+<a
+href="https://twitter.com/intent/tweet"
+class="twitter-share-button"
+data-size="large"
+data-text="完全加法族 | 杏仁豆腐の備忘録"
+data-url="https://laplaciannin102.github.io/laplaciannin102_articles/articles/completely_additive_class_of_sets.html"
+data-hashtags="laplaciannin102"
+data-show-count="false"
+data-lang="en"
+data-via="mq_spark"
 data-related="mq_spark"
 >Tweet #laplaciannin102</a>
-<script 
-async src="https://platform.twitter.com/widgets.js" 
+<script
+async src="https://platform.twitter.com/widgets.js"
 charset="utf-8"
 ></script>
-<br>
-<br>
-<br>
+</div>
+</main> <!-- body -->
+
+<footer id="site_footer">
+<p class="update_date">更新日: 2020/09/01</p>
 <p>
-<img src="https://cdn.mathjax.org/mathjax/badge/mj-logo.svg" width="100" class="left">
-このページでは, 数式の表現に
-<a href="https://www.mathjax.org">MathJax</a>
-を利用しています.
+このページでは, 数式の表現に <a href="https://www.mathjax.org">MathJax</a> を利用しています.
 </p>
-<p>
-このページでは, シンタックスハイライト(プログラムのコードに色を付ける機能)に
-<a href="https://github.com/googlearchive/code-prettify">Google Code Prettify</a>
-を利用しています.
-</p>
-<br>
-<p>更新日: 2020/09/01</p>
 <p>Copyright (C) 2020 laplaciannin102 All Rights Reserved.</p>
+</footer>
 
-</div> <!-- content -->
-</div> <!-- body -->
+<a id="page_top" href="#" aria-label="ページの先頭へ">↑</a>
 
-<script type="text/javascript" src="../assets/js/annn_articles.js"></script>
-
-<!--
-skin候補
-default
-desert
-sunburst
-sons-of-obsidian
--->
-<script async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=html&lang=python&lang=lang-latex&skin=desert"></script>
-<script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script src="../assets/js/article.js"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
 </body>
 </html>
