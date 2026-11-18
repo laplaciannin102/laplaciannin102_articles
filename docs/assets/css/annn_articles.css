@@ -723,8 +723,15 @@ ul.toc_list .date {
     white-space: nowrap;
 }
 
+/* 概要は本文より小さくして, カードの中でタイトルより目立たせない */
+.work_summary {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
 .work_summary p {
-    margin: 0 0 0.6em;
+    margin: 0 0 0.8em;
 }
 
 ul.work_tech {
